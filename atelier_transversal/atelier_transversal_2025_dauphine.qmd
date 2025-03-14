@@ -39,11 +39,11 @@ fig-align: "center"
 highlight-style: ayu-light
 reference-location: margin
 #lightbox: true
+#pour mettre PDF dans texte : 
+# {{< pdf "HARDY_atelier transversal.pdf" width=140% height=800 >}} dans insert->shortcode
 ---
 
 # Salomé Hardy
-
-{{< pdf "HARDY_atelier transversal.pdf" width=140% height=800 >}}
 
 ## Rappels pour moi sensemaking:
 
@@ -66,7 +66,7 @@ Pour Weick, ce processus comporte généralement plusieurs caractéristiques cl�
 ## Points positifs
 
 1.  **Richesse théorique :**\
-    Le texte mobilise de nombreuses références théoriques pertinentes (Weick, 1995 ; Bailey & Madden, 2016 ; Lips-Wiersma & Wright, 2012 ; Foucault, 1975), permettant une analyse approfondie du sens au travail dans le contexte exigeant de l’audit financier. L'articulation entre le concept de *sensemaking* et une approche phénoménologique apporte une profondeur analytique notable.
+    Le texte mobilise de nombreuses références théoriques pertinentes permettant une analyse approfondie du sens au travail dans le contexte exigeant de l’audit financier. L'articulation entre le concept de *sensemaking* et une approche phénoménologique apporte une profondeur analytique notable.
 
 2.  **Qualité empirique des résultats :**\
     La méthodologie qualitative est rigoureuse, avec des entretiens compréhensifs menés auprès d’un large éventail d’auditeurs (différents grades, anciens auditeurs, cabinets Big Four et intermédiaires). L’analyse longitudinale envisagée permet d’observer finement les évolutions de la signifiance au fil des parcours professionnels.
@@ -77,25 +77,24 @@ Pour Weick, ce processus comporte généralement plusieurs caractéristiques cl�
 ## Questions
 
 1.  **Biais des coûts irrécupérables (*sunk cost fallacy*)**\
-    L’étude révèle implicitement une dynamique psychologique de « coûts irrécupérables » (*sunk cost fallacy* ; Arkes & Blumer, 1985). Les auditeurs entrent dans la profession en sachant qu’elle est temporaire, mais après une première année éprouvante, ils repoussent leur départ pour ne pas perdre les efforts investis. Ils restent pour éviter de transformer leur souffrance en échec personnel, une logique émotionnelle et cognitive qui entrave leur capacité à quitter rapidement un métier devenu insupportable.
+    L’étude révèle implicitement une dynamique psychologique de « coûts irrécupérables » (*sunk cost fallacy* ; Arkes & Blumer, 1985). Les auditeurs entrent dans la profession en sachant qu’elle est temporaire, mais après une première année éprouvante, ils repoussent leur départ pour ne pas perdre les efforts investis. Ils restent pour éviter de transformer leur souffrance en échec personnel, une logique émotionnelle et cognitive qui entrave leur capacité à quitter rapidement un métier devenu insupportable. Est-ce que tu penses que ça pourrait appuyer théoriquement ce que tu soulèves dans résultats d'entretiens ?
 
 **Référence :**\
-- Arkes, H. R., & Blumer, C. (1985). *The psychology of sunk cost*. Organizational Behavior and Human Decision Processes, 35(1), 124–140.
+Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. *Organizational behavior and human decision processes*, *35*(1), 124-140.
 
-2.  **Projection temporelle, rationalisation stratégique et sensemaking prospectif**\
-    Le texte mobilise la théorie du *sensemaking* classique (Weick, 1995), mais les pratiques des auditeurs semblent plutôt correspondre à une rationalisation stratégique ou instrumentale (March, 1994 ; Staw, 1981). En effet, les auditeurs justifient leur souffrance actuelle en la projetant vers un bénéfice futur (compétences acquises, meilleure position professionnelle). Ce processus, nommé aussi « sensemaking prospectif » (Gioia & Mehra, 1996 ; Kaplan & Orlikowski, 2013), diffère du sensemaking rétrospectif original décrit par Weick. Dès lors, la quête de sens observée relève-t-elle véritablement d’un sens authentique du métier d'auditeur ou simplement d'une stratégie consciente orientée vers des objectifs de carrière externes ?
+2.  **Projection temporelle, rationalisation stratégique et sensemaking temporel/prospectif**
+
+    Le texte mobilise la théorie du sensemaking classique (Weick, 1995), qui repose sur une interprétation rétrospective des événements. Toutefois, les pratiques des auditeurs semblent s’inscrire dans un **travail temporel** plus large (Kaplan & Orlikowski, 2013), où le sens se construit en articulant passé, présent et futur pour structurer l’action. En effet, ces derniers justifient leur engagement actuel en projetant des bénéfices futurs (compétences acquises, meilleure position professionnelle), une dynamique qui pourrait relever à la fois d’un **ancrage identitaire** dans le métier et d’une **rationalisation stratégique** (March, 1994 ; Staw, 1981). Un [mémoire de Sandrine Royer-Labelle](https://biblos.hec.ca/biblio/memoires/royer_labelle_sandrine_m2021.pdf) (2021) prolonge le raisonnement en parlant de processus d'anticipation actif et structuré et donc de **sensemaking prospectif**. C'est un développement qui peut être intéressant. Est-ce que l'on assiste à une véritable quête de sens liée à l’identité professionnelle des auditeurs, ou bien un travail d’alignement temporel visant à stabiliser des trajectoires de carrière incertaines ? En d’autres termes, le travail temporel observé permet-il aux auditeurs de construire un sens authentique de leur métier, ou s’agit-il d’un cadre stratégique ajusté aux contraintes organisationnelles ?
 
 **Références :**
 
--    Weick, K. E. (1995). *Sensemaking in Organizations*. Sage Publications.
+-   **March, J. G. (1994). *Primer on decision making: How decisions happen*. Simon and Schuste**r.
 
--   March, J. G. (1994). *A Primer on Decision Making: How Decisions Happen*. Free Press.
+-   Staw, B. M. (1981). The Escalation of Commitment to a Course of Action. *The Academy of Management Review*, *6*(4), 577–587. https://doi.org/10.2307/257636
 
--   Staw, B. M. (1981). *The Escalation of Commitment to a Course of Action*. Academy of Management Review, 6(4), 577-587.
+-   Gioia, D. A., & Mehra, A. (1996). Sense-Making in Organizations. *Academy of Management Review*, 21, 1226-1230. https://doi.org/10.2307/259169
 
--   Gioia, D. A., & Mehra, A. (1996). *Sensemaking in Organizations: A Future-oriented Perspective*. Journal of Management Inquiry, 5(2), 122–131.
-
--   Kaplan, S., & Orlikowski, W. J. (2013). *Temporal work in strategy making*. Organization Science, 24(4), 965-995.
+-   **Kaplan, S., & Orlikowski, W. J. (2013). Temporal work in strategy making. *Organization science*, *24*(4), 965-995.**
 
 3.  **Sensemaking versus Sensegiving : qui construit vraiment le sens ?**\
     L’article décrit les auditeurs en quête de sens individuel au travail, mais il pourrait être intéressant de se demander si ce sens provient réellement des auditeurs eux-mêmes (*sensemaking*) ou s’il est plutôt proposé, voire imposé subtilement par l’organisation (*sensegiving*). En effet, le sens apparent du métier d’auditeur pourrait résulter d’une influence externe provenant des cabinets, ce qui relativiserait fortement l’authenticité de la quête individuelle décrite dans le texte.
@@ -105,42 +104,40 @@ Pour Weick, ce processus comporte généralement plusieurs caractéristiques cl�
 -   Gioia, D. A., & Chittipeddi, K. (1991). *Sensemaking and Sensegiving in Strategic Change Initiation*. Strategic Management Journal, 12(6), 433–448.
 
 4.  **Audit, contrôle social et culture du "up or out"**\
-    La dynamique de groupe décrite dans l’article rappelle fortement le concept foucaldien de « corps social » (Foucault, 1975), renforcé par la culture du « up or out ». Dans quelle mesure cette pression organisationnelle constante (avancer ou partir) et cette forme subtile de contrôle social entravent-elles la construction d’un sens authentique au travail ? La comparaison avec les dynamiques militaires décrites par Gauchel (2013) pourrait approfondir cette réflexion.
+    La dynamique de groupe décrite dans l’article rappelle fortement le concept foucaldien de « corps social » (Foucault, 1975), renforcé par la culture du « up or out ». Dans quelle mesure cette pression organisationnelle constante (avancer ou partir) et cette forme subtile de contrôle social entravent-elles la construction d’un sens authentique au travail ? La comparaison avec les dynamiques militaires décrites par Foucault (2013) pourrait approfondir cette réflexion : les St Cyriens trouvent du sens à leur formation militaire rapidement (même si ce n'est pas exploré sous l'aspect du *sensemaking)*, dès les début on leur fournit un binôme St Cyrien N+1. Ils font rapidement des activiités ensemble pour les souder... Tu parles à un moment de valeurs militaires, à mon sens ce serait intéressant de creuser pour le domaine de l'audit, il doit y avoir des ressemblances : "La solidarité de l’équipe a des connotations de sacrifice, une part de valeurs militaires de ne jamais abandonner personne."
 
 -   **Références :**\
-    Foucault, M. (1975). *Surveiller et punir : Naissance de la prison*. Gallimard.
+    Foucault, M. (1975). *Surveiller et punir* (Vol. 1, pp. 192-211). Gallimard: Paris.
 
-    Gauchel, J. (2013). *À genoux les hommes, debout les officiers*. Economica.
+    [**Claude Weber**](https://pur-editions.fr/product/4703/a-genou-les-hommes-debout-les-officiers)**,** *A genou les hommes. Debout les officiers. La socialisation des Saint-Cyriens*, Presses universitaires de Rennes, coll. « Essais », 2012, 405 p., ISBN : 978-2-7535-2019-6.
 
 ## Conseils
 
 1.  **Clarifier le rôle réel du sensemaking :**\
-    Expliciter plus clairement comment le concept de sensemaking est mobilisé concrètement par les auditeurs, en discutant de ses limites éventuelles dans ce contexte spécifique.
+    Expliciter plus clairement comment le concept de sensemaking est mobilisé concrètement par les auditeurs, en discutant de ses limites éventuelles dans ce contexte spécifique. Il y a déjà un aspect sur la temporalité, mais d'après Weick, le sensemaking, c'est avant tout un processus rétrospectif. (si j'ai bien compris)
 
 2.  **Approfondir l’analyse des biais cognitifs et émotionnels :**\
-    Intégrer explicitement des concepts comme le sunk cost fallacy (Arkes & Blumer, 1985) et le biais de projection future (Ariely, 2008) pour mieux expliquer pourquoi les auditeurs persistent malgré les difficultés.
+    Intégrer explicitement des concepts comme le sunk cost fallacy (Arkes & Blumer, 1985) et le biais de projection future (Ariely, 2008) pour mieux expliquer pourquoi les auditeurs persistent malgré les difficultés. Je ne suis pas un expert de ce courant mais il me semble déjà être tombé plusieurs fois là-dessus. Quelques notions intéressantes comme l'[**hyperbolic discounting**](https://en.wikipedia.org/wiki/Hyperbolic_discounting): tendance à donner plus de valeur à ce qui est immédiat, sous-estimer les coûts/bénéfices futurs. C'est à mon avis adapté aux auditeurs. Ils sont contents d'avoir été acceptés dans un travail prestigieux, qui paye convenablement, qui élève donc leur statut social, et leur permet d'espérer de très bons postes par la suite, mais le futur (les saisons, le travail difficile et exigeant n'est jamais aussi bien compris que pendant l'expérience)
 
 3.  **Intégrer une perspective critique sur le contrôle organisationnel :**\
-    Développer davantage une perspective critique inspirée des théories de Foucault (1975) ou des approches néo-normatives (Fleming & Sturdy, 2009) pour analyser le contrôle subtil exercé par les cabinets d’audit à travers le sens au travail.
+    Développer davantage une perspective critique inspirée des théories de Foucault (1975) ou des approches néo-normatives (Fleming & Sturdy, 2009) pour analyser le contrôle subtil exercé par les cabinets d’audit à travers le sens au travail (le [panoptique](https://fr.wikipedia.org/wiki/Panoptique)). Ce n'est pas le domaine que je connais le plus hélas mais ça devrait être plus facile pour toi ou ton/ta directeur/rice de thèse.
 
-4.  **Explorer les effets générationnels et technologique :**\
-    Interroger davantage la façon dont les attentes des nouvelles générations pourraient bouleverser durablement les normes professionnelles actuelles en audit. Quid de l'IA . Est-ce que l'on peut s'imaginer un futur où l'audit sera plus rapide et moins stressant ?
+4.  **Explorer les effets générationnels et technologiques :**\
+    Interroger davantage la façon dont les attentes des nouvelles générations pourraient bouleverser durablement les normes professionnelles actuelles en audit. Quid de l'IA . Est-ce que l'on peut s'imaginer un futur où l'audit sera plus rapide et donc conduisant les auditeurs à être moins stressés, plus réflexifs, et à réussir à construire plus de sens ? [Hovhannisyan Hayk](https://drm.dauphine.fr/fr/drm/membres/detail-cv/profile/hayk-hovhannisyan.html) travaille sur l'IA dans l'audit à Dauphine si je me rappelle bien.
+
+5.  Je ne sais plus si tu as interviewé des gens qui ont fait l'expérience du "out" dans le "up or out". Qu'est-ce qu'ils pensent du sens de leur travail rétrospectivement maintenant (Weick) ? Est-ce que ça a changé ? Ca pourrait apporter une profondeur intéressant à l'analyse. Parce que quand on est "tête dans le guidon" comme le dit un auditeur, la réflexivité peut manquer, elle en peut revenir après. (un peu comme on est amoureux d'ailleurs, y'a des processus chimiques dans notre cerveau qui sont trop puissants et qui inhibent cette réflexivité)
 
 # Charlotte Thouly-Vidal
-
-{{< pdf "thouly_vidal_atelier_transversal.pdf" width=140% height=800 >}}
 
 ## Points positifs
 
 -   **Pertinence et originalité du sujet :**\
-    L’article aborde de manière originale la problématique du branding public, un thème peu exploré dans la littérature malgré son importance croissante dans les stratégies publiques modernes. (Lisa de ERMES le fait sur l'éducation justement il me semble, avec méthodes qualitatiives). En choisissant un terrain aussi spécifique que les marques publiques nationales (hors santé et éducation), l’étude promet une compréhension approfondie d'un phénomène complexe, très pertinent dans un contexte de transformation des administrations publiques (à voir si DITP peut être intéressante dans ce cadre , direction interministérielle de la [transformation]{.underline} publique).
+    L’article aborde de manière originale la problématique du branding public, un thème peu exploré dans la littérature malgré son importance croissante dans les stratégies publiques modernes. (Lisa de ERMES le fait sur l'éducation justement il me semble, avec méthodes qualitatives). En choisissant un terrain aussi spécifique que les marques publiques nationales (hors santé et éducation), l’étude promet une compréhension approfondie d'un phénomène complexe, très pertinent dans un contexte de transformation des administrations publiques (à voir si DITP peut être intéressante dans ce cadre , direction interministérielle de la [transformation]{.underline} publique).
 
 -   **Robustesse théorique et méthodologique :**\
-    Le recours à la théorie des pratiques sociales (Reckwitz, 2002 ; Schatzki, 1996 ; Shove et al., 2012) est particulièrement adapté pour explorer les dynamiques réelles d’adoption et d’intégration du branding dans le secteur public. De plus, la méthodologie qualitative, basée sur des entretiens semi-directifs enrichis par des analyses documentaires et des observations in situ, garantit une solide rigueur scientifique. A voir si 15-20 entretiens suffisent parce qu'il y a de nombreux domaines à envisager, il y a sûrement des pratiques de marque publique comme outil différentes.
+    Le recours à la théorie des pratiques sociales (Reckwitz, 2002 ; Schatzki, 1996 ; Shove et al., 2012) est particulièrement adapté pour explorer les dynamiques réelles d’adoption et d’intégration du branding dans le secteur public. De plus, la méthodologie qualitative, basée sur des entretiens semi-directifs enrichis par des analyses documentaires et des observations in situ, garantit une solide rigueur scientifique.
 
-<!-- -->
-
--    **Identification précise des sous-pratiques :**\
+-   **Identification précise des sous-pratiques :**\
     Le travail de catégorisation en sous-pratiques (« Connecter », « Attirer », « Légitimer », « Valoriser », « Protéger », « Incarner ») permet de comprendre finement comment les acteurs publics adaptent les outils du secteur privé aux réalités publiques spécifiques. Cette structuration analytique facilite une compréhension claire et approfondie des pratiques étudiées.
 
 ## Questions
@@ -159,14 +156,14 @@ Pour Weick, ce processus comporte généralement plusieurs caractéristiques cl�
 
 **Références :**
 
--   Cyert, R.M., & March, J.G. (1963). *A Behavioral Theory of the Firm*. Prentice Hall.
+-   Cyert, R., & March, J. (2015). Behavioral theory of the firm. In *Organizational Behavior 2* (pp. 60-77). Routledge.
 
--   Nelson, R.R., & Winter, S.G. (1982). *An Evolutionary Theory of Economic Change*. Belknap Press of Harvard University Press.
+-   Nelson, R. R., & Winter, S. G. (1985). *An evolutionary theory of economic change*. harvard university press.
 
--   Levitt, B., & March, J.G. (1988). *Organizational Learning*. Annual Review of Sociology, 14, 319-338.
+-   Levitt, B., & March, J. G. (1988). Organizational learning. *Annual review of sociology*, *14*(1), 319-338.
 
 3.  Quid du prestige comme élément de la marque publique ? Certaines administrations sont des marques de prestige reconnues implicitement (IGF, INSP, ENM, DGSE, INSEE, Louis le Grand, Louvre, Comédie Française). Pourtant, l’article ne développe pas explicitement la dimension de prestige comme étant centrale à la construction de ces marques. En effet, ces institutions deviennent souvent des marques par leur prestige historique, leur sélectivité ou leur reconnaissance sociale élevée, sans même utiliser explicitement les stratégies classiques de branding issues du privé.
-4.   Dans quelle mesure les agents opérationnels (guichetiers, fonctionnaires en première ligne) participent-ils réellement à la construction de la marque publique par leurs pratiques quotidiennes ? Peut-on envisager une logique ascendante (bottom-up) de construction de la marque, inspirée du concept de "street-level bureaucracy" pour les politiques publiques ?
+4.  Dans quelle mesure les agents opérationnels (guichetiers, fonctionnaires en première ligne) participent-ils réellement à la construction de la marque publique par leurs pratiques quotidiennes ? Peut-on envisager une logique ascendante (bottom-up) de construction de la marque, inspirée du concept de "street-level bureaucracy" pour les politiques publiques ? Est-elle uniquement top-bottom dans une culture française particulièrement élitiste, où la société de cours prévaut toujours largement ?
 
 **Références :**
 
@@ -174,12 +171,14 @@ Pour Weick, ce processus comporte généralement plusieurs caractéristiques cl�
 
 -   Dubois, V. (2010). *La vie au guichet. Relation administrative et traitement de la misère*. Economica.
 
+-   Elias, N. (1973). *La société de cour*. Flammarion.
+
 ## Conseils
 
-1.  **Reconsidérer l’exclusion des secteurs santé et éducation :**
-    Compte tenu de la pertinence évidente de ces deux domaines en matière de branding public, l’auteur pourrait envisager d'intégrer au moins un établissement issu de l’éducation ou de la santé dans son échantillon. Cela enrichirait fortement l'analyse en montrant comment la logique de marque s'implante dans des environnements institutionnels diversifiés. Ou alors si l'on conserve cette exclusion, elle mériterait d'être mieux justifiée (autres que la diversité territoriale).
+1.  **Reconsidérer l’exclusion des secteurs santé et éducation :** Compte tenu de la pertinence évidente de ces deux domaines en matière de branding public, l’auteur pourrait envisager d'intégrer au moins un établissement issu de l’éducation ou de la santé dans son échantillon. Cela enrichirait fortement l'analyse en montrant comment la logique de marque s'implante dans des environnements institutionnels diversifiés. Ou alors si l'on conserve cette exclusion, elle mériterait d'être mieux justifiée (autres que la diversité territoriale car pas entièrement justifié, AP-HP, Hopital Necker, Louis Le Grand, INSP sont à mon sens des marques publiques nationales, et parfois même internationales).
 2.  La partie théorique précédant les questions de recherche est relativement complexe à lire et à comprendre. Il serait utile de simplifier cette section en précisant clairement l’objectif et les concepts mobilisés. Par exemple, la notion « d’outil » pourrait être clarifiée dès le début : il s’agit de la marque publique, mais ce n’est pas immédiatement évident à la lecture. Il conviendrait aussi de mieux définir et expliciter certains termes techniques comme « praxéologique », afin de faciliter la compréhension du lecteur. Une reformulation simplifiée permettrait ainsi de mieux saisir où l’auteur souhaite en venir avant d’aborder les questions de recherche.
-3.  
+3.  A voir si 15-20 entretiens suffisent parce qu'il y a de nombreux domaines à envisager, il y a sûrement des pratiques de marque publique différentes en fonction de la typologie de l'institution publique. A voir avevc directrice de thèse, mais il me semble que 30-40, ce serait mieux... mais je sais que c'est beaucoup beaucoup de temps à faire les entretiens à et à les retranscrire. Pas hésiter à utiliser Whisper de OpenAI pour les retranscrire. Le CNRS propose une plateforme pour le faire facilement aussi mais je ne me rappelle plus du lien.
+4.  On a récemment eu un cours de déontologie dans la mineure Action Publique, je me demande si la déontologie ne peut pas être un élément fort (et sûrement un peu limitant, on ne peut pas tout faire) de la construction de la marque publique, à la fois pour les agents publics et pour les institutions, qui est un devoir fort des fonctionnaires (même si on l'oublie souvent en voyant les actes des politiques)
 
 **Les 5 principes centraux du NPM (Bezes et Demazière, 2011, à partir de Hood, 1991) :**
 
@@ -193,7 +192,9 @@ Pour Weick, ce processus comporte généralement plusieurs caractéristiques cl�
 
 -   Gestion par les résultats
 
-Philippe Bezes, Didier Demazière, Thomas Le Bianic, Catherine Paradeise, Romuald Normand, Daniel Benamouzig, Frédéric Pierru et Julia Evetts, « *New Public Management* et professions dans l’État : au-delà des oppositions, quelles recompositions ? », *Sociologie du travail*, Vol. 53 - n° 3 \| 2011, 293-348.
+Référence intéressante dans le NPM en France :
+
+**Philippe Bezes, Didier Demazière, Thomas Le Bianic, Catherine Paradeise, Romuald Normand, Daniel Benamouzig, Frédéric Pierru et Julia Evetts, « *New Public Management* et professions dans l’État : au-delà des oppositions, quelles recompositions ? », *Sociologie du travail*, Vol. 53 - n° 3 \| 2011, 293-348.**
 
 ## Orthographe
 
