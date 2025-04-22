@@ -1,0 +1,160 @@
+---
+title: "Public Reaction to Pharmaceutical Preannouncements on Social Media: A Signaling Perspective"
+#bibliography: references.bib
+author:
+  - name: Olivier Caron
+    #orcid: 0000-0000-0000-0000
+    email: olivier.caron@dauphine.psl.eu
+    affiliations:
+      name: "Paris Dauphine - PSL"
+      city: Paris
+      state: France
+  - name: Christophe Benavent
+    orcid: 0000-0002-7253-5747
+    email: christophe.benavent@dauphine.psl.eu
+    affiliations:
+      name: "Paris Dauphine - PSL"
+      city: Paris
+      state: France
+date: 04/22/2025 
+date-format: long
+format:
+  beamer:
+    theme: metropolis
+    navigation: vertical
+    aspectratio: 169
+    pdf-engine: xelatex
+    mainfont: Latin Modern Sans #Fira Sans
+    lang: en
+    header-includes: |
+      \setbeamertemplate{footline}[frame number]
+#bibliography: references.bib
+#csl: apa.csl
+---
+
+## Context During the COVID-19 Pandemic
+
+During the COVID-19 pandemic, managing public perception became vital for pharmaceutical companies.
+
+  - **High Stakes Environment**: Global need for vaccines created immense pressure. Social media became a key conduit for information, opinion, and emotion (Zhang & Cozma, 2021).
+  
+  - **Strategic Communication vs. Public Discourse**: Firms used preannouncements to signal progress (Eliashberg & Robertson, 1988), but this clashed with organic public discussion, especially on side effects. Anecdotal reports, amplified online, could shape fear and reputation (Kasperson et al., 1988).
+  
+  - **French Context**: Notable vaccine skepticism (McKinley et al., 2023) and active social media use in France made it a pertinent setting.
+
+## Context Timeline
+
+![Twitter mentions and EMA approvals timeline for pharmaceutical companies](images/history.png){width=110%}
+
+## Research Problem and Objectives
+
+**Problem:** How do mentions of vaccine side effects on French-language Twitter shape public perceptions of major pharmaceutical brands (Pfizer, AstraZeneca, Moderna) during the COVID-19 pandemic (2020-2021)?
+
+**Objectives:**
+
+1. Empirically analyze how specific side effects became associated with particular brands in online discourse.
+
+2. Explore the mechanisms driving online risk perception and its impact on brand narratives (Kasperson et al., 2022; Van der Meer, 2018).
+
+3. Detect side-effect mentions at scale as a proxy of risk
+
+## Theoretical Framework
+
+- **Signaling theory** explains how companies use signals (like preannouncements) to reduce information asymmetry (Akerlof, 1970; Spence, 1973) and convey quality in uncertain markets.
+
+- **Preannouncements** serve multiple roles: informing stakeholders (investors, regulators), influencing competitors, and shaping public expectations (Eliashberg & Robertson, 1988; Robertson et al., 1995; Su & Rao, 2010).
+
+- **Social Amplification of Risk Framework (SARF):** This framework explains how risk perceptions are shaped and amplified (or attenuated) by social processes (Kasperson et al., 1988), especially on digital platforms ("amplification stations") (Van der Meer, 2018). Peer-to-peer sharing of experiences, particularly negative or alarming ones, can create narratives diverging from scientific consensus (Kasperson et al., 2022).
+
+## Hypotheses
+
+1.  **Risk Amplification:** Public discourse on side effects will disproportionately amplify certain risks (like thrombosis) beyond their statistical frequency, aligning with SARF principles (Kasperson et al., 1988; Van der Meer, 2018).
+
+2.  **Brand-Specific Associations:** Online conversations will construct distinct "side-effect profiles" for different brands, not necessarily mirroring clinical data but reflecting amplified narratives.
+
+3.  **Sentiment Dynamics:** Positive announcements (e.g., high efficacy) will cause temporary positive sentiment shifts, while negative events (e.g., safety concerns, suspensions) will trigger stronger, more persistent negative sentiment, highlighting negativity bias (Baumeister et al., 2001).
+
+## Methodology Overview
+
+- **Data:** Analyzed approx. 150,000 unique French-language tweets (2020-2021) mentioning Pfizer/BioNTech, Moderna, AstraZeneca, J&J, Sanofi, Valneva, filtered from a larger corpus (Banda et al., 2021). Focused on unique user content after preprocessing (removing RTs, duplicates, non-text elements).
+
+- **Side Effect Extraction (NER):** Used **GLiNER**, a zero-shot NER model (Zaratiana et al., 2023), fine-tuned on a small annotated set (100 tweets, F1=0.81), to identify side-effect mentions without large specific training data. Side effects were standardized into categories (e.g., 'Thrombosis', 'Cardiac Issues'). Its application in marketing is nascent (Hartmann & Netzer, 2023).
+
+- **Sentiment Analysis:** Used **XLM-RoBERTa** (Barbieri et al., 2021) (fine-tuned for multilingual COVID-19 tweets) to classify tweets as positive, neutral, or negative. Analyzed sentiment shifts "Before", "On", and "After" key announcement dates.
+
+## Results: Dominant Side Effects in Discourse
+
+Discourse heavily focused on severe, though statistically rare, events, supporting SARF (Kasperson et al., 1988; Van der Meer, 2018).
+
+- **Top Mentioned Categories:**
+  1. Thrombosis / Blood Clots (3280 mentions)
+  2. Cardiac Issues (myocarditis, etc.) (1603 mentions)
+  3. Death (474 mentions)
+  4. Neurological Issues (353 mentions)
+  5. Hemorrhages / Bleeding (305 mentions)
+  
+- This amplification highlights how public concern focuses on dreaded outcomes (Kasperson et al., 2022).
+
+## Results: Brand Discourse Volume (Side Effects)
+
+When looking at tweets mentioning only one company alongside side effects:
+
+- **AstraZeneca (7,660)** and **Pfizer (7,196)** dominated the discourse.
+
+- **Moderna (1,970)** followed significantly behind.
+
+- **Sanofi (1,163)** had notable volume, likely due to national visibility.
+
+- **BioNTech (256)** rarely appeared alone, mostly linked with Pfizer.
+
+(Reference: Figure 4 in the paper shows these counts)
+
+## Results: Brand-Specific Side Effect Associations
+
+Distinct side-effect profiles emerged in the online conversation:
+
+- **AstraZeneca:** Strongly linked to thrombotic events, especially during media/regulatory scrutiny. Also linked to cutaneous reactions.
+
+- **Pfizer:** Associated with common reactions (fever, pain) due to wide use, but also became a focal point for broader concerns (cardiac, neurological issues) mentioned online.
+
+- **Moderna:** Associated with cardiac or muscle-related issues, but generally less intensely than the others.
+
+## Results: Sentiment Dynamics (Pfizer & Moderna Efficacy)
+
+- **Pfizer (Nov 9, 2020 - 95% Efficacy):** Sharp drop in negative (~41% to ~13%) and surge in positive (~30% to ~74%) on announcement day. Rebound effect afterwards (Negative ~37%, Positive ~23%). (See Figure 1 [Image 1])
+
+- **Moderna (Nov 16, 2020 - 94.5% Efficacy):** Similar pattern. Negative decreased (~25% to ~8%), Positive peaked (~34% to ~68%) on day. Rebound afterwards (Negative ~36%, Positive ~25%). (See Figure 2 [Image 2])
+
+- *Shows strong, but temporary, impact of positive news.*
+
+## Results: Sentiment Dynamics (AstraZeneca Suspension)
+
+- **AstraZeneca (Mar 15, 2021 - Suspensions):** Starkly different reaction to negative event. Negative sentiment spiked dramatically (~49% to ~83%) on the day. Positive plummeted (~22% to ~9%). Negative sentiment remained highly dominant afterwards (~51%), showing minimal recovery. (See Figure 3 [Image 3])
+
+- *Shows potent and lasting effect of negative events/safety concerns, supporting negativity bias (Baumeister et al., 2001).*
+
+## Discussion
+
+- **SARF in Action:** Results confirm SARF principles; online discourse amplified specific risks (like thrombosis) (Kasperson et al., 2022) and created brand-specific risk narratives not perfectly aligned with clinical data (Kasperson et al., 1988).
+
+- **Signaling Challenges:** Optimistic preannouncements (Heil & Robertson, 1991) clash with amplified negative side-effect discussions. Communications targeting stakeholders (Eliashberg & Robertson, 1988) might be interpreted differently by the public, potentially amplifying risk (Eliashberg & Robertson, 1988).
+
+- **Reputation Management:** Negative events (like AstraZeneca thrombosis reports) can severely damage brand equity quickly (Aaker, 2010). Requires proactive monitoring (e.g., using NER), transparency, and engagement, not just broadcasting positive news.
+
+- **Methodological Utility:** Fine-tuned GLiNER (Zaratiana et al., 2023) is effective for large-scale, real-time analysis of public health discourse without extensive annotation, not yet used commonly in marketing research (Hartmann & Netzer, 2023).
+
+## Future Research Directions
+
+- **Long-Term Impact:** Investigate how amplified side-effect discourse affects long-term trust and brand perception beyond the initial crisis period.
+
+- **Sentiment & Regulation:** Examine the potential influence of social media sentiment dynamics on regulatory decisions or public health policy responses.
+
+- **Audience Segmentation:** Segment online populations (e.g., general public, HCPs, media) to understand variations in risk perception and amplification within different groups.
+
+- **Advanced NLP:** Use Large Language Models (LLMs) for more nuanced analysis: clarifying genuine brand targeting vs. incidental mentions, deeper sentiment analysis, identifying misinformation patterns.
+
+- **Social Listening for Agencies:** Implement real-time social listening (using NER etc.) for health agencies (EMA, ANSM) to rapidly detect emerging side-effect signals and complement official pharmacovigilance systems.
+
+- **Cross-Cultural Comparison:** Compare findings across different linguistic or cultural contexts to identify variations in risk amplification patterns (Dubé et al., 2013).
+
+## End
