@@ -1,0 +1,208 @@
+% Unofficial University of Cambridge Poster Template
+% NEW VERSION ADAPTED FOR MY USE
+\documentclass[final]{beamer}
+
+% ====================
+% Packages
+% ====================
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[orientation=portrait,size=a0,scale=1.40]{beamerposter}
+\usetheme{gemini}
+\usecolortheme{nott}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{caption}
+
+% ====================
+% Lengths (2-column layout)
+% ====================
+
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.4625\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+% ====================
+% Title
+% ====================
+
+\title{ACSS-PSL at {\#}SMM4H-HeaRD 2025: Multilingual and Monolingual Adverse Event Classification using Transformers (Tasks 1 \& 6)}
+
+\author{Olivier Caron \inst{1} \and Bruno Chaves Ferreira \inst{1} \and Christophe Benavent \inst{1}}
+
+\institute[DRM, PSL]{\inst{1} DRM, Paris-Dauphine University, PSL University, CNRS, 75016 Paris, France}
+
+% ====================
+% Footer
+% ====================
+
+\footercontent{
+  \href{mailto:olivier.caron@dauphine.psl.eu}{olivier.caron@dauphine.psl.eu} \hfill
+  \href{https://acss-dig.psl.eu/}{ACSS-PSL} @ {\#}SMM4H-HeaRD 2025 \hfill
+  \href{https://github.com/oliviercaron/smm4h}{github.com/oliviercaron/smm4h}
+}
+
+% ====================
+% Logo (optional)
+% ====================
+
+% Uncomment and replace with your logos if needed
+%\logoleft{\includegraphics[height=2.5cm]{logos/acss_logoo.png}}
+%\logoright{\includegraphics[height=2.5cm]{logos/dauphine_logoo.png}}
+
+% ====================
+% Body
+% ====================
+
+\begin{document}
+
+\begin{frame}[t] 
+\begin{columns}[t]
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{block}{Introduction}
+    Formal reporting systems from regulatory agencies like the FDA or EMA are central to pharmacovigilance but are known for significant under-reporting. In parallel, patients frequently use social media platforms like Reddit and X to share personal experiences with medications. This user-generated content forms a large body of real-world data offering valuable insights, such as detecting novel safety signals or understanding patient perspectives. However, the informal language, high volume, and multilingual nature of this data require advanced Natural Language Processing (NLP) techniques for effective analysis. Our work tackles two such tasks from the 2025 {\#}SMM4H Shared Tasks.
+  \end{block}
+  
+  \vfill % AJOUT: Espace vertical flexible
+
+  \begin{block}{Tasks Description}
+    \heading{Task 1: Multilingual ADE Classification}
+    This task required identifying social media posts mentioning Adverse Drug Events (ADEs) across English, French, German, and Russian. A post is labeled positive if it contains a personal mention of an ADE. The dataset was highly imbalanced, with the positive class being rare.
+    \begin{center}
+    \captionof{table}{Task 1: Train and Dev Set Distribution by Language}
+    \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Language} & \textbf{Train Total} & \textbf{Train Pos (\%)} & \textbf{Dev Total} & \textbf{Dev Pos (\%)} \\
+    \midrule
+    German (de)  & 1,482  & 83 (5.6\%)   & 634  & 35 (5.5\%)  \\
+    English (en) & 17,974 & 1,214 (6.8\%) & 902  & 61 (6.8\%)  \\
+    French (fr)  & 977    & 70 (7.2\%)    & 419  & 30 (7.2\%)  \\
+    Russian (ru) & 10,754 & 1,084 (10.1\%) & 2,670 & 272 (10.2\%) \\
+    \midrule
+    \textbf{All} & \textbf{31,187} & \textbf{2,451 (7.9\%)} & \textbf{4,625} & \textbf{398 (8.6\%)} \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+
+    \heading{Task 6: Shingles VAEM Classification}
+    This task involved identifying Reddit posts reporting personal mentions of Shingles vaccine adverse events or vaccine failures (VAEM). Posts were labeled positive for first-hand experiences of an adverse reaction to the Shingrix vaccine or its failure. The dataset was relatively balanced, with the positive class representing about 46\% of the data.
+  \end{block}
+  
+  \vfill % AJOUT: Espace vertical flexible
+
+    \begin{block}{Implementation Details}
+    The code for our experiments is publicly available on GitHub. All models were trained using the PyTorch framework on a single NVIDIA RTX 3070 GPU with 8GB of VRAM.
+  \end{block}
+  
+  \begin{alertblock}{Discussion \& Conclusion}
+    Our work demonstrates the effectiveness of transformer models on noisy social media data, even without any text preprocessing.
+    \begin{itemize}
+        \item \textbf{Task 1 (Multilingual):} Our XLM-ROBERTa-Large model achieved an overall F1-score of 0.633. Performance varied significantly by language (F1 > 0.72 for English/French, vs. 0.54 for Russian), likely due to the heterogeneity of data sources.
+        \item \textbf{Task 6 (Shingles Vaccine):} Our DeBERTa-V3-Base model with 5-fold cross-validation achieved a high F1-score of 0.951. This result highlights the model's robustness to noisy content, suggesting its pre-training was sufficient to handle social media specificities like URLs or informalities.
+        \item \textbf{Key Strategy:} Class weighting was a crucial technique to handle data imbalance in both tasks.
+    \end{itemize}
+  \end{alertblock}
+
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{exampleblock}{System Configuration}
+    For both tasks, no text preprocessing was performed. A class-weighted cross-entropy loss was used to mitigate data imbalance. The detailed hyperparameters are compared below.
+    {\small
+    \begin{center}
+    \captionof{table}{Comparison of training configurations.}
+    \begin{tabularx}{\linewidth}{l X X}
+    \toprule
+    \textbf{Hyperparameter} & \textbf{Task 1 (Multilingual ADE)} & \textbf{Task 6 (Shingles VAEM)} \\
+    \midrule
+    Model & XLM-ROBERTa-Large & DeBERTa-v3-base \\
+    Optimizer & AdaFactor & AdamW \\
+    Learning Rate & 1e-5 & 2e-5 \\
+    Weight Decay & 0.05 & 0.01 \\
+    Epochs & 6 & Up to 6 \\
+    Effective Batch Size & 32 & 8 \\
+    Gradient Accumulation & Yes & No \\
+    Learning Rate Scheduler & Cosine & Default \\
+    Warmup Ratio & 10\% & None \\
+    Cross-Validation & None & 5-fold stratified \\
+    Ensembling & None & Averaged probabilities \\
+    Dropout & 0.3 & Default \\
+    Max Sequence Length & 256 tokens & 512 tokens \\
+    \bottomrule
+    \end{tabularx}
+    \end{center}
+    }
+  \end{exampleblock}
+  
+  \vfill % AJOUT: Espace vertical flexible
+
+  \begin{block}{Results}
+    \heading{Task 1: Overall F1-Score of 0.633}
+    Our system consistently outperformed the participant mean and median across all metrics and languages, with particularly strong performance in French and English.
+    \begin{center}
+    \captionof{table}{Task 1: F1 scores by language (Test set)}
+    \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Team} & \textbf{F1-en} & \textbf{F1-ru} & \textbf{F1-de} & \textbf{F1-fr} \\
+    \midrule
+    ACSS-PSL & 0.7208 & 0.5379 & 0.6878 & 0.7374 \\
+    Mean     & 0.5915 & 0.4721 & 0.5567 & 0.5876 \\
+    Median   & 0.6924 & 0.5366 & 0.6686 & 0.6865 \\
+    \bottomrule
+    \end{tabular}
+
+    \captionof{table}{Task 1: Macro-averaged overall results (Test set)}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Team} & \textbf{F1-score} & \textbf{Precision} & \textbf{Recall} \\
+    \midrule
+    ACSS-PSL & 0.6333 & 0.6222 & 0.6449 \\
+    Mean     & 0.5394 & 0.5440 & 0.5661 \\
+    Median   & 0.6268 & 0.6172 & 0.6312 \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+    
+    \heading{Task 6: Overall F1-Score of 0.951}
+    Our system achieved a final F1-score of 0.951, slightly surpassing the official baseline. The ensembling strategy provided a clear benefit over a single model (0.951 vs 0.942).
+    \begin{center}
+    \captionof{table}{Task 6: Final results (Test set)}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Team} & \textbf{F1-score} & \textbf{Precision} & \textbf{Recall} \\
+    \midrule
+    ACSS-PSL & 0.951 & 0.940 & 0.962 \\
+    Mean     & 0.938 & 0.916 & 0.961 \\
+    Median   & 0.944 & 0.922 & 0.972 \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+  \end{block}
+  
+  \vfill % AJOUT: Espace vertical flexible
+
+  \begin{block}{Acknowledgements}
+    We thank the SMM4H 2025 organizers for providing the datasets and evaluation framework.
+\end{block}
+
+    
+\end{column}
+
+\separatorcolumn
+
+\end{columns}
+\end{frame}
+
+\end{document}
