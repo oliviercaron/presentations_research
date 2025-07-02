@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: anonymous-submission-latex-2025.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: aaai25.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Database file #1: aaai25.bib
+You've used 17 entries,
+            2840 wiz_defined-function locations,
+            699 strings with 10704 characters,
+and the built_in function-call counts, 16209 in all, are:
+= -- 1106
+> -- 1263
+< -- 0
++ -- 467
+- -- 445
+* -- 1335
+:= -- 2630
+add.period$ -- 75
+call.type$ -- 17
+change.case$ -- 212
+chr.to.int$ -- 18
+cite$ -- 17
+duplicate$ -- 998
+empty$ -- 894
+format.name$ -- 496
+if$ -- 3056
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 269
+newline$ -- 89
+num.names$ -- 70
+pop$ -- 556
+preamble$ -- 1
+purify$ -- 198
+quote$ -- 0
+skip$ -- 428
+stack$ -- 0
+substring$ -- 473
+swap$ -- 617
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 153
+warning$ -- 0
+while$ -- 96
+width$ -- 0
+write$ -- 228

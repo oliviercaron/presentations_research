@@ -1,0 +1,369 @@
+%File: anonymous-submission-latex-2025.tex
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai25}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+%
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%
+% These are are recommended to typeset listings but not required. See the subsubsection on listing. Remove this block if you don't have listings in your paper.
+\usepackage{newfloat}
+\usepackage{listings}
+\DeclareCaptionStyle{ruled}{labelfont=normalfont,labelsep=colon,strut=off} % DO NOT CHANGE THIS
+\lstset{%
+	basicstyle={\footnotesize\ttfamily},% footnotesize acceptable for monospace
+	numbers=left,numberstyle=\footnotesize,xleftmargin=2em,% show line numbers, remove this entire line if you don't want the numbers.
+	aboveskip=0pt,belowskip=0pt,%
+	showstringspaces=false,tabsize=2,breaklines=true}
+\floatstyle{ruled}
+\newfloat{listing}{tb}{lst}{}
+\floatname{listing}{Listing}
+%
+% Keep the \pdfinfo as shown here. There's no need
+% for you to add the /Title and /Author tags.
+\pdfinfo{
+/TemplateVersion (2025.1)
+}
+
+% DISALLOWED PACKAGES
+% \usepackage{authblk} -- This package is specifically forbidden
+% \usepackage{balance} -- This package is specifically forbidden
+% \usepackage{color (if used in text)
+% \usepackage{CJK} -- This package is specifically forbidden
+% \usepackage{float} -- This package is specifically forbidden
+% \usepackage{flushend} -- This package is specifically forbidden
+% \usepackage{fontenc} -- This package is specifically forbidden
+% \usepackage{fullpage} -- This package is specifically forbidden
+% \usepackage{geometry} -- This package is specifically forbidden
+% \usepackage{grffile} -- This package is specifically forbidden
+% \usepackage{hyperref} -- This package is specifically forbidden
+% \usepackage{navigator} -- This package is specifically forbidden
+% (or any other package that embeds links such as navigator or hyperref)
+% \indentfirst} -- This package is specifically forbidden
+% \layout} -- This package is specifically forbidden
+% \multicol} -- This package is specifically forbidden
+% \nameref} -- This package is specifically forbidden
+% \usepackage{savetrees} -- This package is specifically forbidden
+% \usepackage{setspace} -- This package is specifically forbidden
+% \usepackage{stfloats} -- This package is specifically forbidden
+% \usepackage{tabu} -- This package is specifically forbidden
+% \usepackage{titlesec} -- This package is specifically forbidden
+% \usepackage{tocbibind} -- This package is specifically forbidden
+% \usepackage{ulem} -- This package is specifically forbidden
+% \usepackage{wrapfig} -- This package is specifically forbidden
+% DISALLOWED COMMANDS
+% \nocopyright -- Your paper will not be published if you use this command
+% \addtolength -- This command may not be used
+% \balance -- This command may not be used
+% \baselinestretch -- Your paper will not be published if you use this command
+% \clearpage -- No page breaks of any kind may be used for the final version of your paper
+% \columnsep -- This command may not be used
+% \newpage -- No page breaks of any kind may be used for the final version of your paper
+% \pagebreak -- No page breaks of any kind may be used for the final version of your paperr
+% \pagestyle -- This command may not be used
+% \tiny -- This is not an acceptable font size.
+% \vspace{- -- No negative value may be used in proximity of a caption, figure, table, section, subsection, subsubsection, or reference
+% \vskip{- -- No negative value may be used to alter spacing above or below a caption, figure, table, section, subsection, subsubsection, or reference
+
+\setcounter{secnumdepth}{0} %May be changed to 1 or 2 if section numbers are desired.
+
+% The file aaai25.sty is the style file for AAAI Press
+% proceedings, working notes, and technical reports.
+%
+
+% Title
+
+% Your title must be in mixed case, not sentence case.
+% That means all verbs (including short verbs like be, is, using,and go),
+% nouns, adverbs, adjectives should be capitalized, including both words in hyphenated terms, while
+% articles, conjunctions, and prepositions are lower case unless they
+% directly follow a colon or long dash
+\title{ACSS-PSL at \#SMM4H-HeaRD 2025: Multilingual and Monolingual Adverse Event Classification using Transformers (Tasks 1 \& 6) }
+\author{
+    %Authors
+    % All authors must be in the same font size and format.
+    Written by AAAI Press Staff\textsuperscript{\rm 1}\thanks{With help from the AAAI Publications Committee.}\\
+    AAAI Style Contributions by Pater Patel Schneider,
+    Sunil Issar,\\
+    J. Scott Penberthy,
+    George Ferguson,
+    Hans Guesgen,
+    Francisco Cruz\equalcontrib,
+    Marc Pujol-Gonzalez\equalcontrib
+}
+\affiliations{
+    %Afiliations
+    \textsuperscript{\rm 1}Association for the Advancement of Artificial Intelligence\\
+    % If you have multiple authors and multiple affiliations
+    % use superscripts in text and roman font to identify them.
+    % For example,
+
+    % Sunil Issar\textsuperscript{\rm 2},
+    % J. Scott Penberthy\textsuperscript{\rm 3},
+    % George Ferguson\textsuperscript{\rm 4},
+    % Hans Guesgen\textsuperscript{\rm 5}
+    % Note that the comma should be placed after the superscript
+
+    1101 Pennsylvania Ave, NW Suite 300\\
+    Washington, DC 20004 USA\\
+    % email address must be in roman text type, not monospace or sans serif
+    proceedings-questions@aaai.org
+%
+% See more examples next
+}
+
+%Example, Single Author, ->> remove \iffalse,\fi and place them surrounding AAAI title to use it
+\iffalse
+\title{My Publication Title --- Single Author}
+\author {
+    Author Name
+}
+\affiliations{
+    Affiliation\\
+    Affiliation Line 2\\
+    name@example.com
+}
+\fi
+
+\iffalse
+%Example, Multiple Authors, ->> remove \iffalse,\fi and place them surrounding AAAI title to use it
+\title{My Publication Title --- Multiple Authors}
+\author {
+    % Authors
+    First Author Name\textsuperscript{\rm 1},
+    Second Author Name\textsuperscript{\rm 2},
+    Third Author Name\textsuperscript{\rm 1}
+}
+\affiliations {
+    % Affiliations
+    \textsuperscript{\rm 1}Affiliation 1\\
+    \textsuperscript{\rm 2}Affiliation 2\\
+    firstAuthor@affiliation1.com, secondAuthor@affilation2.com, thirdAuthor@affiliation1.com
+}
+\fi
+
+
+% REMOVE THIS: bibentry
+% This is only needed to show inline citations in the guidelines document. You should not need it and can safely delete it.
+\usepackage{bibentry}
+% END REMOVE bibentry
+%En commençant par la tâche 6, nous nous sommes rendu compte que le preprocessing de textes, comme la suppression des titres ou la supressions des balises url ou de mentions n'apportaient pas ou même faisait baisser la performance. Nous avons donc continué sans preprocessing sur les deux tâches en nous focalisant sur l'utilisation d'un modèle préentraîné adapté aux différences tâches.
+%Compte tenu des 
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper describes the two systems developed by team ACSS-PSL for two tasks at the 10th Social Media Mining for Health (\#SMM4H) and Health Real-World Data (HeaRD) Shared Tasks 2025.
+We participated in Task 1, the binary classification of social media posts containing Adverse Drug Events (ADEs) across German, French, Russian, and English, and Task 6, the binary classification of Reddit posts mentioning Shingles vaccine adverse events or failures.
+For Task 1, we fine-tuned an XLM-RoBERTa-Large model on multilingual data with class weighting, achieving an overall F1-score of 0.633 on the test set.
+For Task 6, we utilized a DeBERTa-V3-Base model trained using 5-fold cross-validation with weighted loss, achieving an F1-score of 0.951 on the test set.
+\end{abstract}
+
+% --- Introduction ---
+\section{Introduction}
+
+Formal reporting systems from regulatory agencies, such as the FDA's FAERS and EMA's EudraVigilance, are central to pharmacovigilance, gathering official reports of adverse drug events (ADEs).
+However, these systems are known for significant under-reporting, with actual rates varying substantially by drug and event type \cite{alatawi2017empirical}.
+Parallel to these official channels, patients frequently use social media platforms like X (formerly Twitter), Reddit, and specific health forums to share personal experiences with medications \cite{golder2021comparative}.
+Online, individuals discuss ADEs to find peer support, report real-time observations, or share experiences—from minor issues to serious side effects—sometimes missed by conventional systems \cite{golder2021comparative, zhou2020complementing, yu2022assessment}.
+
+This user-generated content forms a large body of real-world data offering valuable pharmacovigilance insights, potentially helping to detect novel safety signals or understand patient perspectives on treatment burdens \cite{yang2014postmarketing, liu2014identifying}.
+Yet, the informal language, high volume, and multilingual nature of this data require advanced Natural Language Processing (NLP) techniques for effective extraction and analysis \cite{liu2015identifying, yang2012detecting}.
+
+The Social Media Mining for Health (\#SMM4H) workshop series plays a key role in advancing the development and evaluation of such NLP methods.
+The 10th \#SMM4H and Health Real-World Data (HeaRD) Shared Tasks in 2025 \cite{smm4h-heard-overview-2025} provided the setting for our work.
+Our team, ACSS-PSL, participated in two binary classification tasks. Task 1 required identifying posts mentioning ADEs across four languages from various online sources, while Task 6 involved classifying Reddit posts about the Shingles vaccine to identify reports of personal adverse events or vaccine failures (VAEM).
+
+
+This paper presents our approaches to these tasks, focusing on pre-trained transformer models. We performed no additional text preprocessing beyond what was already applied to the shared task data
+We describe our system configurations, training strategies, and results, demonstrating competitive performance, particularly for Task 6. While our approach primarily leverages established transformer architectures without novel methodological modifications, it demonstrates effectiveness under limited computational resources.
+
+\section{Tasks Description}
+
+\subsection{Task 1: Multilingual ADE Classification}
+
+This task involved the binary classification of user-generated social media posts in four languages (English, French, German, and Russian), with the goal of determining whether a post contains a mention of an Adverse Drug Event (ADE).
+Each post was labeled as positive (1) if it contained at least one personal mention of an ADE, or negative (0) otherwise.
+The dataset presented significant challenges, including highly imbalanced class distributions (with ADEs comprising only about 1\% of the data), noisy and informal language typical of social media, and limited training data size per language. Our approach needed to address these issues and generalize across languages effectively.
+The training data for this task included previously published datasets in French and German, as well as Russian user reviews from the RuDReC corpus \cite{tutubalina2020russian}, and tweets from the SMM4H 2021 shared task \cite{magge-etal-2021-overview}. The English data was reused from earlier editions of the SMM4H shared tasks. The full dataset and shared task overview are described in \cite{smm4h-heard-overview-2025}.
+
+We first provide a brief analysis of the Task 1 training and development data (Tables~\ref{tab:dataset-overview}–\ref{tab:pos-length}).
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Task 1 data volume and positive‐class rate by language.}
+\label{tab:data-volume-label}
+\begin{tabular}{|l|cc|cc|}
+\hline
+\multirow{2}{*}{\textbf{Lang}} &
+\multicolumn{2}{c|}{\textbf{Train}} &
+\multicolumn{2}{c|}{\textbf{Dev}} \\ \cline{2-5}
+ & Total & Pos (\%) & Total & Pos (\%) \\
+\hline
+de & 1\,482 & 83 \,(5.6) & 634 & 35 \,(5.5) \\
+en & 17\,974 & 1\,214 \,(6.8) & 902 & 61 \,(6.8) \\
+fr & 977 & 70 \,(7.2) & 419 & 30 \,(7.2) \\
+ru & 10\,754 & 1\,084 (10.1) & 2\,670 & 272 (10.2) \\
+\hline
+\textbf{All} & \textbf{31\,187} & \textbf{2\,451 (7.9)} & \textbf{4\,625} & \textbf{398 (8.6)} \\
+\hline
+\end{tabular}
+\setlength{\tabcolsep}{6pt}
+\normalsize
+\end{table}
+
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{6pt}
+\caption{Median and IQR of positive texts (label 1).}
+\label{tab:pos-length}
+\begin{tabular}{|l|cc|cc|}
+\hline
+\multirow{2}{*}{\textbf{Lang}} & \multicolumn{2}{c|}{\textbf{Train}} & \multicolumn{2}{c|}{\textbf{Dev}} \\ \cline{2-5}
+ & Med & IQR & Med & IQR \\
+\hline
+de & 204 & 69–272 & 220 & 72–292 \\
+fr & 155 & 97–203 & 118 & 73–177 \\
+ru & 34 & 13–37 & 20 & 12–37 \\
+en & 19 & 14–24 & 19 & 12–23 \\
+\hline
+\end{tabular}
+\setlength{\tabcolsep}{6pt}
+\normalsize
+\end{table}
+
+
+
+\subsection{Task 6: Shingles VAEM Classification}
+
+Task 6 involved identifying Reddit posts reporting personal mentions of Shingles vaccine adverse events or vaccine failures (VAEM).
+Posts were labeled as positive (1) when they included a first-hand experience (or that of someone close to the user) of an adverse reaction to the Shingrix vaccine, or a failure of the vaccine to prevent shingles.
+Posts were labeled negative (0) if they discussed shingles or vaccination in general, mentioned symptoms without attributing them to a vaccine, or lacked a clear report of a recent personal adverse event or failure.
+The dataset consisted of Reddit comments and titles joined with comments, reflecting the informal, varied, and conversational nature of online discourse. This setting posed challenges for accurate classification due to the variety of expressions and noise present in Reddit posts, which we aimed to address in our modeling strategy described below.
+
+
+% --- System Description ---
+\section{Systems Description}
+
+Starting with Task 6, initial experiments indicated that text preprocessing steps, such as removing titles, URLs, or user mentions, did not improve or even degraded performance.
+Consequently, we decided to approach both tasks without any text preprocessing, relying solely on the raw text inputs and focusing on the capabilities of the pre-trained models and fine-tuning strategies.
+For both tasks, we employed a class-weighted cross-entropy loss to mitigate the effects of data imbalance. Class weights were computed dynamically based on the label distribution in the training data.
+
+\subsubsection{Task 1: Model and Training Details}
+
+We fine-tuned the XLM-RoBERTa-Large model \cite{conneau2019}, chosen for its cross-lingual capabilities, using the Hugging Face transformers library \cite{wolf-etal-2020-transformers}. Recognizing the severe class imbalance in the dataset, our primary strategy involved class weighting.
+The model was trained for 6 epochs using the memory-efficient AdaFactor optimizer with a learning rate of 1e-5. We employed a cosine learning rate scheduler with a 10\% warmup ratio and applied a weight decay of 0.05. An effective batch size of 32 was achieved through a per-device batch size of 2 combined with 16 gradient accumulation steps.
+To mitigate overfitting and improve efficiency, we increased both hidden and attention dropout probabilities within the model configuration to 0.3. Furthermore, we enabled gradient checkpointing to reduce memory consumption and utilized BF16 mixed precision when supported by the hardware, explicitly disabling FP16.
+Model selection relied on early stopping with a patience of 1 epoch, monitoring the positive class F1-score on the validation set. The best-performing checkpoint based on this metric was loaded at the end of training. Regarding input processing, texts were tokenized using the model's specific tokenizer, truncating sequences exceeding a maximum length of 256 tokens, and dynamic padding was applied per batch.
+
+
+\subsubsection{Task 6: Model and Training Details}
+
+We used the DeBERTa-v3-base model, which was selected due to its strong performance for its size across a range of natural language understanding (NLU) tasks, as demonstrated in prior work \cite{he2021debertav3, he2021deberta}. Input texts were tokenized with truncation up to a maximum length of 512 tokens.
+A 5-fold stratified cross-validation strategy was employed to improve robustness and make better use of the available data. 
+For each fold, we trained the model for up to 6 epochs using the AdamW optimizer, applying early stopping with a patience of 3 epochs based on the validation F1-score. The best checkpoint was saved and used for the final ensemble. FP16 mixed precision was utilized during training.
+We used a batch size of 8, with a learning rate of 2e-5 and a weight decay of 0.01. The class weights were computed independently for each fold using inverse class frequency, thereby emphasizing the minority class during training.
+Final predictions on the test set were generated by ensembling. We averaged the predicted probabilities for the positive class obtained from the best model of each of the 5 folds. A final decision threshold was then optimized on these averaged probabilities using the true labels from the holdout set to maximize the F1-score for the positive class.
+
+\subsection{Implementation Details}
+
+All models were trained using the PyTorch framework \cite{pytorch2019}, and all experiments were run on a single NVIDIA RTX 3070 GPU with 8GB of VRAM.
+
+\section{Results}
+
+Both of our models achieved F1-scores above the mean and median scores of the other participants in the shared tasks.
+Our system achieved an F1-score of 0.951 on Task 6, slightly surpassing the 0.946 baseline reported in \cite{khademi2024exploring}, despite relying on the lighter DeBERTa-v3-base architecture instead of the large-scale \texttt{twitter-roberta-large-2022} model.
+
+For Task 1, we achieved an overall F1-score of 0.633 using a fixed threshold of 0.25, chosen through limited empirical tuning under the 10-submission constraint. For Task 6, we applied a dynamically optimized threshold, computed by maximizing the F1-score over the ensemble-averaged probabilities on the holdout validation set.
+
+The results are presented in Table~\ref{tab:task1-lang-results} and Table~\ref{tab:task1-overall} for Task 1, and in Table~\ref{tab:task6-results} for Task 6.
+Our system consistently outperformed the participant mean and median across all metrics and languages in Task 1, with particularly strong performance in French and English. 
+
+Performance on Russian posts was lower in comparison, as reflected in the F1-score of 0.538.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Task 1: F1 scores by language on the test set.}
+    \label{tab:task1-lang-results}
+    \begin{tabular}{|l|c|c|c|c|}
+    \hline
+    \textbf{Team} & \textbf{F1-en} & \textbf{F1-ru} & \textbf{F1-de} & \textbf{F1-fr} \\
+    \hline
+    ACSS-PSL & 0.7208 & 0.5379 & 0.6878 & 0.7374 \\
+    Mean     & 0.5915 & 0.4721 & 0.5567 & 0.5876 \\
+    Median   & 0.6924 & 0.5366 & 0.6686 & 0.6865 \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Task 1: Overall macro-averaged results compared to participant mean and median.}
+    \label{tab:task1-overall}
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Team} & \textbf{F1-score} & \textbf{Precision} & \textbf{Recall} \\
+    \hline
+    ACSS-PSL & 0.6333 & 0.6222 & 0.6449 \\
+    Mean     & 0.5394 & 0.5440 & 0.5661 \\
+    Median   & 0.6268 & 0.6172 & 0.6312 \\
+    \hline
+    \end{tabular}
+\end{table}
+
+
+
+\begin{table}[htbp]
+    \centering
+    \caption{Task 6: F1, precision, and recall on the test set compared to participant mean and median.}
+    \label{tab:task6-results}
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Team} & \textbf{F1-score} & \textbf{Precision} & \textbf{Recall} \\
+    \hline
+    ACSS-PSL & 0.951 & 0.940 & 0.962 \\
+    Mean     & 0.938 & 0.916 & 0.961 \\
+    Median   & 0.944 & 0.922 & 0.972 \\
+    \hline
+    \end{tabular}
+\end{table}
+
+
+
+% --- Conclusion ---
+\section{Post-hoc Error Analysis}
+
+
+
+\section{Discussion}
+Our participation showed transformer models' effectiveness on health social media analysis, even without text preprocessing. For Task 1 (Multilingual ADE), the XLM-RoBERTa-Large achieved an F1 of 0.633, which remained below the 0.7048 baseline.
+Performance varied by language (EN/FR F1 $>$ 0.72, DE $\sim$ 0.69, RU 0.538), likely due to heterogeneous data sources (Russian data from RuDReC drug reviews vs.\ others from forums/X) and sizes, impacting generalization.
+Future work for Task 1 should focus on advanced data augmentation, cross-lingual/domain transfer strategies, and ensembling to address these challenges, particularly for Russian.
+
+For Task 6 (Shingles VAEM), our system achieved an F1-score of 0.951, slightly exceeding the official baseline. This result was obtained using DeBERTa-V3-Base with 5-fold cross-validation and probability averaging, suggesting the approach's suitability for Reddit data. Notably, this high performance was achieved without any text preprocessing, highlighting the model's robustness to noisy social media content. We hypothesize that this robustness stems directly from DeBERTa-V3-Base's pre-training. This model was trained on a diverse 160GB corpus (including Wikipedia and BookCorpus) using advanced techniques such as ELECTRA-style replaced token detection and disentangled attention mechanisms \cite{he2021debertav3}. These elements likely grant it inherent capabilities to effectively handle or ignore typical social media noise (e.g., URLs, mentions, formatting variations).
+The effectiveness of the no-preprocessing approach indicates that the model's attention mechanisms might adeptly focus on relevant text spans despite surrounding noise. 
+Minor improvements might come from model scaling (e.g., DeBERTa-V3-Large if resources allowed) or hyperparameter tuning. Overall, the no-preprocessing strategy was viable, class weighting was crucial for imbalance, and resource constraints influenced model selection.
+This shows that a well-tuned and relatively lightweight setup can serve as a strong baseline, especially in resource-constrained scenarios.
+
+
+
+\bibliography{aaai25}
+
+\end{document}

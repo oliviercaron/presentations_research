@@ -1,0 +1,145 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Alatawi and Hansen(2017)}]{alatawi2017empirical}
+Alatawi, Y.~M.; and Hansen, R.~A. 2017.
+\newblock Empirical estimation of under-reporting in the US Food and Drug
+  Administration adverse event reporting system (FAERS).
+\newblock \emph{Expert opinion on drug safety}, 16(7): 761--767.
+
+\bibitem[{Conneau et~al.(2019)Conneau, Khandelwal, Goyal, Chaudhary, Wenzek,
+  Guzm{\'{a}}n, Grave, Ott, Zettlemoyer, and Stoyanov}]{conneau2019}
+Conneau, A.; Khandelwal, K.; Goyal, N.; Chaudhary, V.; Wenzek, G.;
+  Guzm{\'{a}}n, F.; Grave, E.; Ott, M.; Zettlemoyer, L.; and Stoyanov, V. 2019.
+\newblock Unsupervised Cross-lingual Representation Learning at Scale.
+\newblock \emph{CoRR}, abs/1911.02116.
+
+\bibitem[{Golder et~al.(2021)Golder, Smith, O’Connor, Gross, Hennessy, and
+  Gonzalez-Hernandez}]{golder2021comparative}
+Golder, S.; Smith, K.; O’Connor, K.; Gross, R.; Hennessy, S.; and
+  Gonzalez-Hernandez, G. 2021.
+\newblock A comparative view of reported adverse effects of statins in social
+  media, regulatory data, drug information databases and systematic reviews.
+\newblock \emph{Drug safety}, 44: 167--179.
+
+\bibitem[{He, Gao, and Chen(2021)}]{he2021debertav3}
+He, P.; Gao, J.; and Chen, W. 2021.
+\newblock Debertav3: Improving deberta using electra-style pre-training with
+  gradient-disentangled embedding sharing.
+\newblock \emph{arXiv preprint arXiv:2111.09543}.
+
+\bibitem[{He et~al.(2020)He, Liu, Gao, and Chen}]{he2021deberta}
+He, P.; Liu, X.; Gao, J.; and Chen, W. 2020.
+\newblock Deberta: Decoding-enhanced bert with disentangled attention.
+\newblock \emph{arXiv preprint arXiv:2006.03654}.
+
+\bibitem[{Khademi et~al.(2024)Khademi, Palmer, Dimaguila, Javed, and
+  Buttery}]{khademi2024exploring}
+Khademi, S.; Palmer, C.; Dimaguila, G.~L.; Javed, M.; and Buttery, J. 2024.
+\newblock Exploring Large Language Models for Detecting Online Vaccine
+  Reactions.
+\newblock In \emph{Health. Innovation. Community: It Starts With Us}, 30--35.
+  IOS Press.
+
+\bibitem[{Klein et~al.(2025)Klein, Dasgupta, Flores~Amaro, Jana, Khademi,
+  Lopez-Garcia, Onishi, Powell, Raithel, Rajwal, Roller, Sarker, Sinha, Thomas,
+  Tutubalina, Xu, Zweigenbaum, and
+  Gonzalez-Hernandez}]{smm4h-heard-overview-2025}
+Klein, A.~Z.; Dasgupta, T.; Flores~Amaro, I.; Jana, S.; Khademi, S.;
+  Lopez-Garcia, G.; Onishi, T.; Powell, J.; Raithel, L.; Rajwal, S.; Roller,
+  R.; Sarker, A.; Sinha, M.; Thomas, P.; Tutubalina, E.; Xu, D.; Zweigenbaum,
+  P.; and Gonzalez-Hernandez, G. 2025.
+\newblock {Overview of the 10th Social Media Mining for Health (\#SMM4H) and
+  Health Real-World Data (HeaRD) Shared Tasks at ICWSM 2025}.
+\newblock In \emph{Workshop Proceedings of the 19th International AAAI
+  Conference on Web and Social Media}. AAAI Press.
+
+\bibitem[{Liu and Chen(2015)}]{liu2015identifying}
+Liu, X.; and Chen, H. 2015.
+\newblock Identifying adverse drug events from patient social media: a case
+  study for diabetes.
+\newblock \emph{IEEE intelligent systems}, 30(3): 44--51.
+
+\bibitem[{Liu, Liu, and Chen(2014)}]{liu2014identifying}
+Liu, X.; Liu, J.; and Chen, H. 2014.
+\newblock Identifying adverse drug events from health social media: a case
+  study on heart disease discussion forums.
+\newblock In \emph{Smart Health: International Conference, ICSH 2014, Beijing,
+  China, July 10-11, 2014. Proceedings}, 25--36. Springer.
+
+\bibitem[{Magge et~al.(2021)Magge, Klein, Miranda-Escalada, Ali Al-Garadi,
+  Alimova, Miftahutdinov, Farre, Lima~L{\'o}pez, Flores, O{'}Connor,
+  Weissenbacher, Tutubalina, Sarker, Banda, Krallinger, and
+  Gonzalez-Hernandez}]{magge-etal-2021-overview}
+Magge, A.; Klein, A.; Miranda-Escalada, A.; Ali Al-Garadi, M.; Alimova, I.;
+  Miftahutdinov, Z.; Farre, E.; Lima~L{\'o}pez, S.; Flores, I.; O{'}Connor, K.;
+  Weissenbacher, D.; Tutubalina, E.; Sarker, A.; Banda, J.; Krallinger, M.; and
+  Gonzalez-Hernandez, G. 2021.
+\newblock Overview of the Sixth Social Media Mining for Health Applications
+  ({\#}{SMM}4{H}) Shared Tasks at {NAACL} 2021.
+\newblock In Magge, A.; Klein, A.; Miranda-Escalada, A.; Al-garadi, M.~A.;
+  Alimova, I.; Miftahutdinov, Z.; Farre-Maduell, E.; Lopez, S.~L.; Flores, I.;
+  O'Connor, K.; Weissenbacher, D.; Tutubalina, E.; Sarker, A.; Banda, J.~M.;
+  Krallinger, M.; and Gonzalez-Hernandez, G., eds., \emph{Proceedings of the
+  Sixth Social Media Mining for Health ({\#}SMM4H) Workshop and Shared Task},
+  21--32. Mexico City, Mexico: Association for Computational Linguistics.
+
+\bibitem[{Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan,
+  Killeen, Lin, Gimelshein, Antiga, Desmaison, Kopf, Yang, DeVito, Raison,
+  Tejani, Chilamkurthy, Steiner, Fang, Bai, and Chintala}]{pytorch2019}
+Paszke, A.; Gross, S.; Massa, F.; Lerer, A.; Bradbury, J.; Chanan, G.; Killeen,
+  T.; Lin, Z.; Gimelshein, N.; Antiga, L.; Desmaison, A.; Kopf, A.; Yang, E.;
+  DeVito, Z.; Raison, M.; Tejani, A.; Chilamkurthy, S.; Steiner, B.; Fang, L.;
+  Bai, J.; and Chintala, S. 2019.
+\newblock PyTorch: An Imperative Style, High-Performance Deep Learning Library.
+\newblock In \emph{Advances in Neural Information Processing Systems 32},
+  8024--8035. Curran Associates, Inc.
+
+\bibitem[{Tutubalina et~al.(2020)Tutubalina, Alimova, Miftahutdinov,
+  Sakhovskiy, Malykh, and Nikolenko}]{tutubalina2020russian}
+Tutubalina, E.; Alimova, I.; Miftahutdinov, Z.; Sakhovskiy, A.; Malykh, V.; and
+  Nikolenko, S. 2020.
+\newblock The Russian Drug Reaction Corpus and neural models for drug reactions
+  and effectiveness detection in user reviews.
+\newblock \emph{Bioinformatics}, 37(2): 243--249.
+
+\bibitem[{Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac,
+  Rault, Louf, Funtowicz, Davison, Shleifer, von Platen, Ma, Jernite, Plu, Xu,
+  Scao, Gugger, Drame, Lhoest, and Rush}]{wolf-etal-2020-transformers}
+Wolf, T.; Debut, L.; Sanh, V.; Chaumond, J.; Delangue, C.; Moi, A.; Cistac, P.;
+  Rault, T.; Louf, R.; Funtowicz, M.; Davison, J.; Shleifer, S.; von Platen,
+  P.; Ma, C.; Jernite, Y.; Plu, J.; Xu, C.; Scao, T.~L.; Gugger, S.; Drame, M.;
+  Lhoest, Q.; and Rush, A.~M. 2020.
+\newblock Transformers: State-of-the-Art Natural Language Processing.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing: System Demonstrations}, 38--45. Online:
+  Association for Computational Linguistics.
+
+\bibitem[{Yang et~al.(2012)Yang, Jiang, Yang, and Tang}]{yang2012detecting}
+Yang, C.~C.; Jiang, L.; Yang, H.; and Tang, X. 2012.
+\newblock Detecting signals of adverse drug reactions from health consumer
+  contributed content in social media.
+\newblock In \emph{Proceedings of ACM SIGKDD workshop on health informatics},
+  9. ACM Beijing.
+
+\bibitem[{Yang, Yang, and Jiang(2014)}]{yang2014postmarketing}
+Yang, C.~C.; Yang, H.; and Jiang, L. 2014.
+\newblock Postmarketing drug safety surveillance using publicly available
+  health-consumer-contributed content in social media.
+\newblock \emph{ACM Transactions on Management Information Systems (TMIS)},
+  5(1): 1--21.
+
+\bibitem[{Yu and Vydiswaran(2022)}]{yu2022assessment}
+Yu, D.; and Vydiswaran, V.~V. 2022.
+\newblock An assessment of mentions of adverse drug events on social media with
+  natural language processing: model development and analysis.
+\newblock \emph{JMIR Medical Informatics}, 10(9): e38140.
+
+\bibitem[{Zhou, Hultgren et~al.(2020)}]{zhou2020complementing}
+Zhou, Z.; Hultgren, K.~E.; et~al. 2020.
+\newblock Complementing the US Food and Drug Administration adverse event
+  reporting system with adverse drug reaction reporting from social media:
+  comparative analysis.
+\newblock \emph{JMIR public health and surveillance}, 6(3): e19266.
+
+\end{thebibliography}
