@@ -11,5 +11,5 @@ This repository hosts various presentations I have given on my research.
 - Atelier Transversal Dauphine 2025 - [HTML](https://oliviercaron.github.io/presentations_research/atelier_transversal/atelier_transversal_2025_dauphine.html)  
 - CompText Presentation - [PDF](https://oliviercaron.github.io/presentations_research/Comptext/comptext_presentation.pdf)  
 - Econom’IA Presentation - [PDF](https://oliviercaron.github.io/presentations_research/Econom'IA/economia_presentation.pdf)  
-- ICWSM - SMM4H - [PDF](https://oliviercaron.github.io/presentations_research/SMM4H/VF_Poster_ICWSM_SMM4H_olivier_caron.pdf) | [HTML](https://oliviercaron.github.io/presentations_research/SMM4H/presentation_smm4h.html)  
+- ICWSM - SMM4H - [Poster](https://oliviercaron.github.io/presentations_research/SMM4H/VF_Poster_ICWSM_SMM4H_olivier_caron.pdf) | [HTML](https://oliviercaron.github.io/presentations_research/SMM4H/presentation_smm4h.html)  
 - Mineure Action Publique - Regulation des systèmes de santé - [PDF](https://oliviercaron.github.io/presentations_research/Mineure_Action_Publique/regulation_systemes_sante/presentation_regulation_systeme_sante.pdf)  
