@@ -310,8 +310,24 @@ On les met ensuite bout à bout pour former un seul grand vecteur (stacking).
 $$v_{stacked} = [ \underbrace{0.04, 0.50, ..., -0.90}_{v_{tfidf}}, \underbrace{0.44, 0.45, ..., 0.12}_{v_{emb}} ]$$
 
 Ce vecteur final, plus riche, est ensuite fourni au classifieur SVM.
+
 :::
-:::::
+::::
+::: {.callout-note appearance="simple" icon=false}
+#### 💡 Le noyeau RBF
+
+L'astuce du **noyau RBF (Radial Basis Function)** est de mesurer la **similarité** entre les posts. Au lieu de chercher à séparer les données avec une "ligne" droite dans l'espace initial, il les projette dans une dimension supérieure où elles deviennent plus faciles à séparer par un "plan".
+
+L'équation qui calcule cette similarité est :
+$$ K(x_i, x_j) = \exp(-\gamma \|x_i - x_j\|^2) $$
+
+-   **$K(x_i, x_j)$** : Calcule un score de **similarité** entre deux posts, $x_i$ et $x_j$.
+-   **$\|x_i - x_j\|^2$** : Mesure la **distance** au carré entre les deux vecteurs. Plus ils sont "proches", plus ce terme est petit.
+-   **$\gamma$** (gamma) : Un paramètre qui ajuste l'**influence** de chaque point (on peut le voir comme un "zoom").
+-   **$\exp(...)$** : La fonction exponentielle transforme cette distance en un score de similarité (entre 0 et 1). Si la distance est nulle, la similarité est maximale (1).
+
+En bref, le SVM utilise cette mesure pour créer une frontière de décision complexe et non-linéaire, très efficace pour ce type de données.
+:::
 
 
 # Retour d'expérience {.transition-slide-ubdblue style="font-size:0.8em"}

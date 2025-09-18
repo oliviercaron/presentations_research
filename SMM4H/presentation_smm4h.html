@@ -472,6 +472,24 @@ Olivier Caron
 <p>(Dimension <span class="math inline">\(d_{tfidf} + d_{emb}\)</span>) <span class="math display">\[v_{stacked} = [ \underbrace{0.04, 0.50, ..., -0.90}_{v_{tfidf}}, \underbrace{0.44, 0.45, ..., 0.12}_{v_{emb}} ]\]</span></p>
 <p>Ce vecteur final, plus riche, est ensuite fourni au classifieur SVM.</p>
 </div></div>
+<div class="callout callout-note no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>💡 Le noyeau RBF</strong></p>
+</div>
+<div class="callout-content">
+<p>L’astuce du <strong>noyau RBF (Radial Basis Function)</strong> est de mesurer la <strong>similarité</strong> entre les posts. Au lieu de chercher à séparer les données avec une “ligne” droite dans l’espace initial, il les projette dans une dimension supérieure où elles deviennent plus faciles à séparer par un “plan”.</p>
+<p>L’équation qui calcule cette similarité est : <span class="math display">\[ K(x_i, x_j) = \exp(-\gamma \|x_i - x_j\|^2) \]</span></p>
+<ul>
+<li><strong><span class="math inline">\(K(x_i, x_j)\)</span></strong> : Calcule un score de <strong>similarité</strong> entre deux posts, <span class="math inline">\(x_i\)</span> et <span class="math inline">\(x_j\)</span>.</li>
+<li><strong><span class="math inline">\(\|x_i - x_j\|^2\)</span></strong> : Mesure la <strong>distance</strong> au carré entre les deux vecteurs. Plus ils sont “proches”, plus ce terme est petit.</li>
+<li><strong><span class="math inline">\(\gamma\)</span></strong> (gamma) : Un paramètre qui ajuste l’<strong>influence</strong> de chaque point (on peut le voir comme un “zoom”).</li>
+<li><strong><span class="math inline">\(\exp(...)\)</span></strong> : La fonction exponentielle transforme cette distance en un score de similarité (entre 0 et 1). Si la distance est nulle, la similarité est maximale (1).</li>
+</ul>
+<p>En bref, le SVM utilise cette mesure pour créer une frontière de décision complexe et non-linéaire, très efficace pour ce type de données.</p>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="retour-dexpérience" class="title-slide slide level1 transition-slide-ubdblue center" style="font-size:0.8em">
