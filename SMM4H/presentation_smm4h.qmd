@@ -1,0 +1,407 @@
+---
+title: "Participation à #SMM4H-HeaRD 2025"
+subtitle: "Retour sur les tâches 1 & 6 : détection d'événements indésirables"
+author:
+  - name: "Olivier Caron"
+    affiliations: "DRM, Université Paris-Dauphine, Université PSL, CNRS"
+format:
+  ubd-revealjs:
+    self-contained: false
+    chalkboard: true
+    transition: fade
+    auto-stretch: false
+    width: 1250
+    height: 760
+    toc: false
+    toc-depth: 1
+    code-block-height: 700px
+execute:
+  echo: true
+bibliography: refs.bib
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Le contexte : #SMM4H-HeaRD {.transition-slide-ubdblue style="font-size:0.8em"}
+
+## Qu'est-ce que #SMM4H-HeaRD ? {style="font-size:0.8em"}
+
+**#SMM4H-HeaRD** est une série de compétitions scientifiques (*shared tasks*) en NLP appliqué à la santé.
+
+::::: columns
+::: {.column width="50%"}
+### L'objectif
+
+Développer et évaluer de façon collaborative des méthodes NLP/IA pour la recherche en santé, en utilisant les données des réseaux sociaux et du web.
+:::
+
+::: {.column width="50%"}
+### L'intérêt pour la santé publique
+
+La pharmacovigilance traditionnelle souffre d'un sous-signalement important.
+
+Les réseaux sociaux (Reddit, X) sont une source de données massive et en temps réel pour détecter des signaux de sécurité.
+:::
+:::::
+
+::: {.callout-note appearance="simple"}
+#### Les enjeux
+
+Le CDC américain encourage l'utilisation de ces données. #SMM4H-HeaRD est l'atelier de référence pour faire avancer l'état de l'art.
+:::
+
+## Déroulement d'une 'shared task' {style="font-size:0.7em"}
+
+Un processus standardisé pour une comparaison juste et rigoureuse des systèmes proposés.
+
+::::::: columns
+::: {.column width="25%"}
+### Données
+
+-   Les organisateurs fournissent des données annotées (`train`, `valid`).
+-   Les équipes s'inscrivent aux tâches.
+:::
+
+::: {.column width="25%"}
+### Développement
+
+-   Les équipes développent et entraînent leurs modèles.
+-   La performance sur le set `valid` guide les optimisations.
+:::
+
+::: {.column width="25%"}
+### Évaluation
+
+-   Un jeu de test non étiqueté (`test`) est publié.
+-   Les équipes ont **5 jours** pour soumettre leurs prédictions sur **CodaLab**.
+-   CodaLab calcule les scores et établit le classement final.
+:::
+
+::: {.column width="25%"}
+### Publication
+
+-   Chaque équipe soumet un article décrivant son système sur **OpenReview**.
+-   Les articles évalués par les pairs sont publiés dans les actes de l'atelier (ici, ICWSM 2025).
+:::
+:::::::
+
+::: {.callout-tip title="L'édition 2025 en chiffres"}
+-   **6 tâches** : sources, langues et sujets variés (effets indésirables, insomnie...).
+-   **57 équipes** inscrites, représentant **17 pays**.
+:::
+
+# Les défis : tâches 1 & 6 {.transition-slide-ubdblue style="font-size:0.8em"}
+
+## Tâche 1 : détection multilingue d'effets indésirables (ADE) {style="font-size:0.9em"}
+
+
+### Objectif
+
+-   **Classification binaire** de posts sur les réseaux sociaux pour détecter les *Adverse Drug Events* (ADE).
+-   Label `1` : mention personnelle d'un ADE.
+-   Label `0` : aucune mention.
+
+### Données et défis
+
+-   **Sources variées** : X, forums, sites d'avis (corpus RuDReC).
+-   **Multilingue** : Anglais, Français, Allemand, Russe.
+-   **Déséquilibre de classe extrême** : classe positive très minoritaire (5.5% à 10.2%).
+-   **Hétérogénéité des textes** : posts en FR/DE beaucoup plus longs (médiane > 155 mots) qu'en EN/RU (médiane < 35 mots).
+
+
+## Tâche 6 : détection de mentions d'effets post-vaccinaux (VAEM) sur Reddit {style="font-size:0.8em"}
+
+::::::: columns
+::: {.column width="45%"}
+### Objectif
+
+-   Classifier les posts Reddit sur le vaccin contre le zona.
+-   Distinguer une **expérience personnelle** d'un effet indésirable (VAEM) d'une discussion générale.
+-   Label `1` : récit personnel d'une réaction.
+-   Label `0` : discussion générale, question, etc.
+
+### Données et défis
+
+-   **Source** : Reddit (Anglais).
+-   **Distribution** : jeu de données **équilibré** (classe positive ≈46%).
+-   **Défi principal** : comprendre le contexte pour différencier l'expérience personnelle de la simple mention.
+:::
+
+::::: {.column width="55%"}
+### Exemples concrets
+
+::: {.callout-note appearance="simple"}
+#### Positif (Label 1)
+
+"**Shingles Vaccine**: I had my 1st one in December. Felt like I had the flu for a day and a half afterwards." 
+
+Récit personnel ("I had") d'un symptôme ("flu") lié au vaccin.
+:::
+
+::: {.callout-note appearance="simple"}
+#### Négatif (Label 0)
+
+"**Should I get Shingrix at 22?**: I didn't need prior auth, just a prescription sent in by my doctor... I spend all day every day calling pharmacies for other people..." 
+
+Le post parle du vaccin mais ne rapporte aucune réaction personnelle.
+:::
+:::::
+:::::::
+
+# Notre approche (ACSS-PSL) {.transition-slide-ubdblue style="font-size:0.8em"}
+
+## Notre stratégie pour la tâche 1 (multilingue) {style="font-size:0.6em"}
+
+Face au déséquilibre et au multilinguisme, nous avons privilégié une approche robuste.
+
+:::::: columns
+:::: {.column width="50%"}
+### Modèle et stratégie
+
+-   **Modèle** : **XLM-ROBERTa-Large** pour ses capacités cross-lingues.
+-   **Stratégie clé** : **pondération des classes** (fréquence inverse) dans la fonction de coût pour renforcer la classe minoritaire.
+-   **Prétraitement** : aucun, nous avons misé sur les capacités brutes du modèle.
+
+::: {.callout-note appearance="simple"}
+#### Résultat final (Jeu de test)
+
+Notre système a atteint un **F1-score global de 0.633**.
+:::
+::::
+
+::: {.column width="50%"}
+### Paramètres d'entraînement
+
+-   **Optimiseur** : AdaFactor
+-   **Learning rate** : $1 \times 10^{-5}$ (cosine scheduler, 10% warmup)
+-   **Époques** : 6 (early stopping sur F1, patience 1)
+-   **Batch size** : 32 (via 16 pas d'accumulation de gradient)
+-   **Régularisation** : Dropout à 0.3
+-   **Max length** : 256 tokens
+-   **Précision** : BF16
+:::
+::::::
+
+## Notre stratégie pour la tâche 6 (monolingue) {style="font-size:0.6em"}
+
+Pour cette tâche équilibrée, nous avons opté pour une stratégie de validation croisée et d'ensembling pour maximiser la robustesse.
+
+:::::: columns
+:::: {.column width="50%"}
+### Modèle et stratégie
+
+-   **Modèle** : **DeBERTa-V3-Base**, pour son excellent ratio performance/taille.
+-   **Stratégie clé** :
+    1.  **Validation croisée stratifiée à 5 plis** pour entraîner 5 modèles distincts.
+    2.  **Ensembling** : les prédictions finales sont obtenues par **moyennage des probabilités** des 5 modèles.
+
+::: {.callout-note appearance="simple"}
+#### Résultat final (Jeu de test)
+
+Notre système a atteint un **F1-score de 0.951**, battant la baseline. L'ensembling a apporté un gain crucial (vs. F1 de 0.942 pour le meilleur modèle seul).
+:::
+::::
+
+::: {.column width="50%"}
+### Processus d'entraînement et d'ensembling
+
+-   **Optimiseur** : AdamW
+-   **Learning rate** : $2 \times 10^{-5}$
+-   **Époques** : 6 par pli (early stopping sur F1, patience 3)
+-   **Batch size** : 8
+-   **Max length** : 512 tokens
+-   **Précision** : FP16
+-   **Seuil de décision** : optimisé à 0.8147 sur les probabilités de validation pour maximiser le F1-score.
+:::
+::::::
+
+# Meilleures performances : tâche 1 {.transition-slide-ubdblue style="font-size:0.8em"}
+
+## Les approches qui ont fait la différence {style="font-size:0.65em"}
+
+Les deux meilleures équipes ont obtenu des scores F1 quasi identiques (0.709 et 0.708) en utilisant des LLMs récents, mais avec des stratégies d'amélioration très différentes.
+
+::::: columns
+::: {.column width="50%"}
+### 1er : PEI (F1 = 0.709)
+
+-   **Modèle** : **Mistral-Nemo-Instruct-2407**.
+-   **Stratégie clé** : **Augmentation de données itérative et ciblée sur les erreurs**.
+-   **Processus en boucle** :
+    1.  Le modèle est entraîné une première fois sur les données initiales.
+    2.  Il est ensuite utilisé pour prédire les labels de ces mêmes données d'entraînement afin d'identifier ses propres erreurs.
+    3.  Les exemples mal classés sont **paraphrasés par le LLM lui-même** pour créer de nouvelles variantes sémantiquement identiques.
+    4.  Ces nouvelles données sont ajoutées au jeu d'entraînement.
+    5.  Le modèle est **ré-entraîné depuis le début** sur ce jeu de données enrichi.
+-   **Résultat** : Cette méthode, répétée deux fois, a permis au modèle de se concentrer sur les exemples difficiles et de surpasser les approches classiques.
+:::
+
+::: {.column width="50%"}
+### 2ème : Y2K (F1 = 0.708)
+
+-   **Modèle** : **Gemma 3**.
+-   **Architecture "MUSIC"** : Une approche en deux étapes avec **auto-correction**.
+    1.  Un **"Classifieur"** : Un premier LLM qui donne un label initial au post.
+    2.  Un **"Juge"** : Un second LLM qui examine la décision du premier et la **confirme ou l'infirme**.
+-   **Entraînement du "Juge"** : Le Juge est entraîné avec l'aide d'un LLM plus puissant (Claude 3.7) qui lui fournit des **raisonnements en langage naturel** pour justifier les bonnes et mauvaises décisions.
+-   **Techniques complémentaires** :
+    -   **Augmentation de données** par traduction systématique des posts dans les 3 autres langues.
+    -   **Ensembling** : Le résultat final est un vote majoritaire entre 5 Classifieurs et 2 Juges.
+:::
+:::::
+
+# Meilleures performances : tâche 6 {.transition-slide-ubdblue style="font-size:0.8em"}
+
+## Les approches qui ont fait la différence {style="font-size:0.7em"}
+
+Pour cette tâche monolingue et équilibrée, les deux meilleures équipes ont brillé avec des stratégies radicalement différentes : l'une "classique" mais très optimisée, l'autre basée sur le raisonnement guidé d'un LLM.
+
+::::: columns
+::: {.column width="50%"}
+### 1er : BioNLP1 (F1 = 0.959)
+
+-   **Approche "hybride"** : Combinaison de features traditionnelles et neuronales.
+-   **Deux types de représentations** :
+    1.  **Features lexicales (TF-IDF)** : Pour capturer la fréquence et l'importance des mots et des n-grammes (jusqu'à 5 mots).
+    2.  **Embeddings contextuels** : Des représentations sémantiques extraites d'un modèle **RoBERTa-Large** pré-entraîné, puis fine-tuné sur les données de la tâche.
+-   **Classifieur final** : Les deux vecteurs de features (TF-IDF et RoBERTa) sont concaténés ("stacking") et fournis en entrée à un classifieur simple mais puissant : un **Support Vector Machine (SVM)**.
+-   **Résultat** : Cette architecture, qui allie le meilleur des deux mondes (lexical et sémantique profond), a obtenu le meilleur score de la compétition.
+:::
+
+::: {.column width="50%"}
+### 2ème : GooSeek (F1 = 0.957)
+
+-   **Modèle** : **Llama 3.1-8B-Instruct**.
+-   **Stratégie clé** : **Prompting avec "Chaîne de Pensée" (Chain-of-Thought - CoT)** en mode *zero-shot*.
+-   **Le Prompt CoT** : Le LLM n'est pas simplement invité à classifier, mais à suivre un **processus de raisonnement explicite en 4 étapes** pour chaque post :
+    1.  Vérifier la présence d'indices d'une expérience à la première personne (ex: "je", "mon").
+    2.  Chercher une mention explicite de la réception du vaccin.
+    3.  Identifier la mention d'effets secondaires.
+    4.  Évaluer le contexte et classer "0" si le langage est ambigu.
+-   **Résultat** : Le guidage par le CoT s'est avéré crucial. Une étude d'ablation a montré que cette technique améliorait significativement les performances, bien plus que l'ajout d'exemples (*few-shot*).
+:::
+:::::
+
+## Exemple de Concaténation de Features (Stacking) {style="font-size:0.5em"}
+
+Pour un post donné, on calcule deux représentations vectorielles distinctes.
+
+::::: columns
+::: {.column width="45%"}
+### 1. Vecteurs initiaux
+
+#### Vecteur TF-IDF 
+(Dimension $d_{tfidf}$)
+$$v_{tfidf} = [0.04, 0.50, 0.00, ..., -0.90]$$
+
+#### Vecteur Embedding RoBERTa 
+(Dimension $d_{emb}$)
+$$v_{emb} = [0.44, 0.45, -0.89, ..., 0.12]$$
+:::
+
+::: {.column width="55%"}
+### 2. Concaténation
+
+On les met ensuite bout à bout pour former un seul grand vecteur (stacking).
+
+#### Vecteur final
+(Dimension $d_{tfidf} + d_{emb}$)
+$$v_{stacked} = [ \underbrace{0.04, 0.50, ..., -0.90}_{v_{tfidf}}, \underbrace{0.44, 0.45, ..., 0.12}_{v_{emb}} ]$$
+
+Ce vecteur final, plus riche, est ensuite fourni au classifieur SVM.
+:::
+:::::
+
+
+# Retour d'expérience {.transition-slide-ubdblue style="font-size:0.8em"}
+
+## L'importance cruciale d'une évaluation rigoureuse {style="font-size:0.75em"}
+
+Participer à une *shared task* impose une rigueur qui va au-delà d'un simple `train_test_split`.
+
+:::::: columns
+::: {.column width="33%"}
+### 1. Validation croisée
+
+-   **Leçon** : essentielle pour les jeux de données de taille modeste.
+-   **Bénéfices** :
+    -   Utilise toutes les données (entraînement & validation).
+    -   Fournit une estimation de performance **plus robuste**.
+    -   Permet un **ensembling** puissant.
+:::
+
+::: {.column width="33%"}
+### 2. Optimisation du seuil
+
+-   **Leçon** : le seuil par défaut (0.5) est rarement optimal pour le F1-score.
+-   **Pratique** : il faut chercher le seuil qui maximise la métrique cible sur les probabilités du set de validation. Cela a permis de gagner 0.2 point sur la tâche 1.
+:::
+
+::: {.column width="33%"}
+### 3. Études d'ablation
+
+-   **Découverte** : retirer des composants du système pour mesurer leur contribution individuelle.
+-   **Exemple (GooSeek)** : une étude d'ablation a prouvé que le prompting *Chain-of-Thought* (CoT) améliorait la performance, justifiant leur choix d'architecture.
+:::
+::::::
+
+## Le processus de participation et les outils {style="font-size:0.65em"}
+
+Au-delà de la modélisation, une grande partie du travail est logistique et technique.
+
+:::::: columns
+::: {.column width="33%"}
+### Le processus de soumission
+
+1.  Réception des données `train` & `valid`.
+2.  Réception du fichier `test` non labellisé.
+3.  Génération du fichier `predictions.csv` avec notre meilleur modèle.
+4.  Upload d'une archive `.zip` sur **CodaLab**.
+:::
+
+::: {.column width="33%"}
+### Plateformes clés
+
+-   **CodaLab** : plateforme de compétition pour la soumission et l'évaluation automatique. Juge de paix final.
+-   **OpenReview** : plateforme pour la soumission des articles et le processus de peer-review.
+-   **GitHub** : essentiel pour le partage de code reproductible.
+:::
+
+::: {.column width="33%"}
+### Gestion des expériences
+
+-   **Leçon** : il est vital de tracer chaque expérience (modèle, hyperparamètres, score).
+-   **Outils** : une feuille de calcul est un bon début. Des outils comme **WandB** (Weights & Biases) permettent un suivi professionnel, la comparaison et la visualisation des résultats.
+:::
+
+![](images/clipboard-2551751248.png){fig-align="right" width="55%"}
+::::::
+
+# Conclusion {.transition-slide-ubdblue style="font-size:0.8em"}
+
+## Résumé et prochaines étapes {style="font-size:0.7em"}
+
+::::: columns
+::: {.column width="50%"}
+### Résumé de notre participation
+
+-   **Résultats compétitifs**, avec un classement au-dessus de la médiane pour les deux tâches.
+-   **Tâche 1 (ADE Multilingue)** : F1 de **0.633**. Honorable, mais l'hétérogénéité des données et le déséquilibre restent des défis majeurs.
+-   **Tâche 6 (VAEM Zona)** : F1 de **0.951**. Un succès. Notre stratégie (DeBERTa + CV/Ensembling) s'est avérée très robuste sur les données bruitées de Reddit.
+:::
+
+::: {.column width="50%"}
+### Tendances et pistes d'amélioration
+
+-   **Tendance générale** : les **LLMs** sont la nouvelle norme (utilisés par 18/29 équipes).
+-   **Pistes pour la Tâche 1** :
+    -   Explorer l'**augmentation de données** via des LLMs.
+    -   Fine-tuner un **LLM multilingue récent** (Mistral, Gemma) avec des techniques PEFT.
+-   **Pistes pour la Tâche 6** :
+    -   Tester une version plus grande du modèle (**DeBERTa-V3-Large**).
+    -   Combiner notre approche avec des heuristiques générées par un LLM.
+:::
+:::::
+
+## Références
