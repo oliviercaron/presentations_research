@@ -1,0 +1,1586 @@
+    {
+  "B_COUNTRY": {
+    "question_id": "B_COUNTRY",
+    "question_text": "Which country are you currently living in?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Netherlands", "India", "Kyrgyzstan", "Ethiopia", "Macao SAR", "Guatemala", "Czechia", "Uzbekistan", "Canada", "Ukraine", "Malaysia", "China", "Germany", "Lebanon", "Libya", "Tunisia", "Argentina", "Nigeria", "Pakistan", "Greece", "Jordan", "United States", "Northern Ireland", "Mexico", "Switzerland", "Venezuela", "Ecuador", "Iran", "Myanmar", "Taiwan ROC", "Philippines", "New Zealand"]
+  },
+  "N_REGION_ISO": {
+    "question_id": "N_REGION_ISO",
+    "question_text": "Which region do you currently live in?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Overijssel", "Bihar", "Jalal-Abad region", "Utrecht", "Southern Nations, Nationalities and Peoples", "Macau", "North Holland", "Guatemala", "Olomouc", "Farg'ona", "Buxoro", "Quebec", "Dnipropetrovska oblast", "Kelantan", "Henan Sheng", "North Rhine-Westphalia", "Nabatîyé", "Tarabulus", "Ben Arous", "Buenos Aires", "Gelderland", "Anambra", "Panjāb", "Friesland", "Hubei Sheng", "Southern Aegean", "Crete", "Al ‘Āşimah / Amman", "Qoraqalpog'iston Respublikasi", "Colorado", "Dire Dawa", "Zhejiang Sheng", "Northern Ireland", "Attica", "Guanajuato", "Minnesota", "Sindh", "Gyeonggi", "Shandong Sheng", "Issyk-Kul region", "Hesse", "Nova Scotia", "Monagas", "Brandenburg", "Ontario", "El Oro", "Hainan Sheng", "Golestān", "Lvivska oblast", "Prince Edward Island", "Punjab", "Tianjin Shi", "Daejeon", "Selangor", "Shaanxi Sheng", "South Moravia", "Vysocina", "North Brabant", "Al Wahat", "Azuay", "Córdoba", "Central Greece", "Beijing Shi", "Andijon", "Nabeul", "Central Macedonia", "Al Jabal al Akhdar", "Negeri Sembilan", "San Luis Potosí", "Akwa Ibom", "Veracruz de Ignacio de la Llave", "Al Karak", "Shan", "Ayeyarwady", "Chahār Maḩāl va Bakhtīārī", "North Carolina", "Busan", "Liaoning Sheng", "Yangon", "Naryn region", "Virginia", "Osh region", "Āz̄ārbāyjān-e Ghārbī", "Sarawak", "Mont-Liban", "Khaībar Pakhtūnkhwā", "Odeska oblast", "Guerrero", "Saarland", "Darnah", "Zaporizka oblast", "Mon", "Guangdong Sheng", "California", "Manitoba", "Kaohsiung special municipality", "Cotopaxi", "Semnān", "Coahuila de Zaragoza", "Irbid", "Mykolaivska oblast", "Tunis", "Saskatchewan", "Beyrouth", "Mecklenburg-Western Pomerania", "Balōchistān", "Āz̄ārbāyjān-e Shārqī", "Sonora", "Liban-Nord", "Misamis Occidental", "Eşfahān", "Gombe", "Prague", "Moravia-Silesia", "Hidalgo", "Hawke's Bay", "Samarqand", "Gīlān", "Tainan special municipality", "Magway", "Waikato", "Washington", "Kayin", "Al Mafraq", "Guayas", "Tamaulipas", "Hradec Kralove", "Bishkek city", "Samar (Western Samar)", "Missouri", "Amara", "Liberec", "Tanintharyi", "Lagos", "British Columbia", "Auckland", "Aguascalientes", "Santa Fe", "Nei Mongol Zizhiqu", "Al Jafarah", "Utah", "Mahdia", "Sarangani", "Osh city", "Béja", "Limburg", "Abia", "Taoyuan special municipality", "Esmeraldas", "Puebla", "New Brunswick", "Cavite", "Keelung city", "Khūzestān", "Delta", "Schleswig-Holstein", "South Holland", "Oromia", "Vargas", "Rivnenska oblast", "Tehrān", "Khorāsān-e Raẕavī", "Zeeland", "Cherkaska oblast", "Arkansas", "Flevoland", "Chihuahua", "Bago", "South Chungcheong", "Sfax", "Iowa", "Taichung special municipality", "Texas", "Canterbury", "South Dakota", "Daegu", "New Taipei special municipality", "Peloponnese", "Banghazi", "Florida", "Incheon", "Colima", "Distrito Capital", "Ogun", "Wilayah Persekutuan Kuala Lumpur", "North Gyeongsang", "Surxondaryo", "Sucre", "Chiayi county", "Wellington", "Béqaa", "Telangana", "Zamboanga del Sur", "Jigawa", "Miranda", "Īlām", "Eastern Macedonia and Thrace", "Camarines Sur", "National Capital Region", "Monastir", "La Rioja", "Pichincha", "Quetzaltenango", "Drenthe", "Northland", "Liban-Sud", "Newfoundland and Labrador", "Qazvīn", "Baja California", "Usti nad Labem", "Karlovy Vary", "Toshkent city", "South Gyeongsang", "Bay of Plenty", "Qashqadaryo", "Tigrai", "New York", "Manabí", "Talas region", "Cross River", "Bizerte", "Bolivar", "Kebbi", "Qinghai Sheng", "Mandalay", "Kano", "Barinas", "Ciudad Autónoma de Buenos Aires", "Saxony-Anhalt", "Ardabīl", "Alberta", "Wadi al Hayat", "Central Bohemia", "Ionian Islands", "Corrientes", "Santa Elena", "Ghat", "Bavaria", "North Jeolla", "Georgia", "Tennessee", "Hualien county", "Gafsa", "Al Butnan", "Gansu Sheng", "Ekiti", "Davao del Norte", "Al Marqab", "Jiangsu Sheng", "Uttar Pradesh", "Guizhou Sheng", "Jalisco", "Nantou county", "Sabah", "Gabès", "Oyo", "Pahang", "Chernivetska oblast", "Connecticut", "Somali", "Kairouan", "Wisconsin", "West Virginia", "Sirdaryo", "Baden-Württemberg", "Kaduna", "Terengganu", "Shanghai Shi", "Ohio", "Chongqing Shi", "Groningen", "Az Zarqā’", "Plzen", "Cebu", "Delhi", "Pingtung county", "Illinois", "Borno", "Heilongjiang Sheng", "Massachusetts", "Ciudad de México", "Sichuan Sheng", "An Nuqat al Khams", "Shanxi Sheng", "Oklahoma", "Kébili", "Az Zawiyah", "Anhui Sheng", "Kentucky", "Rhineland-Palatinate", "Perlis", "Zulia", "Fārs", "Chüy region", "Gambela Peoples", "Melaka", "Namangan", "Le Kef", "Toshkent region", "Tucumán", "North Chungcheong", "Maharashtra", "Pardubice", "Sinaloa", "Edo", "Tlaxcala", "Chernihivska oblast", "Escuintla", "Lower Saxony", "Suchitepéquez", "Michoacán de Ocampo", "México", "Kharkivska oblast", "Vinnytska oblast", "Batken region", "Southland", "Hebei Sheng", "Batangas", "Kirovohradska oblast", "Lorestān", "Seoul", "Carabobo", "Aragua", "Enugu", "Chiapas", "Kwara", "Oregon", "Sokoto", "South Bohemia", "Lara", "Al Marj", "Abra", "Misratah", "Salta", "Johor", "West Bengal", "Haryana", "Al Jabal al Gharbi", "Ajlūn", "Otago", "Gwangju", "Durango", "North Dakota", "Thuringia", "Zhytomyrska oblast", "Hunan Sheng", "Thessaly", "Imbabura", "Sidi Bouzid", "Pennsylvania", "Benue", "Michigan", "Western Greece", "Taraba", "Sabha", "Addis Ababa", "Zakarpatska oblast", "Perak", "Epirus", "Quintana Roo", "Plateau", "Negros Occidental", "Nuevo León", "Abuja Federal Capital Territory", "Būshehr", "Al ‘Aqabah", "Idaho", "Missing", "Oaxaca", "New Mexico", "Nelson", "Markazī", "Nebraska", "Osun", "Fujian Sheng", "Berlin", "Nalut", "Alborz", "Pulau Pinang", "Afar", "Mendoza", "Santo Domingo de los Tsáchilas", "Wadi ash Shati’", "Quezon", "Jiangxi Sheng", "Bulacan", "Kyiv", "Yunnan Sheng", "Trujillo", "New Jersey", "Luhanska oblast", "Yazd", "Hsinchu county", "Kyivska oblast", "Médenine", "Western Macedonia", "Iloilo", "Aakkâr", "Ilocos Norte", "Tachira", "Arizona", "Petén", "Retalhuleu", "Aţ Ţafīlah", "Tozeur", "Kedah", "Sucumbíos", "Zambales", "Izabal", "Jilin Sheng", "Sacatepéquez", "Adamawa", "San Luis", "Qom", "Surigao del Sur", "Jendouba", "Romblon", "Tungurahua", "Al Balqā’", "Loja", "Ivano-Frankivska oblast", "Hamadān", "Jarash", "Tabasco", "Nay Pyi Taw", "Chaco", "L'Ariana", "Rivers", "Zlin", "Sousse", "Ondo", "Pampanga", "Kermānshāh", "Anzoategui", "Los Ríos", "Quiché", "Xorazm", "Bolívar", "Khorāsān-e Jonūbī", "Vermont", "Khmelnytska oblast", "Maryland", "Taipei special municipality", "Ningxia Huizi Zizhiqu", "Sagaing", "Ulsan", "Zacatecas", "Basilan", "Falcon", "Guarico", "Jalapa", "Kasserine", "Tasman", "Yaracuy", "Kermān", "San Marcos", "Louisiana", "Changhua county", "Māzandarān", "Niger", "Sumska oblast", "Kogi", "Jizzax", "Ternopilska oblast", "Donetska oblast", "Benshangul-Gumaz", "Manawatu-Wanganui", "Guangxi Zhuangzu Zizhiqu", "Katsina", "Mādabā", "Navoiy", "Siliana", "Sīstān va Balūchestān", "Zaghouan", "Huehuetenango", "Sololá", "Leyte", "Merida", "Nevada", "Chubut", "Al Kufrah", "Indiana", "Harari People", "Mississippi", "Jutiapa", "Zamfara", "Volynska oblast", "Alabama", "Catamarca", "Bremen", "Poltavska oblast", "Zanjān", "Saxony", "La Manouba", "Surt", "Chimborazo", "Bauchi", "Yilan county", "Hsinchu city", "Chimaltenango", "Montana", "Nayarit", "Orellana", "Portuguesa", "Nasarawa", "Santa Rosa", "Maine", "Khorāsān-e Shomālī", "Querétaro", "Carchi", "Taranaki", "Hawaii", "Ma‘ān", "Morelos", "Gangwon", "Cañar", "Hormozgān", "Yucatán", "Northern Aegean", "Baalbek-Hermel"]
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "In your life, would you say family is very important, rather important, not very important or not important at all?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Very important", "Rather important", "Not very important", "Not at all important", "Missing", "No answer", "Don´t know"]
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "In your life, would you say friends is very important, rather important, not very important or not important at all?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Very important", "Rather important", "Not very important", "Not at all important", "No answer", "Missing", "Don´t know"]
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "In your life, would you say leisure time is very important, rather important, not very important or not important at all?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Rather important", "Very important", "Not very important", "Not at all important", "Don´t know", "Missing", "No answer"]
+  },
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "In your life, would you say work is very important, rather important, not very important or not important at all?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Rather important", "Very important", "Not at all important", "Missing", "Don´t know", "No answer", "Not very important"]
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "In your life, would you say religion is very important, rather important, not very important or not important at all?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Not at all important", "Very important", "Not very important", "Rather important", "Missing", "Don´t know", "No answer"]
+  },
+  "Q7": {
+    "question_id": "Q7",
+    "question_text": "Do you consider good manners to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Important", "Not so important", "Missing", "Don´t know"]
+  },
+  "Q8": {
+    "question_id": "Q8",
+    "question_text": "Do you consider independence to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Important", "Not so important", "Missing", "Don´t know"]
+  },
+  "Q9": {
+    "question_id": "Q9",
+    "question_text": "Do you consider hard work to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Important", "Not so important", "Missing", "Don´t know"]
+  },
+  "Q10": {
+    "question_id": "Q10",
+    "question_text": "Do you consider feeling of responsibility to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Important", "Not so important", "Missing", "Don´t know"]
+  },
+  "Q11": {
+    "question_id": "Q11",
+    "question_text": "Do you consider imagination to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Not so important", "Important", "Missing", "Don´t know"]
+  },
+  "Q12": {
+    "question_id": "Q12",
+    "question_text": "Do you consider tolerance and respect for other people to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Important", "Not so important", "Missing", "Don´t know"]
+  },
+  "Q13": {
+    "question_id": "Q13",
+    "question_text": "Do you consider thrift saving money and things to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Not so important", "Important", "Missing", "Don´t know"]
+  },
+  "Q15": {
+    "question_id": "Q15",
+    "question_text": "Do you consider religious faith to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Not so important", "Important", "Missing", "Don´t know"]
+  },
+  "Q16": {
+    "question_id": "Q16",
+    "question_text": "Do you consider unselfishness to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Not so important", "Important", "Missing", "Don´t know"]
+  },
+  "Q17": {
+    "question_id": "Q17",
+    "question_text": "Do you consider obedience to be an especially important quality for children to learn at home?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Not so important", "Important", "Missing", "Don´t know"]
+  },
+  "Q18": {
+    "question_id": "Q18",
+    "question_text": "Would you prefer not to have drug addicts as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Yes", "No", "Missing", "Don´t know"]
+  },
+  "t_Q19": {
+    "question_id": "t_Q19",
+    "question_text": "Would you prefer not to have people of a different race as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "No", "Yes", "Missing", "Don´t know"]
+  },
+  "Q20": {
+    "question_id": "Q20",
+    "question_text": "Would you prefer not to have people who have aids as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Yes", "No", "Missing", "Don´t know"]
+  },
+  "Q21": {
+    "question_id": "Q21",
+    "question_text": "Would you prefer not to have immigrants/foreign workers as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "No", "Yes", "Missing", "Don´t know"]
+  },
+  "Q22": {
+    "question_id": "Q22",
+    "question_text": "Would you prefer not to have homosexuals as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Yes", "No", "Missing", "Don´t know"]
+  },
+  "Q23": {
+    "question_id": "Q23",
+    "question_text": "Would you prefer not to have people of a different religion as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Yes", "No", "Missing", "Don´t know"]
+  },
+  "Q25": {
+    "question_id": "Q25",
+    "question_text": "Would you prefer not to have unmarried couples living together as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Yes", "No", "Missing", "Don´t know"]
+  },
+  "Q26": {
+    "question_id": "Q26",
+    "question_text": "Would you prefer not to have people who speak a different language as neighbors?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Yes", "No", "Missing", "Don´t know"]
+  },
+  "t_Q27": {
+    "question_id": "t_Q27",
+    "question_text": "How much do you agree or disagree with the following statement: 'One of your main goals in life has been to make your parents proud'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Missing", "Agree strongly", "Disagree", "Agree", "Strongly disagree", "Don´t know", "No answer"]
+  },
+  "Q28": {
+    "question_id": "Q28",
+    "question_text": "How much do you agree or disagree with the following statement: 'When a mother works for pay, the children suffer'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Strongly disagree", "Agree strongly", "Agree", "Disagree", "Don´t know", "Missing", "No answer"]
+  },
+  "t_Q29": {
+    "question_id": "t_Q29",
+    "question_text": "How much do you agree or disagree with the following statement: 'On the whole, men make better political leaders than women do'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Strongly disagree", "Agree strongly", "Disagree", "Agree", "No answer", "Don´t know", "Missing"]
+  },
+  "Q30": {
+    "question_id": "Q30",
+    "question_text": "How much do you agree or disagree with the following statement: 'A university education is more important for a boy than for a girl'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Strongly disagree", "Agree", "Disagree", "Agree strongly", "No answer", "Don´t know", "Missing"]
+  },
+  "Q31": {
+    "question_id": "Q31",
+    "question_text": "How much do you agree or disagree with the following statement: 'On the whole, men make better business executives than women do'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Strongly disagree", "Agree strongly", "Disagree", "Agree", "Don´t know", "No answer", "Missing"]
+  },
+  "Q32": {
+    "question_id": "Q32",
+    "question_text": "How much do you agree or disagree with the following statement: 'Being a housewife is just as fulfilling as working for pay'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Disagree", "Agree strongly", "Agree", "Strongly disagree", "Don´t know", "No answer", "Missing"]
+  },
+  "Q33": {
+    "question_id": "Q33",
+    "question_text": "Do you agree or disagree with the following statement: 'When jobs are scarce, men should have more right to a job than women'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Disagree", "Agree strongly", "Disagree strongly", "Neither agree nor disagree", "Agree", "No answer", "Don´t know", "Missing"]
+  },
+  "Q34": {
+    "question_id": "Q34",
+    "question_text": "Do you agree, disagree or neither agree nor disagree with the following statement: 'When jobs are scarce, employers should give priority to people of this country over immigrants.'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Agree", "Agree strongly", "Disagree strongly", "Neither agree nor disagree", "Disagree", "No answer", "Missing", "Don´t know"]
+  },
+  "Q35": {
+    "question_id": "Q35",
+    "question_text": "Do you agree or disagree with the following statement 'If a woman earns more money than her husband, it's almost certain to cause problems'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Disagree", "Agree", "Disagree strongly", "Neither agree nor disagree", "Strongly agree", "No answer", "Don't know", "Missing"]
+  },
+  "Q36": {
+    "question_id": "Q36",
+    "question_text": "Do you agree or disagree with the following statement: 'Homosexual couples are as good parents as other couples'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Agree", "Disagree strongly", "Disagree", "Agree strongly", "Neither agree nor disagree", "Missing", "Don´t know", "No answer"]
+  },
+  "Q37": {
+    "question_id": "Q37",
+    "question_text": "Do you agree or disagree with the following statement: 'It is a duty towards society to have children'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Disagree", "Agree strongly", "Agree", "Disagree strongly", "Neither agree nor disagree", "Don´t know", "Missing", "No answer"]
+  },
+  "Q38": {
+    "question_id": "Q38",
+    "question_text": "Do you agree or disagree with the following statement: 'Adult children have the duty to provide long-term care for their parents?'",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Neither agree nor disagree", "Agree strongly", "Agree", "Disagree", "Disagree strongly", "Don´t know", "No answer", "Missing"]
+  },
+  "Q39": {
+    "question_id": "Q39",
+    "question_text": "Do you agree or disagree with the following statement: 'People who don’t work turn lazy'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Agree", "Strongly agree", "Strongly disagree", "Neither agree or disagree", "Disagree", "No answer", "Don´t know", "Missing"]
+  },
+  "t_Q40": {
+    "question_id": "t_Q40",
+    "question_text": "Do you agree or disagree with the following statement: 'Work is a duty towards society'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Agree", "Disagree", "Neither agree or disagree", "Strongly agree", "Strongly disagree", "No answer", "Don´t know", "Missing"]
+  },
+  "Q41": {
+    "question_id": "Q41",
+    "question_text": "Do you agree or disagree with the following statement: 'Work should always come first, even if it means less spare time'?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["Neither agree nor disagree", "Agree strongly", "Agree", "Disagree", "Disagree strongly", "No answer", "Don´t know", "Missing"]
+  },
+  "Q42": {
+    "question_id": "Q42",
+    "question_text": "How would you describe your general outlook on how society should develop or respond to change?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Our society must be gradually improved by reforms", "Our present society must be valiantly defended against all subversive forces", "The entire way our society is organized must be radically changed by revolutionary action", "Don´t know", "Missing"]
+  },
+  "Q43": {
+    "question_id": "Q43",
+    "question_text": "If work were to become less important in people’s lives, would you see that as a good thing, a bad thing, or wouldn't you mind?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Bad thing", "Don´t mind", "Good thing", "Don´t know", "Missing"]
+  },
+  "Q44": {
+    "question_id": "Q44",
+    "question_text": "If society placed more emphasis on developing technology in the future, would you consider that a good thing, a bad thing, or wouldn't you mind?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Good thing", "Don´t mind", "Bad thing", "Don´t know", "Missing"]
+  },
+  "Q45": {
+    "question_id": "Q45",
+    "question_text": "If society placed more emphasis on developing technology in the future, would you consider that a good thing, a bad thing, or wouldn't you mind?",
+    "section": "Social Values, Norms, Stereotypes",
+    "levels": ["No answer", "Good thing", "Don´t know", "Bad thing", "Don´t mind", "Missing"]
+  },
+  "Q46": {
+    "question_id": "Q46",
+    "question_text": "Taking all things together, how happy are you?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["Quite happy", "Very happy", "Not very happy", "Not at all happy", "Don´t know", "No answer", "Missing"]
+  },
+  "Q47": {
+    "question_id": "Q47",
+    "question_text": "All in all, how would you describe your state of health these days?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["Fair", "Good", "Very good", "Poor", "Very poor", "Don´t know", "Missing", "No answer"]
+  },
+  "Q48": {
+    "question_id": "Q48",
+    "question_text": "To what extent do you feel you have freedom of choice and control over the way your life turns out?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["No answer", "A lot", "A great deal", "Some", "None et all", "A little", "None at all", "Don’t know", "Missing"]
+  },
+  "Q49": {
+    "question_id": "Q49",
+    "question_text": "All things considered, how satisfied are you with your life these days?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["No answer", "Fairly satisfied", "Completely satisfied", "Very satisfied", "Very dissatisfied", "Fairly dissatisfied", "Completely dissatisfied", "Neither satisfied nor dissatisfied", "Missing", "Don’t know"]
+  },
+  "Q50": {
+    "question_id": "Q50",
+    "question_text": "How satisfied are you with your household’s financial situation?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["No answer", "Very satisfied", "Completely Satisfied", "Very dissatisfied", "Neither satisfied nor dissatisfied", "Fairly satisfied", "Completely Dissatisfied", "Fairly dissatisfied", "Don’t know", "Missing"]
+  },
+  "t_Q51": {
+    "question_id": "t_Q51",
+    "question_text": "In the last 12 months, how often have you or your family gone without enough food to eat?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["Never", "Sometimes", "Rarely", "Often", "Don´t know", "No answer", "Missing"]
+  },
+  "Q53": {
+    "question_id": "Q53",
+    "question_text": "In the last 12 months, how often have you or your family gone without needed medicine or treatment that you needed?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["Never", "Sometimes", "Rarely", "Often", "Don´t know", "No answer", "Missing"]
+  },
+  "t_Q55": {
+    "question_id": "t_Q55",
+    "question_text": "In the last 12 months, how often have you or your family gone without a safe shelter over your head?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["Never", "Sometimes", "No answer", "Rarely", "Often", "Don´t know", "Missing"]
+  },
+  "Q56": {
+    "question_id": "Q56",
+    "question_text": "Comparing your standard of living with your parents’ standard of living when they were about your age, would you say that you are better off, worse off or about the same?",
+    "section": "Happiness and Wellbeing",
+    "levels": ["Or about the same", "Better off", "Worse off", "No answer", "Don´t know", "Missing"]
+  },
+  "Q57": {
+    "question_id": "Q57",
+    "question_text": "Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Need to be very careful", "Most people can be trusted", "Don´t know", "No answer", "Missing"]
+  },
+  "Q58": {
+    "question_id": "Q58",
+    "question_text": "How much do you trust Your family?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Trust completely", "Trust somewhat", "Do not trust very much", "Do not trust at all", "Missing", "Don´t know", "No answer"]
+  },
+  "Q59": {
+    "question_id": "Q59",
+    "question_text": "How much do you trust Your neighborhood?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Trust completely", "Trust somewhat", "Don´t know", "Do not trust at all", "Do not trust very much", "Missing", "No answer"]
+  },
+  "Q60": {
+    "question_id": "Q60",
+    "question_text": "How much do you trust People you know personally?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Trust completely", "Do not trust very much", "Trust somewhat", "Do not trust at all", "Don´t know", "No answer", "Missing"]
+  },
+  "Q61": {
+    "question_id": "Q61",
+    "question_text": "How much do you trust People you meet for the first time?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Do not trust very much", "Do not trust at all", "Don´t know", "Trust somewhat", "Trust completely", "No answer", "Missing"]
+  },
+  "Q62": {
+    "question_id": "Q62",
+    "question_text": "How much do you trust People of another religion?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Do not trust at all", "Do not trust very much", "Don´t know", "Trust completely", "Trust somewhat", "Missing", "No answer"]
+  },
+  "Q64": {
+    "question_id": "Q64",
+    "question_text": "How much confidence do you have in the churches?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "A great deal", "Not very much", "Quite a lot", "Don´t know", "Missing", "No answer"]
+  },
+  "Q65": {
+    "question_id": "Q65",
+    "question_text": "How much confidence do you have in the armed forces?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "A great deal", "None at all", "Quite a lot", "Don´t know", "Missing", "No answer"]
+  },
+  "Q66": {
+    "question_id": "Q66",
+    "question_text": "How much confidence do you have in the press?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "A great deal", "None at all", "No answer", "Don´t know", "Missing"]
+  },
+  "Q67": {
+    "question_id": "Q67",
+    "question_text": "How much confidence do you have in television?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "A great deal", "None at all", "No answer", "Don´t know", "Missing"]
+  },
+  "Q68": {
+    "question_id": "Q68",
+    "question_text": "How much confidence do you have in labour unions?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "None at all", "A great deal", "Don´t know", "No answer", "Missing"]
+  },
+  "Q69": {
+    "question_id": "Q69",
+    "question_text": "How much confidence do you have in the police?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Quite a lot", "A great deal", "Don´t know", "None at all", "Not very much", "No answer", "Missing"]
+  },
+  "Q70": {
+    "question_id": "Q70",
+    "question_text": "How much confidence do you have in the courts?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "Don´t know", "None at all", "A great deal", "No answer", "Missing"]
+  },
+  "Q71": {
+    "question_id": "Q71",
+    "question_text": "How much confidence do you have in the government?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "A great deal", "None at all", "Don´t know", "Missing", "No answer"]
+  },
+  "Q72": {
+    "question_id": "Q72",
+    "question_text": "How much confidence do you have in political parties?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "None at all", "A great deal", "Don´t know", "No answer", "Missing"]
+  },
+  "Q73": {
+    "question_id": "Q73",
+    "question_text": "How much confidence do you have in parliament?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "None at all", "A great deal", "Don´t know", "Missing", "No answer"]
+  },
+  "Q74": {
+    "question_id": "Q74",
+    "question_text": "How much confidence do you have in the civil services?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "Don´t know", "None at all", "A great deal", "No answer", "Missing"]
+  },
+  "Q75": {
+    "question_id": "Q75",
+    "question_text": "How much confidence do you have in universities?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "Don´t know", "None at all", "A great deal", "Missing", "No answer"]
+  },
+  "Q76": {
+    "question_id": "Q76",
+    "question_text": "How much confidence do you have in elections?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "None at all", "A great deal", "Don´t know", "No answer", "Missing"]
+  },
+  "Q77": {
+    "question_id": "Q77",
+    "question_text": "How much confidence do you have in major companies?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "Don´t know", "None at all", "A great deal", "No answer", "Missing"]
+  },
+  "Q78": {
+    "question_id": "Q78",
+    "question_text": "How much confidence do you have in banks?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Quite a lot", "Don´t know", "Not very much", "A great deal", "None at all", "No answer", "Missing"]
+  },
+  "Q79": {
+    "question_id": "Q79",
+    "question_text": "How much confidence do you have in environmental organizations?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "Don´t know", "None at all", "A great deal", "No answer", "Missing"]
+  },
+  "Q80": {
+    "question_id": "Q80",
+    "question_text": "How much confidence do you have in women´s organizations?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "Don´t know", "A great deal", "None at all", "No answer", "Missing"]
+  },
+  "Q81": {
+    "question_id": "Q81",
+    "question_text": "How much confidence do you have in charitable or humanitarian organizations?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not very much", "Quite a lot", "A great deal", "Don´t know", "None at all", "No answer", "Missing"]
+  },
+  "Q83": {
+    "question_id": "Q83",
+    "question_text": "How much confidence do you have in the United Nations (UN)?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "Quite a lot", "A great deal", "Not very much", "Missing", "Don´t know", "No answer"]
+  },
+  "t_Q84": {
+    "question_id": "t_Q84",
+    "question_text": "How much confidence do you have in the International Monetary Fund (IMF)?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "Quite a lot", "Don´t know", "Not very much", "A great deal", "Missing", "No answer"]
+  },
+  "Q85": {
+    "question_id": "Q85",
+    "question_text": "How much confidence do you have in International Criminal Court (ICC)?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "Quite a lot", "Don´t know", "Not very much", "A great deal", "Missing", "No answer"]
+  },
+  "Q86": {
+    "question_id": "Q86",
+    "question_text": "How much confidence do you have in the North Atlantic Treaty Organization (NATO)?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "Quite a lot", "Don´t know", "Missing", "Not very much", "A great deal", "No answer"]
+  },
+  "Q87": {
+    "question_id": "Q87",
+    "question_text": "How much confidence do you have in the World Bank (WB)?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "Quite a lot", "Don´t know", "Not very much", "A great deal", "Missing", "No answer"]
+  },
+  "Q88": {
+    "question_id": "Q88",
+    "question_text": "How much confidence do you have in the World Health Organization (WHO)?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "Quite a lot", "Don´t know", "Not very much", "A great deal", "Missing", "No answer"]
+  },
+  "Q89": {
+    "question_id": "Q89",
+    "question_text": "How much confidence do you have in the World Trade Organization (WTO)?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["None at all", "Quite a lot", "Don´t know", "Not very much", "A great deal", "Missing", "No answer"]
+  },
+  "t_Q90": {
+    "question_id": "t_Q90",
+    "question_text": "What should international organizations prioritize: being effective or being democratic?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["No answer", "Almost fully democratic", "Being effective", "Being democratic", "Balanced", "Mostly democratic", "Leaning democratic", "Somewhat democratic", "Mostly effective", "Somewhat effective", "Missing", "Don’t know", "Leaning effective"]
+  },
+  "Q91": {
+    "question_id": "Q91",
+    "question_text": "Which of the following countries does not have a permanent seat on the UN Security Council: France, China, India?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don´t know", "India", "France", "China", "No answer", "Missing"]
+  },
+  "Q92": {
+    "question_id": "Q92",
+    "question_text": "Where are the headquarters of the International Monetary Fund (IMF) located?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don´t know", "Washington DC", "Geneva", "London", "No answer", "Missing"]
+  },
+  "Q93": {
+    "question_id": "Q93",
+    "question_text": "Which of the following problems does the organization Amnesty International deal with?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don´t know", "Human rights", "No answer", "Climate change", "Missing", "Destruction of historic monuments"]
+  },
+  "Q95": {
+    "question_id": "Q95",
+    "question_text": "Are you a member of a sport or recreational organization, football/baseball/rugby team?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Active member", "Don't belong", "Inactive member", "Don´t know", "Missing", "No answer"]
+  },
+  "Q96": {
+    "question_id": "Q96",
+    "question_text": "Are you a member of a art, music or educational organization?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don't belong", "Active member", "Inactive member", "Don´t know", "Missing", "No answer"]
+  },
+  "Q97": {
+    "question_id": "Q97",
+    "question_text": "Are you a member of a labour union?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not a member", "Inactive member", "Active member", "Don´t know", "Missing", "No answer"]
+  },
+  "Q98": {
+    "question_id": "Q98",
+    "question_text": "Are you a member of a political party?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not a member", "Inactive member", "Active member", "Don´t know", "Missing", "No answer"]
+  },
+  "Q99": {
+    "question_id": "Q99",
+    "question_text": "Are you a member of a environmental organization?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don't belong", "Active member", "Inactive member", "Don´t know", "Missing", "No answer"]
+  },
+  "Q100": {
+    "question_id": "Q100",
+    "question_text": "Are you a member of a professional association?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not a member", "Inactive member", "Active member", "Don´t know", "Missing", "No answer"]
+  },
+  "Q101": {
+    "question_id": "Q101",
+    "question_text": "Are you a member of a humanitarian or charitable organization?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Not a member", "Missing", "Inactive member", "Active member", "Don´t know", "No answer"]
+  },
+  "Q103": {
+    "question_id": "Q103",
+    "question_text": "Are you a member of a self-help group, mutual aid group?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don't belong", "Inactive member", "Active member", "Don´t know", "Missing", "No answer"]
+  },
+  "t_Q104": {
+    "question_id": "t_Q104",
+    "question_text": "Are you a member of a women’s group?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don't belong", "Inactive member", "Active member", "No answer", "Don´t know", "Missing"]
+  },
+  "Q105": {
+    "question_id": "Q105",
+    "question_text": "Are you a member of a other organization?",
+    "section": "Social Capital, Trust and Organizational Membership",
+    "levels": ["Don't belong", "Missing", "Inactive member", "No answer", "Active member", "Don´t know"]
+  },
+  "Q107": {
+    "question_id": "Q107",
+    "question_text": "Should private or government ownership of business and industry be increased?",
+    "section": "Economic Values",
+    "levels": ["No answer", "Leaning toward government ownership", "Private ownership of business should be increased", "Balanced", "Leaning toward private ownership", "Don’t know", "Government ownership of business should be increased", "Missing"]
+  },
+  "t_Q108": {
+    "question_id": "t_Q108",
+    "question_text": "Should the government take more responsibility to ensure provision for all, or should individuals be more responsible for themselves?",
+    "section": "Economic Values",
+    "levels": ["No answer", "Leaning toward individual responsibility", "People should take more responsibility to provide for themselves", "The government should take more responsibility to ensure that everyone is provided for", "Balanced", "Leaning toward government responsibility", "Don’t know", "Missing"]
+  },
+  "t_Q109": {
+    "question_id": "t_Q109",
+    "question_text": "Do you think competition is good because it stimulates effort and innovation, or harmful because it brings out the worst in people?",
+    "section": "Economic Values",
+    "levels": ["No answer", "Leaning toward harmful", "Competition is good", "Balanced", "Leaning toward good", "Competition is harmful", "Don’t know", "Missing"]
+  },
+  "Q110": {
+    "question_id": "Q110",
+    "question_text": "Is success mainly the result of hard work, or more a matter of luck and connections?",
+    "section": "Economic Values",
+    "levels": ["No answer", "Leaning toward luck and connections", "In the long run, hard work usually brings a better life", "Hard work doesn’t generally bring success – it’s more a matter of luck and connections", "Leaning toward hard work", "Balanced", "Don’t know", "Missing"]
+  },
+  "Q111": {
+    "question_id": "Q111",
+    "question_text": "Here are two statements people sometimes make when discussing the environment and economic growth. Which of them comes closer to your own point of view? A. Protecting the environment should be given priority, even if it causes slower economic growth and some loss of jobs B. Economic growth and creating jobs should be the top priority, even if the environment suffers to some extent",
+    "section": "Economic Values",
+    "levels": ["No answer", "B: Economic growth", "A: Protect environment", "Other answer", "Don´t know", "Missing"]
+  },
+  "Q113": {
+    "question_id": "Q113",
+    "question_text": "How many  state authorities do you believe are involved in corruption?",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "Most of them", "None of them", "Don´t know", "All of them", "Few of them", "Missing"]
+  },
+  "t_Q114": {
+    "question_id": "t_Q114",
+    "question_text": "How many  business executives do you believe are involved in corruption?",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "Most of them", "None of them", "Don´t know", "Few of them", "All of them", "Missing"]
+  },
+  "t_Q115": {
+    "question_id": "t_Q115",
+    "question_text": "How many  local authorities do you believe are involved in corruption?",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "Most of them", "None of them", "Don´t know", "Few of them", "All of them", "Missing"]
+  },
+  "Q116": {
+    "question_id": "Q116",
+    "question_text": "How many  civil service providers (police, judiciary, civil servants, doctors, teachers) do you believe are involved in corruption?",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "Most of them", "Few of them", "Don´t know", "None of them", "All of them", "Missing"]
+  },
+  "Q117": {
+    "question_id": "Q117",
+    "question_text": "How many  journalists and media do you believe are involved in corruption?",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "Few of them", "Don´t know", "Most of them", "None of them", "All of them", "Missing"]
+  },
+  "Q118": {
+    "question_id": "Q118",
+    "question_text": "We want to know about your experience with local officials and service providers, like police officers, lawyers, doctors, teachers and civil servants in your community. How often do you think ordinary people like yourself or people from your neighbourhood have to pay a bribe, give a gift or do a favor to these people in order to get the services you need?",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "Rarely", "Never", "Frequently", "Don´t know", "Always", "Missing"]
+  },
+  "Q119": {
+    "question_id": "Q119",
+    "question_text": "Can you tell me how strongly you agree or disagree with the following statement: On the whole, women are less corrupt than men",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "Agree", "Strongly disagree", "Hard to say", "Don´t know", "Disagree", "Strongly agree", "Missing"]
+  },
+  "Q120": {
+    "question_id": "Q120",
+    "question_text": "In your opinion, how high is the risk that someone will be held accountable for giving or receiving a bribe, gift, or favour in return for public service?",
+    "section": "Perceptions of Corruption",
+    "levels": ["No answer", "High risk", "No risk at all", "Moderate risk", "Very high risk", "Low risk", "Don’t know", "Missing"]
+  },
+  "t_Q121": {
+    "question_id": "t_Q121",
+    "question_text": "How do you evaluate the impact of immigrants on the development of this country?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Very good", "Neither good, nor bad", "Rather bad", "Quite good", "Quite bad", "Don´t know", "Missing"]
+  },
+  "Q123": {
+    "question_id": "Q123",
+    "question_text": "Do you agree that immigrants strengthen cultural diversity?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Disagree", "Agree", "Hard to say", "Don´t know", "Missing"]
+  },
+  "Q124": {
+    "question_id": "Q124",
+    "question_text": "Do you agree that immigrants increase the crime rate?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Hard to say", "Agree", "Don´t know", "Disagree", "Missing"]
+  },
+  "Q125": {
+    "question_id": "Q125",
+    "question_text": "Do you agree that the country should give asylum to political refugees?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Hard to say", "Agree", "Disagree", "Missing", "Don´t know"]
+  },
+  "Q126": {
+    "question_id": "Q126",
+    "question_text": "Do you agree that immigrants increase the risks of terrorism?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Agree", "Don´t know", "Disagree", "Hard to say", "Missing"]
+  },
+  "Q128": {
+    "question_id": "Q128",
+    "question_text": "Do you agree that immigrants increase unemployment?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Agree", "Disagree", "Don´t know", "Hard to say", "Missing"]
+  },
+  "Q129": {
+    "question_id": "Q129",
+    "question_text": "Do you agree that immigrants lead to social conflict?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Hard to say", "Agree", "Don´t know", "Disagree", "Missing"]
+  },
+  "t_Q130": {
+    "question_id": "t_Q130",
+    "question_text": "What do you think the government should do about people from other countries coming here to work?",
+    "section": "Perceptions of Migration",
+    "levels": ["No answer", "Prohibit people coming here from other countries", "Place strict limits on the number of foreigners who can come here", "Let people come as long as there are jobs available", "Let anyone come who wants to", "Don’t know", "Missing"]
+  },
+  "Q132": {
+    "question_id": "Q132",
+    "question_text": "How frequently does robberies occur in your neighborhood?",
+    "section": "Perceptions of Security",
+    "levels": ["Not frequently", "Very Frequently", "Not at all frequently", "Quite frequently", "Don´t know", "Missing", "No answer"]
+  },
+  "t_Q133": {
+    "question_id": "t_Q133",
+    "question_text": "How frequently does alcohol consumed in the streets occur in your neighborhood?",
+    "section": "Perceptions of Security",
+    "levels": ["Not frequently", "Quite frequently", "Not at all frequently", "Very Frequently", "Missing", "Don´t know", "No answer"]
+  },
+  "Q134": {
+    "question_id": "Q134",
+    "question_text": "How frequently does police or military interfere with people’s private life occur in your neighborhood?",
+    "section": "Perceptions of Security",
+    "levels": ["Not frequently", "Quite frequently", "Not at all frequently", "Very Frequently", "Missing", "Don´t know", "No answer"]
+  },
+  "Q135": {
+    "question_id": "Q135",
+    "question_text": "How frequently does racist behavior occur in your neighborhood?",
+    "section": "Perceptions of Security",
+    "levels": ["Not frequently", "Quite frequently", "Very Frequently", "Not at all frequently", "Missing", "Don´t know", "No answer"]
+  },
+  "Q136": {
+    "question_id": "Q136",
+    "question_text": "How frequently does drug sale in streets occur in your neighborhood?",
+    "section": "Perceptions of Security",
+    "levels": ["Not frequently", "Very Frequently", "Quite frequently", "Not at all frequently", "Don´t know", "Missing", "No answer"]
+  },
+  "Q137": {
+    "question_id": "Q137",
+    "question_text": "How frequently does street violence and fights occur in your neighborhood?",
+    "section": "Perceptions of Security",
+    "levels": ["Not frequently", "Quite frequently", "Not at all frequently", "Missing", "Don´t know", "Very Frequently", "No answer"]
+  },
+  "Q138": {
+    "question_id": "Q138",
+    "question_text": "How frequently does sexual harassment occur in your neighborhood?",
+    "section": "Perceptions of Security",
+    "levels": ["Not frequently", "Not at all frequently", "Quite frequently", "Don´t know", "Missing", "Very Frequently", "No answer"]
+  },
+  "Q139": {
+    "question_id": "Q139",
+    "question_text": "Have you ever avoided carrying much money for security reasons?",
+    "section": "Perceptions of Security",
+    "levels": ["No answer", "No", "Yes", "Missing", "Don´t know"]
+  },
+  "Q140": {
+    "question_id": "Q140",
+    "question_text": "Have you preferred not to go out at night for reasons of security?",
+    "section": "Perceptions of Security",
+    "levels": ["No answer", "No", "Yes", "Missing", "Don´t know"]
+  },
+  "t_Q141": {
+    "question_id": "t_Q141",
+    "question_text": "Have you ever carried a knife, gun or other weapon for reasons of security?",
+    "section": "Perceptions of Security",
+    "levels": ["No answer", "No", "Missing", "Yes", "Don´t know"]
+  },
+  "Q142": {
+    "question_id": "Q142",
+    "question_text": "How worried are you about losing your job or not finding a job?",
+    "section": "Perceptions of Security",
+    "levels": ["A great deal", "Very much", "Missing", "Not much", "Not at all", "Don´t know", "No answer"]
+  },
+  "Q143": {
+    "question_id": "Q143",
+    "question_text": "How worried are you about not being able to give your children a good education?",
+    "section": "Perceptions of Security",
+    "levels": ["Not much", "Very much", "A great deal", "Missing", "Not at all", "Don´t know", "No answer"]
+  },
+  "Q144": {
+    "question_id": "Q144",
+    "question_text": "Have you been the victim of a crime during the past year?",
+    "section": "Perceptions of Security",
+    "levels": ["No", "Yes", "Missing", "Don´t know", "No answer"]
+  },
+  "Q145": {
+    "question_id": "Q145",
+    "question_text": "And what about your immediate family, has someone in your family been the victim of a crime during the last year?",
+    "section": "Perceptions of Security",
+    "levels": ["No", "Yes", "Missing", "Don´t know", "No answer"]
+  },
+  "Q147": {
+    "question_id": "Q147",
+    "question_text": "How worried are you about a terrorist attack?",
+    "section": "Perceptions of Security",
+    "levels": ["Not much", "Very much", "Not at all", "Missing", "A great deal", "Don´t know", "No answer"]
+  },
+  "Q148": {
+    "question_id": "Q148",
+    "question_text": "How worried are you about a civil war?",
+    "section": "Perceptions of Security",
+    "levels": ["Not much", "Very much", "A great deal", "Not at all", "No answer", "Missing", "Don´t know"]
+  },
+  "Q149": {
+    "question_id": "Q149",
+    "question_text": "Most people consider both freedom and equality to be important, but if you had to choose between them, which one would you consider more important?",
+    "section": "Perceptions of Security",
+    "levels": ["Don´t know", "Freedom", "Equality", "Missing", "No answer"]
+  },
+  "Q150": {
+    "question_id": "Q150",
+    "question_text": "Most people consider both freedom and security to be important, but if you had to choose between them, which one would you consider more important?",
+    "section": "Perceptions of Security",
+    "levels": ["Don´t know", "Security", "Freedom", "Missing", "No answer"]
+  },
+  "Q151": {
+    "question_id": "Q151",
+    "question_text": "Of course, we all hope that there will not be another war, but if it were to come to that, would you be willing to fight for your country?",
+    "section": "Perceptions of Security",
+    "levels": ["No answer", "Yes", "No", "Missing", "Don´t know"]
+  },
+  "t_Q152": {
+    "question_id": "t_Q152",
+    "question_text": "What do you think should be the most important goal for this country over the next ten years? Economic growth, strong defence, public participation, or environmental improvement?",
+    "section": "Index of Postmaterialism",
+    "levels": ["No answer", "A high level of economic growth", "People have more say about how things are done", "Strong defence forces", "Trying to make our cities and countryside more beautiful", "Don’t know", "Missing"]
+  },
+  "Q154": {
+    "question_id": "Q154",
+    "question_text": "People may value different national goals. Which of these goals is most important to you personally: maintaining order in the nation, giving people more say in important government decisions, fighting rising prices, or protecting freedom of speech?",
+    "section": "Index of Postmaterialism",
+    "levels": ["No answer", "Maintaining order in the nation", "Protecting freedom of speech", "Fighting rising prices", "Giving people more say in important government decisions", "Don’t know", "Missing"]
+  },
+  "Q155": {
+    "question_id": "Q155",
+    "question_text": "People may value different national goals. Which of these goals is the second most important to you personally: maintaining order in the nation, giving people more say in important government decisions, fighting rising prices, or protecting freedom of speech?",
+    "section": "Index of Postmaterialism",
+    "levels": ["Missing", "Fighting rising prices", "Maintaining order in the nation", "Protecting freedom of speech", "Giving people more say in important government decisions", "No answer", "Don’t know"]
+  },
+  "t_Q156": {
+    "question_id": "t_Q156",
+    "question_text": "In your opinion, which of the following is most important: A stable economy; Progress toward a less impersonal and more humane society; Progress toward a society in which ideas count more than money; The fight against crime?",
+    "section": "Index of Postmaterialism",
+    "levels": ["Don´t know", "A stable economy", "Progress toward a society in which Ideas count more than money", "Progress toward a less impersonal and more humane society", "The fight against crime", "No answer", "Missing"]
+  },
+  "Q157": {
+    "question_id": "Q157",
+    "question_text": "In your opinion, which of the following is the second most important: A stable economy; Progress toward a less impersonal and more humane society; Progress toward a society in which ideas count more than money; The fight against crime?",
+    "section": "Index of Postmaterialism",
+    "levels": ["Missing", "Progress toward a society in which Ideas count more than money", "Progress toward a less impersonal and more humane  society", "A stable economy", "The fight against crime", "Don´t know", "No answer"]
+  },
+  "Q158": {
+    "question_id": "Q158",
+    "question_text": "To what extent do you agree or disagree that science and technology are making our lives healthier, easier, and more comfortable?",
+    "section": "Perceptions about Science and Technology",
+    "levels": ["Missing", "Agree", "Completely disagree", "Completely agree", "Somewhat agree", "Somewhat disagree", "Don’t know", "No answer"]
+  },
+  "Q159": {
+    "question_id": "Q159",
+    "question_text": "To what extent do you agree or disagree that science and technology will create more opportunities for the next generation?",
+    "section": "Perceptions about Science and Technology",
+    "levels": ["Missing", "Agree", "Completely agree", "Completely disagree", "Somewhat agree", "Somewhat disagree", "Don’t know", "No answer"]
+  },
+  "Q161": {
+    "question_id": "Q161",
+    "question_text": "To what extent do you agree or disagree with the statement: 'One of the bad effects of science is that it breaks down people’s ideas of right and wrong'?",
+    "section": "Perceptions about Science and Technology",
+    "levels": ["Missing", "Agree", "Completely agree", "Completely disagree", "Somewhat agree", "Somewhat disagree", "Don’t know", "No answer"]
+  },
+  "t_Q162": {
+    "question_id": "t_Q162",
+    "question_text": "To what extent do you agree or disagree with the statement: 'It is not important for me to know about science in my daily life'?",
+    "section": "Perceptions about Science and Technology",
+    "levels": ["Missing", "Agree", "Completely agree", "Completely disagree", "Somewhat disagree", "Somewhat agree", "Don’t know", "No answer"]
+  },
+  "t_Q163": {
+    "question_id": "t_Q163",
+    "question_text": "To what extent do you think the world is better or worse off because of science and technology?",
+    "section": "Perceptions about Science and Technology",
+    "levels": ["Don’t know", "Better off", "Much better off", "Somewhat better off", "Much worse off", "Somewhat worse off", "No answer", "Missing"]
+  },
+  "Q164": {
+    "question_id": "Q164",
+    "question_text": "How important is God in your life?",
+    "section": "Religious Values",
+    "levels": ["Don’t know", "Important", "Very important", "Missing", "Not at all important", "Moderately important", "Of little importance", "No answer"]
+  },
+  "Q165": {
+    "question_id": "Q165",
+    "question_text": "Do you believe in God?",
+    "section": "Religious Values",
+    "levels": ["No", "Yes", "Don´t know", "No answer", "Missing"]
+  },
+  "Q166": {
+    "question_id": "Q166",
+    "question_text": "Do you believe in life after death?",
+    "section": "Religious Values",
+    "levels": ["No", "Missing", "Yes", "Don´t know", "No answer"]
+  },
+  "Q167": {
+    "question_id": "Q167",
+    "question_text": "Do you believe in Hell?",
+    "section": "Religious Values",
+    "levels": ["No", "Missing", "Yes", "Don´t know", "No answer"]
+  },
+  "Q168": {
+    "question_id": "Q168",
+    "question_text": "Do you believe in Heaven?",
+    "section": "Religious Values",
+    "levels": ["No", "Missing", "Yes", "Don´t know", "No answer"]
+  },
+  "Q169": {
+    "question_id": "Q169",
+    "question_text": "Whenever science and religion conflict, is religion always right?",
+    "section": "Religious Values",
+    "levels": ["Strongly disagree", "Agree", "Strongly agree", "Don’t know", "Disagree", "No answer", "Missing"]
+  },
+  "Q172": {
+    "question_id": "Q172",
+    "question_text": "Apart from weddings and funerals, about how often do you pray?",
+    "section": "Religious Values",
+    "levels": ["Never, practically never", "Only on special holy days", "Once a day", "Several times each week", "Only when attending religious services", "Missing", "Don´t know", "Several times a day", "Once a year", "Less often", "No answer"]
+  },
+  "t_Q173": {
+    "question_id": "t_Q173",
+    "question_text": "Independently of whether you go to church or not, would you say you are a religious person?",
+    "section": "Religious Values",
+    "levels": ["Don´t know", "A religious person", "Missing", "An atheist", "Not a religious person", "No answer"]
+  },
+  "Q174": {
+    "question_id": "Q174",
+    "question_text": "Is religion primarily about following religious norms and ceremonies, or about doing good to other people?",
+    "section": "Religious Values",
+    "levels": ["Don’t know", "Do good to other people", "Follow religious norms and ceremonies", "Missing", "No answer"]
+  },
+  "t_Q175": {
+    "question_id": "t_Q175",
+    "question_text": "Is religion primarily about making sense of life after death or life in this world?",
+    "section": "Religious Values",
+    "levels": ["Don’t know", "Make sense of life in this world", "Make sense of life after death", "Missing", "No answer"]
+  },
+  "Q176": {
+    "question_id": "Q176",
+    "question_text": "Do you agree or disagree that it is difficult nowadays to decide which moral rules are the right ones to follow?",
+    "section": "Ethical Values",
+    "levels": ["Don’t know", "Somewhat disagree", "Completely agree", "Somewhat agree", "Neither agree nor disagree", "Missing", "Completely disagree", "No answer"]
+  },
+  "Q178": {
+    "question_id": "Q178",
+    "question_text": "Is it justifiable to avoid paying a fare on public transport?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Rarely justifiable", "Always justifiable", "Never justifiable", "Often justifiable", "Sometimes justifiable", "Don’t know", "No answer"]
+  },
+  "Q179": {
+    "question_id": "Q179",
+    "question_text": "Is it justifiable to steal property?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Rarely justifiable", "Never justifiable", "Often justifiable", "Always justifiable", "No answer", "Sometimes justifiable", "Don’t know"]
+  },
+  "Q180": {
+    "question_id": "Q180",
+    "question_text": "Is it justifiable to cheat on taxes if you have the chance?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Rarely justifiable", "Never justifiable", "Often justifiable", "Sometimes justifiable", "Don’t know", "Always justifiable", "No answer"]
+  },
+  "Q181": {
+    "question_id": "Q181",
+    "question_text": "Is it justifiable for someone to accept a bribe in the course of their duties?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Rarely justifiable", "Never justifiable", "Sometimes justifiable", "Often justifiable", "Don’t know", "No answer", "Always justifiable"]
+  },
+  "Q182": {
+    "question_id": "Q182",
+    "question_text": "Is homosexuality justifiable, in your view?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Don’t know", "Always justifiable", "Never justifiable", "Often justifiable", "Rarely justifiable", "Sometimes justifiable", "No answer"]
+  },
+  "t_Q183": {
+    "question_id": "t_Q183",
+    "question_text": "Is prostitution justifiable, in your view?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Don’t know", "Always justifiable", "Never justifiable", "Rarely justifiable", "Sometimes justifiable", "Often justifiable", "No answer"]
+  },
+  "Q184": {
+    "question_id": "Q184",
+    "question_text": "Is abortion justifiable, in your view?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Rarely justifiable", "Never justifiable", "Always justifiable", "Sometimes justifiable", "Often justifiable", "No answer", "Don’t know"]
+  },
+  "Q185": {
+    "question_id": "Q185",
+    "question_text": "Is divorce justifiable, in your view?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Rarely justifiable", "Never justifiable", "Always justifiable", "Sometimes justifiable", "Often justifiable", "No answer", "Don’t know"]
+  },
+  "Q186": {
+    "question_id": "Q186",
+    "question_text": "How justifiable do you think sex before marriage is?",
+    "section": "Ethical Values",
+    "levels": ["Missing", "Don’t know", "Never justifiable", "Always justifiable", "Often justifiable", "Rarely justifiable", "Sometimes justifiable", "No answer"]
+  },
+  "Q187": {
+    "question_id": "Q187",
+    "question_text": "How justifiable do you think suicide is?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Never justifiable", "Don’t know", "Rarely justifiable", "Often justifiable", "Always justifiable", "Sometimes justifiable", "Missing"]
+  },
+  "t_Q188": {
+    "question_id": "t_Q188",
+    "question_text": "How justifiable do you think euthanasia is?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Always justifiable", "Never justifiable", "Don’t know", "Sometimes justifiable", "Often justifiable", "Rarely justifiable", "Missing"]
+  },
+  "Q189": {
+    "question_id": "Q189",
+    "question_text": "How justifiable do you think it is for a man to beat his wife?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Rarely justifiable", "Never justifiable", "Missing", "Often justifiable", "Always justifiable", "Sometimes justifiable", "Don’t know"]
+  },
+  "Q190": {
+    "question_id": "Q190",
+    "question_text": "How justifiable do you think it is for parents to beat their children?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Rarely justifiable", "Never justifiable", "Always justifiable", "Sometimes justifiable", "Often justifiable", "Don´t know", "Missing"]
+  },
+  "Q191": {
+    "question_id": "Q191",
+    "question_text": "How justifiable do you think it is to use violence against other people?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Rarely justifiable", "Never justifiable", "Don´t know", "Sometimes justifiable", "Often justifiable", "Always justifiable", "Missing"]
+  },
+  "Q192": {
+    "question_id": "Q192",
+    "question_text": "How justifiable do you think it is to use terrorism as a political, ideological or religious means?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Never justifiable", "Rarely justifiable", "Often justifiable", "Always justifiable", "Sometimes justifiable", "Don´t know", "Missing"]
+  },
+  "Q194": {
+    "question_id": "Q194",
+    "question_text": "How justifiable do you think it is to use political violence?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Rarely justifiable", "Never justifiable", "Don’t know", "Often justifiable", "Always justifiable", "Sometimes justifiable", "Missing"]
+  },
+  "t_Q195": {
+    "question_id": "t_Q195",
+    "question_text": "How justifiable do you think the death penalty is?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Always justifiable", "Never justifiable", "Rarely justifiable", "Often justifiable", "Sometimes justifiable", "Don’t know", "Missing"]
+  },
+  "Q196": {
+    "question_id": "Q196",
+    "question_text": "Should the government have the right to keep people under video surveillance in public areas?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Definitely should have the right", "Probably should not have the right", "Definitely should not have the right", "Probably should have the right", "Don’t know", "Missing"]
+  },
+  "Q197": {
+    "question_id": "Q197",
+    "question_text": "Should the government have the right to monitor all emails and other information exchanged on the Internet?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Definitely should have the right", "Probably should have the right", "Definitely should not have the right", "Probably should not have the right", "Don’t know", "Missing"]
+  },
+  "Q198": {
+    "question_id": "Q198",
+    "question_text": "Should the government have the right to collect information about people living in this country without their knowledge?",
+    "section": "Ethical Values",
+    "levels": ["No answer", "Probably should not have the right", "Probably should have the right", "Definitely should not have the right", "Definitely should have the right", "Don’t know", "Missing"]
+  },
+  "Q199": {
+    "question_id": "Q199",
+    "question_text": "How interested would you say you are in politics?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Not at all interested", "Somewhat interested", "Very interested", "Not very interested", "Missing", "Don´t know", "No answer"]
+  },
+  "Q200": {
+    "question_id": "Q200",
+    "question_text": "When you get together with your friends, how often do you discuss political matters?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Never", "Occasionally", "Frequently", "Missing", "No answer", "Don´t know"]
+  },
+  "t_Q201": {
+    "question_id": "t_Q201",
+    "question_text": "How often do you use daily newspaper to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Daily", "Less than monthly", "Weekly", "Monthly", "Never", "Missing", "Don´t know", "No answer"]
+  },
+  "Q202": {
+    "question_id": "Q202",
+    "question_text": "How often do you use tv news to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Daily", "Weekly", "Less than monthly", "Monthly", "Never", "Don´t know", "Missing", "No answer"]
+  },
+  "Q203": {
+    "question_id": "Q203",
+    "question_text": "How often do you use radio news to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Less than monthly", "Never", "Daily", "Weekly", "Monthly", "No answer", "Missing", "Don´t know"]
+  },
+  "t_Q204": {
+    "question_id": "t_Q204",
+    "question_text": "How often do you use mobile phone to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Less than monthly", "Daily", "Monthly", "Never", "Weekly", "Missing", "Don´t know", "No answer"]
+  },
+  "Q205": {
+    "question_id": "Q205",
+    "question_text": "How often do you use email to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Less than monthly", "Daily", "Weekly", "Never", "Monthly", "Don´t know", "No answer", "Missing"]
+  },
+  "Q206": {
+    "question_id": "Q206",
+    "question_text": "How often do you use internet to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Less than monthly", "Daily", "Monthly", "Never", "Weekly", "No answer", "Don´t know", "Missing"]
+  },
+  "Q207": {
+    "question_id": "Q207",
+    "question_text": "How often do you use social media (facebook, twitter, etc.) to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Less than monthly", "Daily", "Never", "Weekly", "Monthly", "No answer", "Missing", "Don´t know"]
+  },
+  "t_Q208": {
+    "question_id": "t_Q208",
+    "question_text": "How often do you use talk with friends or colleagues to obtain information about this country and the world?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Less than monthly", "Weekly", "Never", "Daily", "Monthly", "Don´t know", "No answer", "Missing"]
+  },
+  "Q209": {
+    "question_id": "Q209",
+    "question_text": "Have you ever signed a petition, might you consider signing one, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "Missing", "No answer"]
+  },
+  "Q210": {
+    "question_id": "Q210",
+    "question_text": "Have you ever joined a boycott, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "No answer", "Missing"]
+  },
+  "Q211": {
+    "question_id": "Q211",
+    "question_text": "Have you ever attended a peaceful demonstration, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "Missing", "No answer"]
+  },
+  "Q212": {
+    "question_id": "Q212",
+    "question_text": "Have you ever participated in an unofficial strike, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Missing", "Might do", "Don´t know", "No answer"]
+  },
+  "Q213": {
+    "question_id": "Q213",
+    "question_text": "Have you ever donated to a political or activist group or campaign, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "No answer", "Missing"]
+  },
+  "Q214": {
+    "question_id": "Q214",
+    "question_text": "Have you ever contacted a government official, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "No answer", "Missing"]
+  },
+  "Q215": {
+    "question_id": "Q215",
+    "question_text": "Have you ever encouraged others to take political action, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Might do", "Have done", "Don´t know", "Missing", "No answer"]
+  },
+  "Q216": {
+    "question_id": "Q216",
+    "question_text": "Have you ever encouraged others to vote, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "Missing", "No answer"]
+  },
+  "Q217": {
+    "question_id": "Q217",
+    "question_text": "Have you ever used the internet or social media to search for information about politics and political events, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "No answer", "Missing"]
+  },
+  "Q218": {
+    "question_id": "Q218",
+    "question_text": "Have you ever signed a petition online using the internet or social media, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "No answer", "Missing"]
+  },
+  "Q219": {
+    "question_id": "Q219",
+    "question_text": "Have you ever encouraged others to take political action using the internet or social media, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Have done", "Might do", "Don´t know", "No answer", "Missing"]
+  },
+  "Q220": {
+    "question_id": "Q220",
+    "question_text": "Have you ever used the internet or social media to organize political activities, events, or protests, might you consider doing so, or would you never do so under any circumstances?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Would never do", "Might do", "Don´t know", "Have done", "No answer", "Missing"]
+  },
+  "Q221": {
+    "question_id": "Q221",
+    "question_text": "How often do you vote in local elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Never", "Always", "Usually", "Not allowed to vote", "Don´t know", "No answer", "Missing"]
+  },
+  "Q222": {
+    "question_id": "Q222",
+    "question_text": "How often do you vote in national elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Never", "Always", "Usually", "Missing", "Not allowed to vote", "Don´t know", "No answer"]
+  },
+  "Q223": {
+    "question_id": "Q223",
+    "question_text": "If there were a national election tomorrow, for which party would you vote?. If you do not know, which party appeals to you most?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["No answer", "IND: Indian People's Party (BJP)", "KGZ: Social Democratic Party of Kyrgyzstan", "Don't know", "ETH: Prosperity Party", "MAC: New Macau Development Union", "NLD: Forum for Democracy", "GTM: Vamos (Come on or Let's go)", "CZE: ANO 2011", "860001.0", "CAN: New Democratic Party", "UKR: Opposition Platform - For Life", "MYS: National Front", "CAN: Bloc Quebecois", "Missing", "DEU: Social Democratic Party", "None", "Other", "ARG: Citizen's Unity, Cristina Fernandez de Kirchner", "NLD: Juiste Antwoord 2021", "NGA: Democratic People's Party", "PAK: Movement for Justice", "GRC: Democratic Alignment", "NIRL: Alliance", "USA: Democratic Party", "NLD: Party for Freedom", "PAK: Pakistan People's Party", "KOR: Democratic Party", "DEU: Alliance 90/The Greens", "CAN: Conservative Party", "CAN: Liberal Party", "MAC: New Hope", "VEN: United Socialist Party of Venezuela", "CAN: Green Party", "ECU: PAIS Alliance", "GRC: Coalition of the Radical Left", "IRN: Reformists", "MYS: Ideas of Prosperity", "CZE: Civic Democratic Party", "NLD: People's Party for Freedom and Democracy", "LBY: National Forces Alliance", "ARG: Front for Victory", "I would not vote", "MYS: Socialist Party of Malaysia", "860002.0", "MMR: National League for Democracy", "MAC: Macau Citizens’ Development Association", "NGA: All Progressive Grand Alliance", "MYS: Alliance of Hope", "KGZ: Socialist Party 'Fatherland'", "PAK: Pakistan Muslim League, Nawaz Sharif faction", "LBY: Taghyeer Party Libya", "MMR: Union Solidarity and Development Party", "DEU: Christian Democratic Union of Germany; Christian Social Union in Bavaria", "TWN: Democratic Progressive Party", "Independent candidate", "MEX: Institutional Revolutionary Party", "UKR: Strength and Honor", "TUN: Renaissance Party 'Ennahdha'", "MAC: Democratic Prosperous Macau Association", "GRC: New Democracy", "MEX: National Action Party", "LBN: The Future Movement", "PHL: Democratic Action", "CZE: Christian Democratic Union / People's Party", "LBN: Free Patriotic Movement", "NZL: New Zealand Labour Party", "TWN: The Pan-Green Coalition", "NLD: Socialist Party", "MAC: Alliance for Change", "NLD: Labour Party", "MEX: National Regeneration Movement", "CZE: Mayors and Independents – Your Option", "KGZ: Respublika", "PHL: Philippine Democratic Party–People's Power", "GRC: The River", "CZE: Freedom and Direct Democracy Tomio Okamura", "UKR: Servant of the People", "MEX: Party of the Democratic Revolution", "ARG: Together for Change, Macri", "USA: Republican Party", "ECU: Warrior Wood Civic Movement", "IND: Regional/State Parties", "TWN: Non-partisan & Non-Partisan Solidarity Union", "NLD: Party for the Animals", "NLD: Volt Europe", "TWN: Nationalist Party", "IND: Left (CPI, CPI(M) etc)", "ETH: Ethiopian Citizens for Social Justice", "NLD: Christian Democratic Appeal", "UKR: Voice", "CZE: Czech Pirate Party", "MAC: Ou Mun Kong I", "LBN: Hezbollah", "TUN: Democratic Current", "TUN: Free Patriotic Union", "KOR: Liberty Korea Party (Grand National Party)", "TWN: Green Party Taiwan", "Null vote", "NGA: All Progressives Congress", "LBN: The Lebanese Forces", "PHL: Liberal Party of the Philippines", "GRC: Union of Centrists", "PHL: New Society Movement", "PHL: Nacionalista Party", "TUN: National Destourian Initiative", "NLD: Green Left", "NZL: Green Party of Aotearoa New Zealand", "LBN: Amal Movement", "KOR: Bareun Party", "MEX: Labor Party", "CZE: Czechoslovak Social Democratic Workers Party", "PHL: United Nationalist Alliance", "MAC: Citizens’ Power", "TUN: Free Destourian Party", "NZL: New Zealand National Party", "TUN: Call of Tunisia", "PHL: Nationalist People’s Coalition", "IND: Indian National Congress", "LBN: Armenian Revolutionary Federation", "NLD: Democrats 66", "VEN: Accion Democratica: AD", "ETH: Amhara National Democratic Movement", "DEU: Alternative for Germany", "LBY: National Front Party", "CZE: TOP 09", "TWN: New Power Party", "MAC: New Macau Progressives", "LBN: Progressive Socialist Party", "ECU: Democratic Left", "MAC: Alliance for a Happy Home", "USA: Libertarian", "KGZ: Respublika - Ata-Zhurt", "860003.0", "USA: Green Party of the United States", "MEX: Social Encounter Party", "TUN: Popular Front for the Realization of the Objectives of the Revolution", "GRC: Course of Freedom", "TUN: Movement Party / Tunisia Will Movement", "KOR: People's Party", "LBY: Justice and Construction Party", "ECU: CREO Movement", "I would cast a blank ballot; White vote", "MEX: Ecologist Green Party of Mexico", "VEN: Primero Justicia", "KGZ: United Kyrgyzstan", "ARG: Justicialist [Peronist] Party, Daniel Scioli, Florencio", "MAC: Progress Promotion Union", "UKR: Movement of New Forces", "GTM: National Unity of Hope", "MAC: Pearl Horizon Buyers’ Rights Defence Union", "VEN: Un Nuevo Tiempo", "MAC: Union for Development", "MAC: New Democratic Macau Association", "ETH: Tigrayan People's Liberation Front", "No right to vote", "UKR: Ukrainian Strategy Party", "PHL: Lakas-Christian Muslim Democrats", "IRN: Fundamentalists", "VEN: Popular Will", "ARG: Republican Proposal, María Eugenia Vidal", "860004.0", "UKR: Opposition Block", "ETH: Ethiopian Social-Democratic Party", "UKR: 'Independence'", "MMR: Shan Nationalities Democratic Party", "ECU: Social Christian Party [Movement]", "NLD: Christian Union Party", "NZL: New Zealand First Party", "KGZ: Kyrgyzstan Party", "TUN: Tunisian Aspiration(s)", "KOR: Justice Party", "LBN: The Future of Determination and Happiness", "PAK: Pakistan Muslim League", "PAK: Awami National Party", "TUN: Current of Love", "NZL: ACT New Zealand", "GRC: Communist Party of Greece", "MAC: Macau-Guangdong Union", "UKR: Radical Party of Oleh Lyashko", "MYS: United Sabah Alliance", "KGZ: Contemporary Party", "DEU: The Left", "KGZ: Dignity Party", "TUN: Republican Party", "UKR: European Solidarity", "ECU: Patriotic Society Party", "ECU: Ecuador Force", "TWN: Social Democratic Party", "MAC: Macau United Citizens' Association", "NIRL: Democratic Unionist Party", "TWN: People First Party", "KGZ: Homeland Security", "PHL: National Unity Party", "ECU: Suma, More Action United Society Movement", "CZE: Oath", "GRC: Front of the Greek Anticapitalist Left", "ETH: Ogaden National Liberation Front", "ECU: Ecuadorian", "MYS: Sabah Heritage Party", "NIRL: N.I. Conservative Party", "TUN: Vive la Tunisie", "NIRL: Sinn Fein", "860005.0", "PAK: Assembly of Islamic Clerics", "ETH: Oromo Liberation Front", "UKR: All-Ukrainian Union 'Fatherland'", "VEN: Progressive Advance", "MEX: Convergence / Citizens' Movement", "NIRL: Green Party", "MAC: Powers of Political Thought", "LBN: Lebanese Resistance Regiments", "TUN: Tunisian Alternative", "TWN: The Pan-Blue Coalition", "UKR: Party of Shariy", "KGZ: Political Party of State Unity and Patriotism", "NIRL: Aontu", "KGZ: Development and Progress Party", "PAK: Muttahida Qaumi Movement-Pakistan", "DEU: Free Democratic Party", "NLD: Interest of the Netherlands", "CZE: Communist Party of Bohemia and Moravia", "LBN: Popular Nasserist Organization", "PAK: Baloch National Party", "UKR: Patriot of Ukraine", "LBN: Enterprise Society", "NIRL: Traditional Unionist Voice", "UKR: Trust the Deeds", "KGZ: White Falcon", "NIRL: Social Democratic and Labour Party", "NIRL: Ulster Unionist", "CZE: Tricolour Citizens' Movement", "GRC: People’s Association / Golden Dawn", "PAK: Pashtunkhwa Milli Awami Party", "NLD: Farmer–Citizen Movement", "CZE: Green Party", "GRC: Popular Unity", "UKR: All-Ukrainian Union 'Svoboda'", "NLD: Reformed Political Party", "NLD: BIJ1", "NZL: The Opportunities Party", "UKR: The 'People's Force' Syla Lyudey Party", "UKR: Civil Position", "GRC: Independent Greeks", "NLD: DENK", "MAC: Civic Watch"]
+  },
+  "Q224": {
+    "question_id": "Q224",
+    "question_text": "In your view, how often are votes counted fairly in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Not often", "Very often", "Not at all often", "Don´t know", "Fairly often", "Missing", "No answer"]
+  },
+  "Q225": {
+    "question_id": "Q225",
+    "question_text": "In your view, how often are opposition candidates prevented from running in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Very often", "Not at all often", "Fairly often", "Don´t know", "Not often", "No answer", "Missing"]
+  },
+  "Q226": {
+    "question_id": "Q226",
+    "question_text": "In your view, how often is TV news favoring the governing party in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Very often", "Not at all often", "Fairly often", "Don´t know", "Not often", "No answer", "Missing"]
+  },
+  "Q227": {
+    "question_id": "Q227",
+    "question_text": "In your view, how often are voters bribed in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Fairly often", "Very often", "Not often", "Don´t know", "No answer", "Not at all often", "Missing"]
+  },
+  "Q228": {
+    "question_id": "Q228",
+    "question_text": "In your view, how often are journalists providing fair coverage of elections in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Not often", "Not at all often", "Don´t know", "Very often", "Fairly often", "No answer", "Missing"]
+  },
+  "Q230": {
+    "question_id": "Q230",
+    "question_text": "In your view, how often are rich people buying elections in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Fairly often", "Very often", "Don´t know", "Not often", "Not at all often", "Missing", "No answer"]
+  },
+  "Q231": {
+    "question_id": "Q231",
+    "question_text": "In your view, how often are voters threatened with violence at the polls in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Not often", "Fairly often", "Don´t know", "Very often", "Not at all often", "Missing", "No answer"]
+  },
+  "Q232": {
+    "question_id": "Q232",
+    "question_text": "In your view, how often are voters offered a genuine choice in the elections in this country's elections?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Fairly often", "Very often", "Don´t know", "Not at all often", "Not often", "Missing", "No answer"]
+  },
+  "Q234": {
+    "question_id": "Q234",
+    "question_text": "Do you think that honest elections play an important role in deciding whether you and your family are able to make a good living?. How important would you say this is?",
+    "section": "Political Interest and Political Participation",
+    "levels": ["Don´t know", "Very important", "Rather important", "No answer", "Not very important", "Missing", "Not at all important"]
+  },
+  "Q235": {
+    "question_id": "Q235",
+    "question_text": "Do you think having a strong leader who does not have to consult parliament or hold elections is a good or bad way of governing this country?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Very bad", "Very good", "Fairly good", "Fairly bad", "No answer", "Missing"]
+  },
+  "Q236": {
+    "question_id": "Q236",
+    "question_text": "Do you think having experts, rather than the government, make decisions based on what they think is best for the country is a good or bad way of governing?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Very bad", "Fairly good", "Very good", "Fairly bad", "No answer", "Missing"]
+  },
+  "Q237": {
+    "question_id": "Q237",
+    "question_text": "Do you think having the army rule the country is a good or bad way of governing?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Very bad", "Fairly good", "Fairly bad", "No answer", "Very good", "Missing"]
+  },
+  "Q239": {
+    "question_id": "Q239",
+    "question_text": "Do you think having a system governed by religious law, without political parties or elections, is a good or bad way of governing this country?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Bad", "Fairly good", "Very bad", "No answer", "Very good", "Missing"]
+  },
+  "Q240": {
+    "question_id": "Q240",
+    "question_text": "In politics, people often describe their views as more left-wing or right-wing. Where would you place your own views on a scale from 1 to 10, where 1 means 'left' and 10 means 'right'?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["No answer", "Don’t know", "Missing", "Center", "Far right", "Right", "Left", "Far left"]
+  },
+  "Q241": {
+    "question_id": "Q241",
+    "question_text": "How essential is it for democracy that governments tax the rich and subsidize the poor? Please use a scale from 1 ('not at all essential') to 10 ('essential').",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Moderately essential", "Not essential", "Very essential", "Essential", "Somewhat unimportant", "It is against democracy", "No answer", "Missing"]
+  },
+  "Q242": {
+    "question_id": "Q242",
+    "question_text": "How essential is it for democracy that religious authorities interpret the laws? Please use a scale from 1 ('not at all essential') to 10 ('essential').",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Not essential", "Somewhat unimportant", "Moderately essential", "Essential", "Very essential", "It is against democracy", "No answer", "Missing"]
+  },
+  "Q243": {
+    "question_id": "Q243",
+    "question_text": "How essential do you think it is for a democracy that people choose their leaders in free elections?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Extremely important", "Not essential at all", "Absolutely essential", "Very important", "Somewhat unimportant", "Important", "Somewhat important", "No answer", "It is against democracy", "Not very essential", "Missing"]
+  },
+  "Q244": {
+    "question_id": "Q244",
+    "question_text": "How essential do you think it is for a democracy that people receive state aid when they are unemployed?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Somewhat important", "Absolutely essential", "Important", "Not very essential", "Very important", "Extremely important", "Not essential at all", "It is against democracy", "Somewhat unimportant", "No answer", "Missing"]
+  },
+  "Q245": {
+    "question_id": "Q245",
+    "question_text": "How essential do you think it is for a democracy that the army takes over when the government is incompetent?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Not essential at all", "It is against democracy", "Absolutely essential", "Very important", "Important", "Somewhat important", "Extremely important", "No answer", "Not very essential", "Somewhat unimportant", "Missing"]
+  },
+  "Q246": {
+    "question_id": "Q246",
+    "question_text": "How essential do you think it is for a democracy that civil rights protect people’s liberty against state oppression?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Somewhat important", "Not essential at all", "Absolutely essential", "Extremely important", "Somewhat unimportant", "Important", "Very important", "It is against democracy", "No answer", "Not very essential", "Missing"]
+  },
+  "Q247": {
+    "question_id": "Q247",
+    "question_text": "How essential do you think it is for a democracy that the state makes people’s incomes more equal?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Extremely important", "Absolutely essential", "Important", "Not essential at all", "Very important", "Somewhat important", "Somewhat unimportant", "It is against democracy", "No answer", "Not very essential", "Missing"]
+  },
+  "Q248": {
+    "question_id": "Q248",
+    "question_text": "How essential do you think it is for a democracy that people obey their rulers?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Very important", "Absolutely essential", "Not essential at all", "Somewhat important", "Extremely important", "Somewhat unimportant", "Important", "Not very essential", "No answer", "It is against democracy", "Missing"]
+  },
+  "Q250": {
+    "question_id": "Q250",
+    "question_text": "How important is it for you to live in a country that is governed democratically?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Somewhat important", "Very important", "Missing", "Neutral", "Somewhat unimportant", "No answer", "Not important"]
+  },
+  "Q251": {
+    "question_id": "Q251",
+    "question_text": "In your view, how democratically is this country being governed today?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Somewhat democratic", "Very democratic", "Not democratic", "Neutral", "Missing", "Somewhat undemocratic", "No answer"]
+  },
+  "Q252": {
+    "question_id": "Q252",
+    "question_text": "How satisfied are you with the way the political system is functioning in your country these days?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Don’t know", "Somewhat satisfied", "Not satisfied", "Somewhat dissatisfied", "Very satisfied", "Missing", "Neutral", "No answer"]
+  },
+  "t_Q253": {
+    "question_id": "t_Q253",
+    "question_text": "How much respect is there for individual human rights nowadays in this country?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["No answer", "A great deal of respect", "Not much respect", "Fairly much respect", "Missing", "No respect at all", "Don´t know"]
+  },
+  "Q254": {
+    "question_id": "Q254",
+    "question_text": "How proud are you to be of nationality of this country?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Quite proud", "Very proud", "Missing", "Don´t know", "Not at all proud", "No answer", "I am not a national of this country", "Not very proud"]
+  },
+  "Q255": {
+    "question_id": "Q255",
+    "question_text": "How close do you feel to your village, town or city?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Close", "Very close", "Not very close", "Not close at all", "Don´t know", "Missing", "No answer"]
+  },
+  "Q256": {
+    "question_id": "Q256",
+    "question_text": "How close do you feel to your region or district?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Close", "Very close", "Not very close", "Not close at all", "Don´t know", "Missing", "No answer"]
+  },
+  "t_Q257": {
+    "question_id": "t_Q257",
+    "question_text": "How close do you feel to your country?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Close", "Very close", "Not very close", "Not close at all", "Don´t know", "Missing", "No answer"]
+  },
+  "t_Q258": {
+    "question_id": "t_Q258",
+    "question_text": "How close do you feel to your continent?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Not very close", "Very close", "Not close at all", "Close", "Don´t know", "No answer", "Missing"]
+  },
+  "Q259": {
+    "question_id": "Q259",
+    "question_text": "How close do you feel to the World?",
+    "section": "Political Culture and Political Regimes",
+    "levels": ["Not very close", "Very close", "Not close at all", "Close", "Don´t know", "No answer", "Missing"]
+  },
+  "Q260": {
+    "question_id": "Q260",
+    "question_text": "How do you identify your sex, male or female?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Female", "Male", "Missing", "No answer"]
+  },
+  "Q262": {
+    "question_id": "Q262",
+    "question_text": "How old are you?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["45.0", "29.0", "36.0", "63.0", "38.0", "Missing", "21.0", "46.0", "31.0", "22.0", "28.0", "37.0", "41.0", "61.0", "68.0", "56.0", "20.0", "39.0", "27.0", "66.0", "53.0", "69.0", "59.0", "52.0", "42.0", "23.0", "26.0", "50.0", "72.0", "92.0", "64.0", "47.0", "74.0", "51.0", "40.0", "75.0", "34.0", "70.0", "57.0", "32.0", "19.0", "18.0", "60.0", "44.0", "65.0", "83.0", "35.0", "58.0", "43.0", "48.0", "55.0", "24.0", "25.0", "30.0", "73.0", "67.0", "62.0", "76.0", "78.0", "77.0", "71.0", "33.0", "49.0", "88.0", "81.0", "54.0", "16.0", "84.0", "79.0", "82.0", "80.0", "89.0", "Don't know", "85.0", "91.0", "86.0", "17.0", "99.0", "87.0", "No answer"]
+  },
+  "Q263": {
+    "question_id": "Q263",
+    "question_text": "Were you born in this country or are you an immigrant?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["I am born in this country", "I am an immigrant to this country (born outside this country)", "Don´t know", "No answer", "Missing"]
+  },
+  "t_Q264": {
+    "question_id": "t_Q264",
+    "question_text": "Is your mother immigrant to this country or not?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Not an immigrant", "Immigrant", "Missing", "Don´t know", "No answer"]
+  },
+  "Q265": {
+    "question_id": "Q265",
+    "question_text": "Is your father immigrant to this country or not?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Not an immigrant", "Immigrant", "Missing", "Don´t know", "No answer"]
+  },
+  "Q266": {
+    "question_id": "Q266",
+    "question_text": "In which country were you born?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Netherlands", "India", "Kyrgyzstan", "Ethiopia", "Macau SAR", "Guatemala", "Czech Rep.", "Uzbekistan", "Canada", "Ukraine", "Malaysia", "Missing", "Germany", "Lebanon", "Libya", "Tunisia", "Argentina", "Nigeria", "Pakistan", "Greece", "Jordan", "United States", "United Kingdom", "Mexico", "South Korea", "China", "Venezuela", "Ecuador", "Iran", "Syria", "Afghanistan", "Russia", "Morocco", "Myanmar", "Poland", "No answer", "Italy", "Taiwan ROC", "Philippines", "Algeria", "Albania", "New Zealand", "Other", "Slovakia", "Brazil", "740.0", "Vietnam", "646.0", "Indonesia", "Armenia", "South Africa", "Israel", "800.0", "France", "Trinidad and Tobago", "Ghana", "Moldova", "Jamaica", "Colombia", "Cyprus", "Hong Kong SAR", "531.0", "Turkey", "Antigua", "Egypt", "Australia", "Belgium", "Ireland", "Don't know", "Tajikistan", "Hungary", "Sri Lanka", "Kazakhstan", "Togo", "Singapore", "Romania", "Uruguay", "Laos", "Guyana", "Paraguay", "Bolivia"]
+  },
+  "Q267": {
+    "question_id": "Q267",
+    "question_text": "In which country was your mother born?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Netherlands", "India", "Kyrgyzstan", "Ethiopia", "Macau SAR", "Guatemala", "Czech Rep.", "Uzbekistan", "Canada", "Ukraine", "Malaysia", "Missing", "Germany", "Lebanon", "Libya", "Tunisia", "Argentina", "Nigeria", "Pakistan", "Greece", "Jordan", "United States", "Mexico", "South Korea", "China", "Venezuela", "Ecuador", "Iran", "Syria", "Afghanistan", "Russia", "Morocco", "Myanmar", "No answer", "Italy", "Belarus", "Taiwan ROC", "Philippines", "United Kingdom", "Algeria", "Albania", "New Zealand", "Portugal", "Colombia", "Hong Kong SAR", "Brazil", "Other", "Austria", "Egypt", "Vietnam", "646.0", "Sweden", "Laos", "Armenia", "84.0", "South Africa", "Guyana", "Antigua", "Belgium", "Anguilla", "Slovakia", "Indonesia", "France", "Trinidad and Tobago", "Ghana", "Poland", "Spain", "Israel", "Moldova", "Jamaica", "686.0", "Bangladesh", "Cyprus", "Cambodia", "Honduras", "Dominican Rep.", "Turkey", "531.0", "Chile", "Andorra", "740.0", "North Korea", "Kazakhstan", "Costa Rica", "Ireland", "Tajikistan", "El Salvador", "Singapore", "Sri Lanka", "Puerto Rico", "Togo", "Georgia", "Thailand", "Paraguay", "Hungary", "Haiti", "Japan", "Uruguay", "Bahrain", "Turkmenistan", "Romania"]
+  },
+  "Q268": {
+    "question_id": "Q268",
+    "question_text": "In which country was your father born? List of codes in Annex",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Netherlands", "India", "Kyrgyzstan", "Ethiopia", "Macau SAR", "Guatemala", "Czech Rep.", "Uzbekistan", "Canada", "Ukraine", "Malaysia", "Austria", "Missing", "Germany", "Lebanon", "Libya", "Tunisia", "Argentina", "Nigeria", "Pakistan", "Greece", "Jordan", "United States", "Mexico", "South Korea", "Croatia", "China", "Venezuela", "Ecuador", "Iran", "Syria", "Afghanistan", "Russia", "Morocco", "Myanmar", "No answer", "Italy", "Taiwan ROC", "Philippines", "United Kingdom", "Algeria", "Albania", "New Zealand", "Other", "Portugal", "Bangladesh", "Colombia", "France", "Hong Kong SAR", "Brazil", "Andorra", "Dominican Rep.", "Vietnam", "646.0", "Turkey", "Cambodia", "Armenia", "Ireland", "South Africa", "Guyana", "Antigua", "Bahamas", "Slovenia", "Indonesia", "Trinidad and Tobago", "Ghana", "Poland", "Serbia", "Moldova", "Jamaica", "132.0", "Honduras", "Cyprus", "Don't know", "Georgia", "531.0", "Norway", "Kazakhstan", "North Korea", "Slovakia", "Egypt", "Australia", "Cuba", "Tajikistan", "Sri Lanka", "Belgium", "Puerto Rico", "Palestine", "Togo", "Hungary", "Haiti", "Romania", "Spain", "Laos", "Bahrain", "Uruguay"]
+  },
+  "Q269": {
+    "question_id": "Q269",
+    "question_text": "Are you a citizen of this country?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Yes, I am a citizen of this country", "Missing", "Not, I am not a citizen of this country", "No answer", "Don´t know"]
+  },
+  "Q270": {
+    "question_id": "Q270",
+    "question_text": "How many people are there in your household, including yourself and children?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["4", "8.0", "2", "7.0", "No answer", "6", "5", "3", "1", "9.0", "10.0", "Missing", "12.0", "20.0", "11.0", "18.0", "14.0", "15.0", "13.0", "21.0", "16.0", "26.0"]
+  },
+  "Q271": {
+    "question_id": "Q271",
+    "question_text": "Do you live with your parents?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["No", "Yes, own parent(s)", "Yes, parent(s) in law", "Missing", "No answer", "Yes, both own parent(s) and parent(s) in law", "Don´t know"]
+  },
+  "Q272": {
+    "question_id": "Q272",
+    "question_text": "What language do you normally speak at home?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["1190.0", "Hindi", "Kirghiz; Kyrgyz", "Somali", "Cantonese", "Spanish; Castilian", "Czech", "Uzbek", "French", "Russian", "Malay; Malaysian", "Other Chinese dialects", "German", "Arabic", "Tunisian Arabic; Tunisian", "English", "Igbo", "Punjabi, Panjabi", "Greek, Modern", "Amharic", "Sindhi", "Korean", "Other", "Ukrainian", "Standard Chinese; Mandarin; Putonghua; Guoyu", "Tamil", "Burmese", "Sgaw Karen; Sgaw Kayin; Karen", "Persian; Farsi; Dari", "Polish", "Azerbaijani; Azeri", "Pashto, Pushto", "Hakka Chinese", "Cebuano; Bisaya; Binisaya", "Hausa", "Albanian", "Gilaki", "Hokkien; Minnan", "Mayan languages", "Waray", "Yoruba", "Urdu", "Maguindanao", "Saraiki", "Oromo", "Filipino; Pilipino", "Lurish; Luri; Bakhtiari", "Nigerian Pidgin", "Telugu", "Kurdish; Yezidi", "Bikol; Bicolano", "Tigrinya", "Bengali; Bangla", "Sidamo; Sidaama; Sidaamu Afoo", "Sama-Bajaw", "Marathi", "No answer", "Missing", "Tajik", "Itneg", "Shan", "Tiv", "Urhobo", "Mon", "2190.0", "Balochi", "Afar", "Hiligaynon; Ilonggo", "Ilocano; Ilokano; Iloko", "Surigaonon", "Kamayo", "Kapampangan", "Garifuna", "Tagalog", "Tausug", "Armenian; Hayeren", "Kazakh", "Isoko", "Romani; Romany", "Berber; Amazigh; Tamaziɣt", "Chavacano; Chabacano"]
+  },
+  "Q273": {
+    "question_id": "Q273",
+    "question_text": "What is your marital status?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Married", "Single", "Living together as married", "Widowed", "Divorced", "No answer", "Separated", "Missing", "Don´t know"]
+  },
+  "Q274": {
+    "question_id": "Q274",
+    "question_text": "Have you had children? If yes, how many?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["4 children", "1 child", "2 children", "No children", "5 children", "3 children", "Missing", "6 children", "No answer", "7.0", "8.0", "10.0", "Don´t know", "9.0", "12.0", "14.0", "22.0", "16.0", "11.0"]
+  },
+  "Q275": {
+    "question_id": "Q275",
+    "question_text": "What is the highest educational level that you have attained?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Bachelor or equivalent (ISCED 6)", "Master or equivalent (ISCED 7)", "Upper secondary education (ISCED 3)", "Post-secondary non-tertiary education (ISCED 4)", "Early childhood education (ISCED 0) / no education", "Lower secondary education (ISCED 2)", "Primary education (ISCED 1)", "Short-cycle tertiary education (ISCED 5)", "No answer", "Don´t know", "Doctoral or equivalent (ISCED 8)", "Missing"]
+  },
+  "Q276": {
+    "question_id": "Q276",
+    "question_text": "What is the highest educational level that your spouse has attained?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Bachelor or equivalent (ISCED 6)", "Master or equivalent (ISCED 7)", "Lower secondary education (ISCED 2)", "Upper secondary education (ISCED 3)", "Missing", "Post-secondary non-tertiary education (ISCED 4)", "-2.0", "Primary education (ISCED 1)", "Early childhood education (ISCED 0) / no education", "Short-cycle tertiary education (ISCED 5)", "9.0", "Doctoral or equivalent (ISCED 8)", "Don´t know"]
+  },
+  "Q277": {
+    "question_id": "Q277",
+    "question_text": "What is the highest educational level that your mother has attained?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Lower secondary education (ISCED 2)", "Upper secondary education (ISCED 3)", "Short-cycle tertiary education (ISCED 5)", "Don´t know", "Early childhood education (ISCED 0) / no education", "Missing", "Post-secondary non-tertiary education (ISCED 4)", "Master or equivalent (ISCED 7)", "Primary education (ISCED 1)", "No answer", "Bachelor or equivalent (ISCED 6)", "Doctoral or equivalent (ISCED 8)", "9.0"]
+  },
+  "Q278": {
+    "question_id": "Q278",
+    "question_text": "What is the highest educational level that your father has attained?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Upper secondary education (ISCED 3)", "Bachelor or equivalent (ISCED 6)", "Short-cycle tertiary education (ISCED 5)", "Don´t know", "Early childhood education (ISCED 0) / no education", "Post-secondary non-tertiary education (ISCED 4)", "Missing", "Master or equivalent (ISCED 7)", "Primary education (ISCED 1)", "Lower secondary education (ISCED 2)", "No answer", "Doctoral or equivalent (ISCED 8)", "9.0"]
+  },
+  "Q279": {
+    "question_id": "Q279",
+    "question_text": "Are you employed now or not?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Part time (less than 30 hours a week)", "Full time (30 hours a week or more)", "Retired/pensioned", "Student", "Self employed", "Housewife not otherwise employed", "No answer", "Unemployed", "Other", "Missing", "Don´t know"]
+  },
+  "Q280": {
+    "question_id": "Q280",
+    "question_text": "Is your spouse employed?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Full time (30 hours a week or more)", "Housewife not otherwise employed", "Retired/pensioned", "Missing", "Part time (less than 30 hours a week)", "No answer", "Self employed", "Student", "Unemployed", "Other", "Don´t know", "9.0"]
+  },
+  "Q281": {
+    "question_id": "Q281",
+    "question_text": "To which occupational group do you belong?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Service (for example: restaurant owner, police officer, waitress, barber, caretaker)", "Professional and technical (for example: doctor, teacher, engineer, artist, accountant, nurse)", "No answer", "Clerical (for example: secretary, clerk, office manager, civil servant, bookkeeper", "Skilled worker (for example: foreman, motor mechanic, printer, seamstress, tool and die maker, electrician)", "Unskilled worker (for example: labourer, porter, unskilled factory worker, cleaner)", "Farm owner, farm manager", "Sales (for example: sales manager, shop owner, shop assistant, insurance agent, buyer)", "Higher administrative (for example: banker, executive in big business, high government official, union official)", "Semi-skilled worker (for example: bricklayer, bus driver, cannery worker, carpenter, sheet metal worker, baker)", "Never had a job", "Missing", "Farm worker (for example: farm labourer, tractor driver)", "Don´t know", "JP,KG,TJ: Other"]
+  },
+  "Q282": {
+    "question_id": "Q282",
+    "question_text": "To which occupational group does your spouse belong?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Sales (for example: sales manager, shop owner, shop assistant, insurance agent, buyer)", "Never had a job", "Professional and technical (for example: doctor, teacher, engineer, artist, accountant, nurse)", "No answer", "Clerical (for example: secretary, clerk, office manager, civil servant, bookkeeper", "Missing", "Skilled worker (for example: foreman, motor mechanic, printer, seamstress, tool and die maker, electrician)", "Higher administrative (for example: banker, executive in big business, high government official, union official)", "Farm worker (for example: farm labourer, tractor driver)", "Unskilled worker (for example: labourer, porter, unskilled factory worker, cleaner)", "Service (for example: restaurant owner, police officer, waitress, barber, caretaker)", "Farm owner, farm manager", "Semi-skilled worker (for example: bricklayer, bus driver, cannery worker, carpenter, sheet metal worker, baker)", "JP,KG,TJ: Other", "Don´t know"]
+  },
+  "Q283": {
+    "question_id": "Q283",
+    "question_text": "When you were 14, to which of the following occupational groups did your father belong?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Missing", "Higher administrative (for example: banker, executive in big business, high government official, union official)", "Clerical (for example: secretary, clerk, office manager, civil servant, bookkeeper", "Don´t know", "Service (for example: restaurant owner, police officer, waitress, barber, caretaker)", "Skilled worker (for example: foreman, motor mechanic, printer, seamstress, tool and die maker, electrician)", "Semi-skilled worker (for example: bricklayer, bus driver, cannery worker, carpenter, sheet metal worker, baker)", "Farm worker (for example: farm labourer, tractor driver)", "Unskilled worker (for example: labourer, porter, unskilled factory worker, cleaner)", "Sales (for example: sales manager, shop owner, shop assistant, insurance agent, buyer)", "Farm owner, farm manager", "No answer", "Never had a job", "Professional and technical (for example: doctor, teacher, engineer, artist, accountant, nurse)", "JP,KG,TJ: Other"]
+  },
+  "Q284": {
+    "question_id": "Q284",
+    "question_text": "Are you working for the government or public institution, for private business or industry, or for a private non-profit organization? If you do not work currently, characterize your major work in the past! Do you or did you work for?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Private business or industry", "Government or public institution", "No answer", "Missing", "Private non-profit organization", "Don´t know"]
+  },
+  "Q285": {
+    "question_id": "Q285",
+    "question_text": "Are you the chief wage earner in your house",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["No", "Yes", "Missing", "No answer", "Don´t know"]
+  },
+  "Q287": {
+    "question_id": "Q287",
+    "question_text": "Which social class would you say you belong to?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Working class", "Lower middle class", "Upper class", "Don´t know", "Upper middle class", "No answer", "Lower class", "Missing"]
+  },
+  "Q288": {
+    "question_id": "Q288",
+    "question_text": "What is the level of your household's income counting all wages, salaries, pensions and other incomes on an income scale on which 'lowest' indicates the lowest income group and 'tenth step' the highest income group in your country",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["No answer", "Eight step", "Tenth step", "Fifth step", "Seventh step", "Lower step", "Fourth step", "second step", "Sixth step", "Third step", "Don´t know", "Nineth step", "Missing"]
+  },
+  "Q290": {
+    "question_id": "Q290",
+    "question_text": "How do you identify when it comes to Racial belonging/ ethnic group in your country?",
+    "section": "Demographic and Socioeconomic Variables",
+    "levels": ["Don't know", "IN: General", "KG: Kirguís", "Missing", "ET: Amhara", "MO: Chinese", "NL: Caucasian white", "GT: White", "203003.0", "UZ: Kyrgyz", "CA: Caucasian (White)", "UA: Ukrainians", "MY: Malay", "CN: Chinese", "LY: Arabic", "TN: Arabic", "AR: White", "NL: Other", "NG: Igbo", "PK: Punjabi", "GT: Brown", "GR: Caucasian white", "US: White, non-Hispanic", "NIR: English / Welsh / Scottish / Northern Irish / British", "MX: Dark brown", "PK: Sindhi", "KR: East Asian (Chinese, Japanese, etc)", "IN: Hindu (Other Backward Castes)", "VE: Dark-skinned / Dark-brown", "EC: Mestizo", "IR: Gilak/Mazani/Shomali", "IN: Hindu (Scheduled Castes)", "MY: Indian", "MX: Light brown", "NG: Others", "NL: Arabic, Central Asian", "MM: Bamar", "MM: Kayin", "IR: Persian", "NIR: Any other White background, please describe", "US: Hispanic", "KG: Other", "IR: Turk/Azeri", "PK: Pashto", "TW: Hakka from Taiwan", "ET: Other Africans/Negro Black", "MX: White", "PH: Ilonggo", "NG: Fulani", "CA: Arabic (Central Asia)", "ET: Wolayta", "TW: Minnanese from Taiwan", "GT: Indigenous", "PH: Waray", "NG: Yoruba", "PK: Urdu speaking", "PH: Maguindanao", "PK: Seraiki", "EC: Negro", "ET: Somali", "PH: Tagalog", "TW: Aboriginal", "IR: Lor", "ET: Oromo", "VE: White", "US: Black, Non-Hispanic", "US: Two plus, non-Hispanic", "KG: European", "MY: Chinese", "UZ: Karakalpak", "TW: Mainlander/China", "PH: Cebuano", "NG: Hausa", "VE: Mestizo / Light brown", "IR: Kurd", "PH: Bicolano", "CA: Chinese", "CZ: Slovak", "UZ: Kazakhs", "ET: Tigre", "US: Other, Non-Hispanic", "PK: Hindko", "NL: South Asian Indian, Pakistani, etc.", "AR: Light brown", "LY: Tuareg", "TW: Other", "CA: Black (African, African-American, etc.)", "ET: Sidama", "CA: Southeast Asian (Vietnamese, Cambodian, Malaysian, etc.)", "No answer", "MM: Other", "CA: Other", "VE: Black", "PH: Sama", "CA: South Asian (Indian, Bangladeshi, Pakistani, Sri Lankan)", "NL: Negro Black", "MO: Portuguese/Macaense", "ET: Other", "IN: Hindu (Scheduled Tribes)", "EC: Blanco", "PH: Matinguian Tribe", "UZ: Turkmen", "CA: Latin American / Hispanic", "NL: East Asian Chinese, Japanese, etc.", "EC: Indígena", "MM: Shan", "NG: Tiv", "MM: Mon", "IR: Arab", "UZ: Uzbek", "PK: Baluchi", "ET: Afar", "PH: Ilocano", "PH: Tinguian Tribe", "NIR: Irish", "GT: Cross breed", "MO: Other", "GR: Arabic, Central Asian", "PK: Others", "CA: Filipino", "AR: Dark brown", "IR: Other", "PH: Kapampangan", "PH: Tausog", "KG: Tayiko", "CA: Korean", "MX: Indigenous", "UA: Other", "PH: Sinamah", "LY: Amazigh", "CA: Aboriginal / First Nations", "IR: Baluch", "LY: Toubou", "GT: Ladino", "PH: Masbateno", "UA: Russians", "203001.0", "PH: Marinduque", "MO: Southeast Asians (Indonesia, Philippines, Thailand)", "PH: Chabacano", "UZ: Russian", "KG: Kazakh", "UZ: Tatarin", "VE: Indigenous", "NIR: African"]
+  }
+}

@@ -1,0 +1,658 @@
+---
+title: "WVS — Sélection de questions par composantes"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+editor: visual
+execute:
+  warning: false
+  message: false
+---
+
+## Scores sanity checks
+
+### par type de paire
+
+```{r}
+
+
+rank_all_df %>%
+  mutate(pair_type = paste(type_feature, type_target, sep="×")) %>%
+  group_by(pair_type) %>%
+  summarize(
+    rho_mi_u       = cor(mi, theil_u, use="pairwise.complete.obs", method="spearman"),
+    rho_mi_cramer  = cor(mi, cramer_v, use="pairwise.complete.obs", method="spearman"),
+    rho_u_cramer   = cor(theil_u, cramer_v, use="pairwise.complete.obs", method="spearman"),
+    rho_poly_u     = cor(polychor, theil_u, use="pairwise.complete.obs", method="spearman"),
+    n = n()
+  )
+
+```
+
+### effet de la taille effective
+
+```{r}
+rank_all_df %>%
+  mutate(n_bin = ntile(n_eff, 5)) %>%
+  group_by(n_bin) %>%
+  summarize(
+    rho_mi_u = cor(mi, theil_u, use="pairwise.complete.obs", method="spearman"),
+    rho_u_cv = cor(theil_u, cramer_v, use="pairwise.complete.obs", method="spearman"),
+    rho_poly_u = cor(polychor, theil_u, use="pairwise.complete.obs", method="spearman"),
+    n = n()
+  )
+
+```
+
+### versios normalsiée
+
+```{r}
+safe_entropy <- function(p){ p <- p[p>0]; -sum(p*log2(p)) }
+H_col <- function(x){ tab <- table(x); safe_entropy(prop.table(tab)) }
+
+rank_all_df2 <- rank_all_df %>%
+  mutate(
+    # si tu as H(feature) / H(target) dans tes calculs de Theil’s U, réutilise-les
+    su = 2*mi / (H_col(feature) + H_col(target))  # attention: ici H_col() ne prend pas les données brutes;
+                                                  # l'exemple illustre la formule, à adapter au contexte de calcul MI
+  )
+
+```
+
+### réduire redondance du score
+
+```{r}
+library(tidyr)
+library(recipes)
+
+rec <- recipe(~ theil_u + cramer_v + polychor, data = rank_all_df) %>%
+  step_impute_median(all_predictors()) %>%
+  step_normalize(all_predictors()) %>%
+  step_pca(all_predictors(), num_comp = 1) %>%
+  prep()
+
+rank_all_df$assoc_pc1 <- bake(rec, new_data = NULL)[[1]]
+
+```
+
+### score latent pca
+
+```{r}
+library(tidymodels)
+
+rec <- recipe(~ theil_u + cramer_v + polychor, data = rank_all_df) %>%
+  step_impute_median(all_predictors()) %>%
+  step_normalize(all_predictors()) %>%
+  step_pca(all_predictors(), num_comp = 3)
+
+prep_rec <- prep(rec)
+pca_obj  <- tidy(prep_rec, number = 3)       # loadings
+expl_var <- tidy(prep_rec, number = 3, type = "variance") # variance expliquée
+
+# PC1 comme score
+rank_all_df$assoc_pc1 <- bake(prep_rec, new_data = NULL)[["PC1"]]
+```
+
+# Calcul de scores d'importance des features
+
+```{r}
+# ───────────────────────────────────────────────────────────────────────────────
+#  Feature ranking par cible (MI, Cramér’s V, Polychor/Tetra, Theil’s U)
+#  - Détection ordinale stricte (Likert >=3 ou binaire Yes/No)
+#  - Mapping t_Qxxx -> Qxxx pour récupérer les niveaux (metadata/JSON)
+#  - Rangs par métrique + score composite
+#  - Exports: CSV (par cible & ALL) + JSON (Top-N par cible pour LLM)
+# ───────────────────────────────────────────────────────────────────────────────
+
+suppressPackageStartupMessages({
+  library(arrow)
+  library(tidyverse)
+  library(stringr)
+  library(infotheo)   # MI
+  library(jsonlite)   # JSON items
+  library(polycor)    # polychor/tetrachor
+})
+
+`%||%` <- function(a, b) if (!is.null(a)) a else b
+
+# ── 0) Chemins & lecture ───────────────────────────────────────────────────────
+meta_path  <- "data/metadata.parquet"
+train_path <- "data/train.parquet"
+
+# JSON: essaie /mnt/data puis data/
+wvs_json_candidate <- c("/mnt/data/wvs_answer_categories_VERBATIM.json",
+                        "data/wvs_answer_categories_VERBATIM.json")
+wvs_json_path <- wvs_json_candidate[file.exists(wvs_json_candidate)][1] %||% NA_character_
+
+metadata <- arrow::read_parquet(meta_path) %>% as_tibble()
+train    <- arrow::read_parquet(train_path) %>% as_tibble()
+
+dir.create("exports", showWarnings = FALSE)
+
+targets      <- names(train) %>% keep(~ str_starts(.x, "t_"))
+features_all <- names(train) %>% setdiff(c(targets, "respondent_id"))
+
+# ── 1) Normalisation / canonisation ────────────────────────────────────────────
+na_tokens <- c(
+  "No answer","Don't know","Don’t know","Don´t know","DK","Refused","Missing",
+  "Hard to say","Don’t mind","Don´t mind","Other answer"
+)
+
+normalize_txt <- function(v) {
+  v %>%
+    str_replace_all("[`´’]", "'") %>%
+    str_replace_all("\\s+", " ") %>%
+    str_trim()
+}
+
+canon_map <- c(
+  # accords
+  "Agree strongly"="Strongly agree",
+  "Disagree strongly"="Strongly disagree",
+  "Neither agree or disagree"="Neither agree nor disagree",
+  # fréquences
+  "Very Frequently"="Very often",
+  "Quite frequently"="Fairly often",
+  "Not at all frequently"="Not at all often",
+  # satisfactions
+  "Completely Satisfied"="Completely satisfied",
+  "Completely Dissatisfied"="Completely dissatisfied"
+)
+
+canonize <- function(x){
+  x2 <- normalize_txt(as.character(x))
+  if (!length(x2)) return(x2)
+  m <- match(x2, names(canon_map))
+  repl <- !is.na(m)
+  x2[repl] <- unname(canon_map[m[repl]])
+  x2
+}
+
+# Patrons Likert + binaire
+LIKERT_4_IMPORTANCE <- c("Not at all important","Not very important","Rather important","Very important")
+LIKERT_5_AGREE      <- c("Strongly disagree","Disagree","Neither agree nor disagree","Agree","Strongly agree")
+LIKERT_5_FREQ       <- c("Never","Rarely","Sometimes","Often","Very often")
+LIKERT_5_SAT        <- c("Very dissatisfied","Dissatisfied","Neither agree nor disagree","Satisfied","Very satisfied")
+LIKERT_4_TRUST      <- c("None at all","Not very much","Trust somewhat","Trust completely")
+
+ord_patterns_likert <- list(
+  LIKERT_4_IMPORTANCE, LIKERT_5_AGREE, LIKERT_5_FREQ, LIKERT_5_SAT, LIKERT_4_TRUST,
+  c("Not at all often","Not often","Fairly often","Very often"),
+  c("No risk at all","Low risk","Moderate risk","High risk","Very high risk")
+)
+binary_patterns <- list(c("No","Yes"), c("Yes","No"))
+
+is_subset_of_any <- function(levs, patterns) any(purrr::map_lgl(patterns, ~ all(levs %in% .x)))
+ordered_levels_from_patterns <- function(levs, patterns){
+  pats <- purrr::keep(patterns, ~ all(levs %in% .x))
+  if (length(pats)) pats[[1]][pats[[1]] %in% levs] else NULL
+}
+classify_levels <- function(levs){
+  if (is_subset_of_any(levs, ord_patterns_likert))
+    return(list(kind="likert", ord_levels = ordered_levels_from_patterns(levs, ord_patterns_likert)))
+  if (is_subset_of_any(levs, binary_patterns))
+    return(list(kind="binary", ord_levels = ordered_levels_from_patterns(levs, binary_patterns)))
+  list(kind="nominal", ord_levels=NULL)
+}
+
+# ── 2) Niveaux depuis metadata + (option) JSON ─────────────────────────────────
+meta_levels <- metadata %>%
+  transmute(
+    question_id = as.character(question_id),
+    levels_vec  = map(answer_categories, ~ as.character(.x))
+  )
+
+if (!is.na(wvs_json_path)) {
+  json_raw <- jsonlite::fromJSON(wvs_json_path, simplifyVector = FALSE)
+  json_tbl <- tibble(
+    question_id = names(json_raw),
+    levels_vec  = map(json_raw, ~ as.character(.x$levels) %||% character())
+  )
+  meta_levels <- meta_levels %>%
+    full_join(json_tbl, by = "question_id", suffix = c("_meta","_json")) %>%
+    mutate(
+      levels_vec = case_when(
+        map_int(levels_vec_meta, length) > 0 ~ levels_vec_meta,
+        map_int(levels_vec_json, length) > 0 ~ levels_vec_json,
+        TRUE                                 ~ list(character())
+      )
+    ) %>%
+    select(question_id, levels_vec)
+}
+
+meta_levels <- meta_levels %>%
+  mutate(levels_vec = map(levels_vec, ~ setdiff(canonize(.x), na_tokens)))
+
+strip_t <- function(x) ifelse(str_starts(x, "t_"), str_replace(x, "^t_", ""), x)
+
+meta_types <- meta_levels %>%
+  mutate(
+    cls = map(levels_vec, classify_levels),
+    kind = map_chr(cls, "kind"),
+    ord_levels = map(cls, "ord_levels")
+  ) %>%
+  transmute(question_id, kind, ord_levels)
+
+meta_lookup <- meta_types %>%
+  mutate(key2 = strip_t(question_id)) %>%
+  select(question_id, key2, kind, ord_levels)
+
+get_meta_kind_levels <- function(var){
+  d1 <- meta_lookup %>% filter(question_id == var)
+  if (nrow(d1)==1) return(list(kind=d1$kind, ord_levels=d1$ord_levels[[1]]))
+  base <- strip_t(var)
+  d2 <- meta_lookup %>% filter(question_id == base | key2 == base)
+  if (nrow(d2)>=1) return(list(kind=d2$kind[1], ord_levels=d2$ord_levels[[1]]))
+  list(kind="nominal", ord_levels=NULL)
+}
+
+detect_from_data <- function(x_chr){
+  vals <- setdiff(unique(canonize(x_chr)), na_tokens)
+  if (!length(vals)) return(list(kind="nominal", ord_levels=NULL))
+  classify_levels(vals)
+}
+
+# ── 3) Encodage (ordered seulement si kind ∈ {likert, binary}) ────────────────
+cols_categ <- setdiff(names(train), "respondent_id")
+train_chr  <- train %>% mutate(across(all_of(cols_categ), ~ canonize(.x)))
+
+encode_one_col <- function(colname, vec_chr){
+  meta <- get_meta_kind_levels(colname)
+  kind <- meta$kind; levs <- meta$ord_levels
+  if (kind == "nominal" || is.null(levs) || !length(levs)) {
+    det <- detect_from_data(vec_chr); kind <- det$kind; levs <- det$ord_levels
+  }
+  x <- vec_chr; x[x %in% na_tokens] <- NA_character_
+  if (kind %in% c("likert","binary") && !is.null(levs) && length(levs)>0) {
+    factor(x, levels = levs, ordered = TRUE)
+  } else {
+    factor(x)
+  }
+}
+
+train_fct <- train_chr %>%
+  mutate(across(all_of(cols_categ), ~ encode_one_col(cur_column(), .x)))
+
+ordinal_vars <- names(train_fct)[map_lgl(train_fct, is.ordered)]
+nominal_vars <- setdiff(names(train_fct), c(ordinal_vars, "respondent_id"))
+
+cat("Nombre de cibles:", length(targets), "\n")
+cat("Variables ordinales détectées (dans train):", length(ordinal_vars), "\n")
+targets_ord <- intersect(targets, ordinal_vars)
+cat("Targets ordinales détectées:", length(targets_ord), " / ", length(targets), "\n")
+if (length(targets_ord)) print(targets_ord)
+
+# ── 4) Mesures d’association ───────────────────────────────────────────────────
+min_n <- 100  # garde-fou
+top_k <- 30   # export CSV top-K par cible
+topN  <- 15   # export JSON top-N pour prompts
+
+# MI
+safe_mutual_information <- function(x, y) {
+  xx <- as.integer(droplevels(x)); yy <- as.integer(droplevels(y))
+  ok <- !is.na(xx) & !is.na(yy); xx <- xx[ok]; yy <- yy[ok]
+  if (length(xx) < min_n) return(NA_real_)
+  suppressWarnings(tryCatch(infotheo::mutinformation(xx, yy), error = function(e) NA_real_))
+}
+# Cramér’s V
+safe_cramers_v <- function(x, y) {
+  ok <- !is.na(x) & !is.na(y); n <- sum(ok)
+  if (n < min_n) return(NA_real_)
+  tab <- table(droplevels(x[ok]), droplevels(y[ok]))
+  if (any(dim(tab) < 2)) return(NA_real_)
+  k <- min(nrow(tab)-1, ncol(tab)-1); if (k <= 0) return(NA_real_)
+  suppressWarnings(tryCatch({
+    chi2 <- chisq.test(tab, correct = FALSE)$statistic
+    sqrt(as.numeric(chi2) / (n * k))
+  }, error = function(e) NA_real_))
+}
+# Polychor/Tetra (selon cardinalités)
+safe_poly_assoc <- function(x, y) {
+  if (!(is.ordered(x) && is.ordered(y))) return(NA_real_)
+  ok <- !is.na(x) & !is.na(y); n <- sum(ok)
+  if (n < min_n) return(NA_real_)
+  x2 <- droplevels(x[ok]); y2 <- droplevels(y[ok])
+  nx <- nlevels(x2); ny <- nlevels(y2)
+  if (nx < 2 || ny < 2) return(NA_real_)
+  suppressWarnings(tryCatch({
+    if (nx == 2 && ny == 2) {
+      polycor::tetrachoric(table(x2, y2))$rho
+    } else {
+      polycor::polychor(x2, y2, ML = TRUE)
+    }
+  }, error = function(e) NA_real_))
+}
+
+# Theil’s U : U(Y|X) = (H(Y) - H(Y|X)) / H(Y)
+safe_entropy <- function(p) { p <- p[p > 0]; if (!length(p)) return(0); -sum(p * log2(p)) }
+entropy_from_counts <- function(counts) { tot <- sum(counts); if (tot == 0) return(0); safe_entropy(counts/tot) }
+conditional_entropy_y_given_x <- function(tab_xy) {
+  n <- sum(tab_xy); if (n == 0) return(0)
+  hx <- apply(tab_xy, 1, entropy_from_counts)   # H(Y|X=x)
+  px <- rowSums(tab_xy) / n
+  sum(px * hx)                                  # H(Y|X)
+}
+theils_U_y_given_x <- function(x, y) {
+  ok <- !is.na(x) & !is.na(y)
+  x <- droplevels(x[ok]); y <- droplevels(y[ok])
+  if (length(x) < 2 || length(y) < 2) return(NA_real_)
+  tab <- table(x, y)
+  hy  <- entropy_from_counts(colSums(tab))
+  if (hy == 0) return(NA_real_)                 # Y dégénéré
+  hyx <- conditional_entropy_y_given_x(tab)
+  as.numeric((hy - hyx) / hy)                   # U(Y|X)
+}
+
+# ── 5) Ranking par cible ───────────────────────────────────────────────────────
+all_ranks <- list()
+
+for (tq in targets) {
+  y <- train_fct[[tq]]
+  target_is_ordinal <- is.ordered(y)
+
+  res <- purrr::map_dfr(features_all, function(fq){
+    if (!fq %in% names(train_fct)) return(NULL)
+    x <- train_fct[[fq]]
+
+    ok <- !is.na(x) & !is.na(y)
+    n_eff <- sum(ok)
+    if (n_eff < min_n) {
+      return(tibble(
+        target = tq, feature = fq, n_eff = n_eff,
+        mi = NA_real_, cramer_v = NA_real_, polychor = NA_real_, theil_u = NA_real_,
+        type_feature = if_else(is.ordered(x), "ordinal", "nominal"),
+        type_target  = if_else(target_is_ordinal, "ordinal", "nominal")
+      ))
+    }
+
+    mi_val   <- safe_mutual_information(x, y)
+    cv_val   <- safe_cramers_v(x, y)
+    polyval  <- if (target_is_ordinal && is.ordered(x)) safe_poly_assoc(x, y) else NA_real_
+    theil_u  <- theils_U_y_given_x(x, y)   # *** U(Target|Feature) ***
+
+    tibble(
+      target = tq, feature = fq, n_eff = n_eff,
+      mi = as.numeric(mi_val),
+      cramer_v = as.numeric(cv_val),
+      polychor = as.numeric(polyval),
+      theil_u = as.numeric(theil_u),
+      type_feature = if_else(is.ordered(x), "ordinal", "nominal"),
+      type_target  = if_else(target_is_ordinal, "ordinal", "nominal")
+    )
+  })
+
+  # Score composite (pragmatique) — favorise Theil’s U (asymétrique)
+  res <- res %>%
+    mutate(
+      score = 0.6*coalesce(theil_u, 0) +
+              0.3*coalesce(mi, 0) +
+              0.1*coalesce(cramer_v, 0) +
+              0.1*abs(coalesce(polychor, 0))
+    ) %>%
+    # Rangs par métrique (NA en fin)
+    mutate(
+      rank_theilU = min_rank(desc(coalesce(theil_u, -Inf))),
+      rank_mi     = min_rank(desc(coalesce(mi, -Inf))),
+      rank_cramer = min_rank(desc(coalesce(cramer_v, -Inf))),
+      rank_poly   = min_rank(desc(coalesce(abs(polychor), -Inf))),
+      rank_score  = min_rank(desc(coalesce(score, -Inf)))
+    ) %>%
+    arrange(rank_score, desc(score), desc(theil_u), desc(mi), desc(cramer_v), desc(abs(polychor))) %>%
+    mutate(rank = row_number())   # rang global final (héritage historique)
+
+  # Exports par cible
+  readr::write_csv(res %>% slice_head(n = top_k),
+                   file = file.path("exports", paste0("feature_ranking_", tq, ".csv")))
+  all_ranks[[tq]] <- res
+}
+
+# Consolidé ALL
+rank_all_df <- bind_rows(all_ranks)
+readr::write_csv(rank_all_df, "exports/feature_ranking_ALL.csv")
+
+# JSON Top-N (par défaut basé sur rank_score ; change si tu préfères theilU)
+top_features <- rank_all_df %>%
+  group_by(target) %>%
+  arrange(rank_score, .by_group = TRUE) %>%
+  slice_head(n = topN) %>%
+  summarize(features = list(feature), .groups = "drop") %>%
+  deframe()
+write_json(top_features, "exports/top_features_by_target.json", auto_unbox = TRUE, pretty = TRUE)
+
+# ── 6) Résumé console ─────────────────────────────────────────────────────────
+cat("\n==== RÉSUMÉ ====\n")
+cat("Nombre de cibles:", length(targets), "\n")
+cat("Variables ordinales détectées (dans train):", length(ordinal_vars), "\n")
+cat("Targets ordinales détectées:", length(targets_ord), " / ", length(targets), "\n\n")
+
+rank_all_df %>%
+  group_by(target) %>%
+  arrange(rank_score, .by_group = TRUE) %>%
+  slice_head(n = 10) %>%
+  select(target, rank, rank_score, rank_theilU, rank_mi, rank_cramer, rank_poly,
+         feature, n_eff, mi, cramer_v, polychor, theil_u, score, type_feature) %>%
+  print(n = 200, width = Inf)
+
+cat("\nFichiers écrits dans exports/ :\n",
+    " - feature_ranking_ALL.csv (toutes les paires cible×feature)\n",
+    " - feature_ranking_t_*.csv (Top", top_k, "par cible)\n",
+    " - top_features_by_target.json (Top", topN, "features par cible, pour LLM)\n")
+
+write.csv(rank_all_df, "rank_all_questions.csv")
+write.csv(feature_pop, "most_popular_questions_features.csv")
+write.csv(train, "train.csv")
+```
+
+## Sanity checks
+
+```{r}
+# ───────────────────────────────────────────────────────────────────────────────
+# SANITY CHECK (simple) — glmnet pénalisée vs baselines (majorité & chance)
+# Requiert : train_fct, rank_all_df, targets
+# Écrit : exports/sanity_check_<TARGET>.csv (une ligne par Target)
+# ───────────────────────────────────────────────────────────────────────────────
+suppressPackageStartupMessages({
+  library(glmnet)
+  library(dplyr); library(tidyr); library(forcats); library(readr); library(purrr)
+})
+
+dir.create("exports", showWarnings = FALSE)
+set.seed(42)
+
+# == Paramètres ==
+top_n_feats    <- 20           # Top-N features par Target (depuis rank_all_df)
+train_frac     <- 0.80         # split 80/20
+alpha_en       <- 0.5          # elastic-net (0=ridge, 1=lasso)
+lambda_choice  <- "lambda.1se" # ou "lambda.min"
+min_count_lump <- 20           # regrouper modalités rares (features)
+
+# == Helpers ==
+macro_f1 <- function(y_true, y_pred){
+  `%||%` <- function(a,b) if (!is.null(a)) a else b
+  lev <- union(levels(y_true), levels(y_pred))
+  y_true <- factor(as.character(y_true), levels = lev)
+  y_pred <- factor(as.character(y_pred), levels = lev)
+  tb <- table(y_true, y_pred)
+  f1s <- sapply(lev, function(l){
+    tp <- tb[l, l] %||% 0; fp <- sum(tb[, l]) - tp; fn <- sum(tb[l, ]) - tp
+    if ((2*tp + fp + fn) == 0) return(NA_real_)
+    2*tp / (2*tp + fp + fn)
+  })
+  mean(f1s, na.rm = TRUE)
+}
+log_loss_multi <- function(prob_mat, y_true){
+  eps <- 1e-15
+  classes <- colnames(prob_mat)
+  y_true <- factor(as.character(y_true), levels = classes)
+  idx <- match(as.character(y_true), classes)
+  p <- prob_mat[cbind(seq_len(nrow(prob_mat)), idx)]
+  p <- pmin(pmax(p, eps), 1 - eps)
+  -mean(log(p))
+}
+brier_score_bin <- function(p1, y_true){
+  lev <- levels(y_true)
+  y <- as.integer(factor(as.character(y_true), levels = lev) == lev[2])
+  mean((p1 - y)^2)
+}
+
+get_top_features <- function(tq, n = top_n_feats){
+  rk <- if ("rank_score" %in% names(rank_all_df)) "rank_score" else "rank"
+  rank_all_df %>% filter(target == tq) %>% arrange(.data[[rk]]) %>%
+    slice_head(n = n) %>% pull(feature)
+}
+
+run_one <- function(tq){
+  # 1) Data cible + Top-N
+  feats <- get_top_features(tq, top_n_feats)
+  if (!length(feats)) return(invisible(NULL))
+  df <- train_fct %>%
+    select(tidyselect::any_of(c(tq, feats))) %>%
+    drop_na()
+  if (nrow(df) < 50) return(invisible(NULL))
+
+  # 2) Lumping des modalités rares sur les features (pas la cible)
+  feat_cols <- setdiff(names(df), tq)
+  df <- df %>%
+    mutate(across(all_of(feat_cols[map_lgl(df[feat_cols], is.factor)]),
+                  ~ fct_lump_min(.x, min = min_count_lump, other_level = "__OTHER__"))) %>%
+    mutate(across(where(is.ordered), ~ factor(.x))) %>%  # simplifie design
+    droplevels()
+
+  # 3) Split 80/20
+  n <- nrow(df); idx <- sample.int(n, floor(train_frac*n))
+  tr <- df[idx, , drop = FALSE]; te <- df[-idx, , drop = FALSE]
+
+  # Cible (désordonnée + niveaux alignés)
+  lev <- union(levels(tr[[tq]]), levels(te[[tq]]))
+  y_tr <- factor(as.character(tr[[tq]]), levels = lev)
+  y_te <- factor(as.character(te[[tq]]), levels = lev)
+
+  # Baselines
+  K <- nlevels(y_tr)
+  maj <- names(sort(table(y_tr), decreasing = TRUE))[1]
+  acc_majority <- mean(factor(maj, levels = lev)[rep(1, length(y_te))] == y_te)
+  f1_majority  <- macro_f1(y_te, factor(rep(maj, length(y_te)), levels = lev))
+  acc_chance   <- 1 / K  # baseline "au hasard" uniforme
+
+  # 4) Design matrices (consistentes)
+  tr$.split <- "train"; te$.split <- "test"
+  all_m <- bind_rows(tr, te)
+  fml_x <- as.formula(paste("~ . -", tq, "- .split - 1"))
+  X <- model.matrix(fml_x, data = all_m)
+  X_tr <- X[all_m$.split=="train", , drop=FALSE]
+  X_te <- X[all_m$.split=="test",  , drop=FALSE]
+
+  fam <- if (K == 2) "binomial" else "multinomial"
+
+  # 5) Fit + prédiction
+  cvfit <- glmnet::cv.glmnet(
+    x = X_tr, y = y_tr,
+    family = fam, alpha = alpha_en,
+    nfolds = 5, type.measure = "deviance",
+    type.multinomial = "ungrouped"
+  )
+  s_use <- if (lambda_choice %in% c("lambda.min","lambda.1se")) lambda_choice else "lambda.1se"
+
+  if (fam == "binomial") {
+    p1 <- as.numeric(predict(cvfit, newx = X_te, s = s_use, type = "response"))
+    yhat <- ifelse(p1 >= 0.5, levels(y_tr)[2], levels(y_tr)[1]) %>%
+      factor(levels = lev)
+    acc <- mean(yhat == y_te)
+    f1  <- macro_f1(y_te, yhat)
+    brier <- brier_score_bin(p1, y_te)
+    tibble(
+      target = tq, n_train = length(y_tr), n_test = length(y_te),
+      k_classes = K, top_n = length(feats),
+      alpha = alpha_en, lambda = s_use, family = fam,
+      acc_model = acc, f1_macro_model = f1, brier = brier,
+      logloss = NA_real_,
+      acc_majority = acc_majority, f1_majority = f1_majority, acc_chance = acc_chance
+    )
+  } else {
+    pr <- predict(cvfit, newx = X_te, s = s_use, type = "response")  # n x K x 1
+    pr_mat <- as.matrix(pr[,,1]); colnames(pr_mat) <- colnames(pr)
+    # aligne colonnes-probas sur "lev" si besoin
+    miss <- setdiff(lev, colnames(pr_mat))
+    if (length(miss)) {
+      pr_mat <- cbind(pr_mat, matrix(0, nrow(pr_mat), length(miss),
+                                     dimnames = list(NULL, miss)))
+    }
+    pr_mat <- pr_mat[, lev, drop=FALSE]
+    yhat <- apply(pr_mat, 1, function(r) lev[which.max(r)]) %>% factor(levels = lev)
+    acc <- mean(yhat == y_te)
+    f1  <- macro_f1(y_te, yhat)
+    ll  <- log_loss_multi(pr_mat, y_te)
+    tibble(
+      target = tq, n_train = length(y_tr), n_test = length(y_te),
+      k_classes = K, top_n = length(feats),
+      alpha = alpha_en, lambda = s_use, family = fam,
+      acc_model = acc, f1_macro_model = f1, brier = NA_real_,
+      logloss = ll,
+      acc_majority = acc_majority, f1_majority = f1_majority, acc_chance = acc_chance
+    )
+  }
+}
+
+# == Lancer pour chaque Target et écrire un CSV par cible ==
+all_rows <- list()
+for (tq in targets) {
+  cat("[Sanity] ", tq, " ...\n")
+  row <- tryCatch(run_one(tq), error = function(e) NULL)
+  if (!is.null(row)) {
+    write_csv(row, file.path("exports", paste0("sanity_check_", tq, ".csv")))
+    print(row %>% select(target, family, k_classes, top_n, acc_model, f1_macro_model,
+                         acc_majority, acc_chance))
+    all_rows[[tq]] <- row
+  } else {
+    message("  (skipped: not enough data or error)")
+  }
+}
+# optionnel: consolidé
+if (length(all_rows)) {
+  bind_rows(all_rows) %>% write_csv("exports/sanity_checks_ALL.csv")
+  cat("\nRésumé écrit : exports/sanity_checks_ALL.csv\n")
+}
+
+```
+
+### quelles sont les features qui reviennent le plus souvent pour prédire la réponse
+
+```{r}
+# Paramètres
+topN <- 20                           # combien de features par target on regarde
+rkcol <- if ("rank_score" %in% names(rank_all_df)) "rank_score" else "rank"
+
+# Top-N par target
+top_tbl <- rank_all_df %>%
+  dplyr::group_by(target) %>%
+  dplyr::arrange(.data[[rkcol]], .by_group = TRUE) %>%
+  dplyr::slice_head(n = topN) %>%
+  dplyr::ungroup()
+
+# Popularité + stats rapides
+feature_pop <- top_tbl %>%
+  dplyr::group_by(feature) %>%
+  dplyr::summarise(
+    appearances      = dplyr::n(),                         # nb de targets où la feature est dans le Top-N
+    targets_covered  = dplyr::n_distinct(target),
+    coverage_rate    = targets_covered / dplyr::n_distinct(top_tbl$target),
+    mean_rank        = mean(rank, na.rm = TRUE),
+    median_rank      = stats::median(rank, na.rm = TRUE),
+    mean_theil_u     = mean(theil_u, na.rm = TRUE),
+    mean_mi          = mean(mi, na.rm = TRUE),
+    mean_cramer_v    = mean(cramer_v, na.rm = TRUE),
+    mean_score       = mean(score, na.rm = TRUE),
+    # “force” type Borda: plus la feature est haut dans le Top-N, plus elle marque
+    strength_score   = sum(topN - rank + 1, na.rm = TRUE)
+  ) %>%
+  dplyr::arrange(dplyr::desc(appearances), dplyr::desc(strength_score), mean_rank)
+
+# Aperçu console
+print(feature_pop %>% dplyr::slice_head(n = 30), n = 30, width = Inf)
+
+# Export
+readr::write_csv(feature_pop, file.path("exports", paste0("feature_global_popularity_top", topN, ".csv")))
+
+```
