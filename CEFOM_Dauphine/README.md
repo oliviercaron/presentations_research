@@ -1,6 +1,6 @@
 # Scripts de collecte (Codex)
 
-Ce dossier regroupe les scripts que nous avons crees ensemble (WSL/Linux) pour recuperer des donnees depuis differents sites, plus les scripts et videos de demo Browser Use.
+Ce dossier regroupe les scripts pour récupérer des données depuis différents sites, + les scripts et vidéos de demo Browser Use.
 
 ## Organisation
 
@@ -108,7 +108,3 @@ Packages typiques :
 - python-dotenv
 - openai (via ChatOpenAI)
 
----
-
-## Remarque
-Tu as mentionne Tripadvisor - nous n'avons pas encore cree de script pour ce site. Si tu veux, je peux en ajouter un.
