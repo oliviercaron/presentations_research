@@ -8,6 +8,7 @@ This repository hosts various presentations I have given on my research.
 - 2025-05-26 - Mineure Action Publique - Régulation des systèmes de santé - [PDF](https://oliviercaron.github.io/presentations_research/Mineure_Action_Publique/regulation_systemes_sante/presentation_regulation_systeme_sante.pdf)  
 - 2025-05-19 - Econom'IA Presentation - [PDF](https://oliviercaron.github.io/presentations_research/Econom'IA/economia_presentation.pdf)  
 - 2025-04-22 - CompText Presentation - [PDF](https://oliviercaron.github.io/presentations_research/Comptext/comptext_presentation.pdf)  
+- 2025-04-08 - Mineure Action Publique - Stats causales : Fuzzy RDD - [PDF](https://oliviercaron.github.io/presentations_research/Mineure_Action_Publique/statistiques_causales_rdd/fuzzy_design_rdd.pdf) | [QMD](https://oliviercaron.github.io/presentations_research/Mineure_Action_Publique/statistiques_causales_rdd/fuzzy_design_rdd.qmd)  
 - 2025-03-14 - Atelier Transversal Dauphine 2025 - [HTML](https://oliviercaron.github.io/presentations_research/atelier_transversal/atelier_transversal_2025_dauphine.html)  
 - 2025-02-18 - Systematic Literature Review in the Age of AI - [PDF](https://oliviercaron.github.io/presentations_research/UPJV_SLR/UPJV_SLR_presentation.pdf)  
 - 2025-01-24 - International Marketing Trends Conference Presentation - Venice - [PDF](https://oliviercaron.github.io/presentations_research/IMTC/2IMTC_presentation.pdf)  
