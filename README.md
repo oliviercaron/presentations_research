@@ -1,6 +1,7 @@
 # Presentations  
 This repository hosts various presentations I have given on my research.  
 
+- 2026-10-14 - JIMS 2026 - Lille - Une approche dynamique de la réception des pré-annonces pharmaceutiques dans les réseaux sociaux - [PDF](https://oliviercaron.github.io/presentations_research/JIMS_2026/jims2026_caron_benavent.pdf)  
 - 2026-06-29 - EvalLLM 2026 - Nantes - Liage d'entités de santé sans entraînement - [Poster](https://oliviercaron.github.io/presentations_research/EvalLLM/Poster_EvalLLM_2026_Olivier_Caron.pdf)  
 - 2026-01-13 - GovReg Internal Seminar - Public Reaction to Pharmaceutical Preannouncements - [PDF](https://oliviercaron.github.io/presentations_research/GovReg_Internal_Seminar/documents/new_presentation.pdf)  
 - 2025-11-25 - PSL Week - [HTML](https://oliviercaron.github.io/presentations_research/PSL_Week/combined_presentation.html)  
