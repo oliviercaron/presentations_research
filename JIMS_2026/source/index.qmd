@@ -1104,9 +1104,9 @@ format: revealjs
 <div class="navbar"><span class="done"><a href="#contexte">Contexte</a></span><span class="done"><a href="#litterature">Littérature</a></span><span class="done"><a href="#question">Question</a></span><span class="done"><a href="#modele">Modèle</a></span><span class="on"><a href="#methode">Méthode</a></span><span><a href="#resultats">Résultats</a></span><span><a href="#discussion">Discussion</a></span></div>
 
 <table class="synth mesures">
-<tr><th>Question posée</th><th>Modèles</th><th>Tweets lus</th><th>Accord entre<br>les 3 modèles<br>(alpha de Krippendorff)</th><th>Contrôle extérieur</th></tr>
-<tr><td class="h">Le message juge-t-il l'entreprise ? <span class="hy">H3</span></td><td class="mod"><code>gemma-4-31B-it</code><br><code>Qwen3.6-27B</code><br><code>DeepSeek-V4-Flash</code></td><td class="n">41&#8239;448</td><td class="n">0,76</td><td class="ctl">relecture à l'aveugle par 2 autres modèles<br>sur 396 tweets : 94&#8239;% des tweets<br>hostiles retrouvés</td></tr>
-<tr><td class="h">Parle-t-il d'effets secondaires ? <span class="hy">H2</span></td><td class="mod"><code>GPT-6 Astra</code><br><code>GPT-6.1 Sol</code><br><code>Claude Opus 5.5</code></td><td class="n">4&#8239;963</td><td class="n">0,84</td><td class="ctl">modèles comparés à 2 humains<br>sur 300 tweets : kappa 0,84<br><small>(humains entre eux : 0,90)</small></td></tr>
+<tr><th>Question posée</th><th>Modèles</th><th>Tweets lus<br>par les modèles</th><th>Accord entre<br>les 3 modèles<br>(alpha de Krippendorff)</th><th>Contrôle extérieur</th></tr>
+<tr><td class="h">Le message juge-t-il l'entreprise ? <span class="hy">H3</span></td><td class="mod"><code>gemma-4-31B-it</code><br><code>Qwen3.6-27B</code><br><code>DeepSeek-V4-Flash</code></td><td class="n">41&#8239;448<br><small>tous les messages<br>qui nomment l'entreprise</small></td><td class="n">0,76</td><td class="ctl">relecture à l'aveugle par 2 autres modèles<br>sur 396 tweets : 94&#8239;% des tweets<br>hostiles retrouvés</td></tr>
+<tr><td class="h">Parle-t-il d'effets secondaires ? <span class="hy">H2</span></td><td class="mod"><code>GPT-6 Astra</code><br><code>GPT-6.1 Sol</code><br><code>Claude Opus 5.5</code></td><td class="n">4&#8239;963<br><small>candidats retenus<br>par un classifieur</small></td><td class="n">0,84</td><td class="ctl">modèles comparés à 2 humains<br>sur 300 tweets : kappa 0,84<br><small>(humains entre eux : 0,90)</small></td></tr>
 </table>
 
 <table class="synth exemples">
