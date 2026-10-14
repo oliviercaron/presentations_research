@@ -1,0 +1,24 @@
+<script>
+// Menu du haut cliquable : un clic sur « Contexte », « Méthodologie »… mène à la première diapo
+// dont la rubrique active (span.on) porte ce nom.
+(function () {
+  function aller(nom) {
+    var diapos = Reveal.getSlides();
+    for (var i = 0; i < diapos.length; i++) {
+      var on = diapos[i].querySelector('.navbar span.on');
+      if (on && on.textContent.trim() === nom) {
+        var k = Reveal.getIndices(diapos[i]);
+        Reveal.slide(k.h, k.v);
+        return;
+      }
+    }
+  }
+  document.addEventListener('click', function (e) {
+    var s = e.target.closest('.navbar span');
+    if (!s) return;
+    e.preventDefault();
+    e.stopPropagation();
+    aller(s.textContent.trim());
+  }, true);
+})();
+</script>

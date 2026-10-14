@@ -1,0 +1,28 @@
+project:
+  type: default
+  render:
+    - index.qmd
+
+lang: fr
+pagetitle: "JIMS 2026 · Réception des pré-annonces pharmaceutiques"
+
+format:
+  revealjs:
+    theme: [default, assets/theme.scss, assets/jims.scss]
+    width: 1600
+    height: 900
+    margin: 0.05
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    hash: true
+    transition: none
+    background-transition: none
+    controls: false
+    progress: true
+    navigation-mode: linear
+    menu: true
+    preview-links: false
+    embed-resources: false
+    pdf-separate-fragments: false
+    include-after-body: assets/navbar.html

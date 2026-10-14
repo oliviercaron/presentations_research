@@ -1,0 +1,71 @@
+[
+ {
+  "compte": "Maitre_Eolas",
+  "nom": "Maitre Eolas",
+  "verifie": false,
+  "abonnes": 357874,
+  "j": -2,
+  "date": "2020-11-07 13:02:15+01:00",
+  "type": "quote",
+  "jaime": 1486,
+  "retweets": 552,
+  "texte": "Arrêtez d’embêter l’officier du ministère public : l’amende ne sanctionne pas le défaut d’attestation mais le fait de ne pas respecter les conditions du confinement, or sortir faire des courses est un motif valable, vos contraventions seront toutes classées sans suite. https://t.co/xOfHz9gWH4",
+  "id": "1325045901694472195",
+  "vecteur_6": [
+   0.022,
+   -0.088,
+   -0.027,
+   0.04,
+   0.007,
+   -0.001
+  ],
+  "x": -0.21675020456314087,
+  "y": 0.03675292804837227
+ },
+ {
+  "compte": "MicheleRivasi",
+  "nom": "Michèle Rivasi 🌍",
+  "verifie": true,
+  "abonnes": 27847,
+  "j": 1,
+  "date": "2020-11-10 16:33:26+01:00",
+  "type": "quote",
+  "jaime": 436,
+  "retweets": 227,
+  "texte": "Il est irresponsable de parler d'obligation vaccinale sur un vaccin dont on connaît rien de l'efficacité et de l'innocuité. Les chiffres donnés par @pfizer concernent seulement 94 volontaires. Pour l'heure il ne s'agit que d'un bon coup commercial et financier pour ce labo ! https://t.co/KfGLqqqh16",
+  "id": "1326186208087724039",
+  "vecteur_6": [
+   0.032,
+   -0.063,
+   -0.006,
+   0.039,
+   0.057,
+   -0.006
+  ],
+  "x": 0.21122685074806213,
+  "y": 0.043780531734228134
+ },
+ {
+  "compte": "f_philippot",
+  "nom": "Florian Philippot",
+  "verifie": true,
+  "abonnes": 227806,
+  "j": 3,
+  "date": "2020-11-12 12:14:58+01:00",
+  "type": "quote",
+  "jaime": 2227,
+  "retweets": 609,
+  "texte": "Soutien total au Professeur Raoult, qui a sûrement le grand tort de chercher à soigner ses patients ! https://t.co/9bIfqaV1E3",
+  "id": "1326845939508764672",
+  "vecteur_6": [
+   0.016,
+   -0.126,
+   0.004,
+   0.022,
+   0.002,
+   0.016
+  ],
+  "x": 0.01919054426252842,
+  "y": -0.10896780341863632
+ }
+]
